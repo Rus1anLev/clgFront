@@ -97,7 +97,6 @@ function destroyMegaMenu() {
 	$("[data-mega-menu-dropdown]").removeClass('is-open')
 }
 
-
 function init() {
 	initBurger()
 	initMegaMenu()
