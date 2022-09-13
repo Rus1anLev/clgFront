@@ -1,0 +1,130 @@
+.burger
+
+	.burger__window(data-burger="main")
+		.burger-bg
+		.container
+			.row
+				.col-md-8
+					nav.burger__window-nav
+						a(href="#").burger__window-item.burger__window-button
+							.burger__window-button--icon
+								+svg('user')
+							.burger__window-button--label.menu-item Войти
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Новинки
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Sale
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Одежда
+							.burger__window-item--button.js-burger-open(data-open-burger="clothes")
+								+svg('arrow-right')
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Верхняя одежда
+							.burger__window-item--button.js-burger-open(data-open-burger="up-clothes")
+								+svg('arrow-right')
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Подборка по стилю
+							.burger__window-item--button.js-burger-open(data-open-burger="style")
+								+svg('arrow-right')
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Lookbook
+
+	.burger__window(data-burger="clothes")
+		.container
+			.row
+				.col-md-8
+					nav.burger__window-nav
+						button.burger__window-item.burger__window-button.js-burger-close(data-close-burger="clothes")
+							.burger__window-button--icon
+								+svg('arrow-left')
+							.burger__window-button--label.menu-item Одежда
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Ксотюмы
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Жакеты
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Платья
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Юбки
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Брюки
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Комбинезоны
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Блузы
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Топы
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Трикотаж
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Верхняя одежда
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Бестселлеры
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Ограниченное предложение
+						.burger__window-banner.mt-48
+							+lazyPicture({
+								src: `${baseDir}images/header/burgerBanner.jpeg`,
+								alt: '',
+							})
+	.burger__window(data-burger="up-clothes")
+		.container
+			.row
+				.col-md-8
+					nav.burger__window-nav
+						button.burger__window-item.burger__window-button.js-burger-close(data-close-burger="up-clothes")
+							.burger__window-button--icon
+								+svg('arrow-left')
+							.burger__window-button--label.menu-item Верхняя одежда
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Ксотюмы
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Жакеты
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Платья
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Юбки
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Брюки
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Комбинезоны
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Блузы
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Топы
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Трикотаж
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Верхняя одежда
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Бестселлеры
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Ограниченное предложение
+						.burger__window-banner.mt-48
+							+lazyPicture({
+								src: `${baseDir}images/header/burgerBanner.jpeg`,
+								alt: '',
+							})
+	.burger__window(data-burger="style")
+		.container
+			.row
+				.col-md-8
+					nav.burger__window-nav
+						button.burger__window-item.burger__window-button.js-burger-close(data-close-burger="style")
+							.burger__window-button--icon
+								+svg('arrow-left')
+							.burger__window-button--label.menu-item Подборка по стилю
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Business
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Casual
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Cocktail
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Weekend
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Натуральная кожа
+						.burger__window-item
+							a(href="#").menu-item.burger__window-item--label Кашемир
+
+

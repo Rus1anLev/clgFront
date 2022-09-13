@@ -1,0 +1,120 @@
+.header {
+	padding: 24px 0;
+	color: $color-white;
+	transition: $duration-normal $easing-out background-color;
+	z-index: 30;
+
+	@include media-breakpoint-down(sm) {
+		padding: 12px 0;
+	}
+	&.is-cover {
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+	}
+	&.is-open {
+		background: #FFF;
+		color: $color-black;
+	}
+	&-brand {
+		display: block;
+		max-width: 173px;
+		@include media-breakpoint-down(sm) {
+			max-width: 104px;
+			height: 36px;
+		}
+		img {
+			display: block;
+		}
+	}
+	&__nav {
+		display: flex;
+		&-item {
+			margin-right: 24px;
+		}
+	}
+	&__actions {
+		display: flex;
+		align-items: center;
+		&-search {
+			width: 24px;
+			height: 24px;
+			margin-right: 24px;
+			@include media-breakpoint-down(sm) {
+				margin-right: 12px;
+			}
+		}
+		&-personal {
+			align-items: center;
+			margin-right: 24px;
+			@include media-breakpoint-down(sm) {
+				margin-right: 12px;
+			}
+			&--icon {
+				width: 24px;
+				height: 24px;
+				flex: 0 0 24px;
+				margin-right: 4px;
+			}
+			&--label {
+				color: $color-space-gray;
+			}
+		}
+		&-favorite {
+			width: 24px;
+			height: 24px;
+			flex: 0 0 24px;
+			margin-right: 24px;
+			position: relative;
+			@include media-breakpoint-down(sm) {
+				margin-right: 12px;
+			}
+		}
+
+		&-cart {
+			width: 24px;
+			height: 24px;
+			flex: 0 0 24px;
+			position: relative;
+		}
+	}
+	&-burger {
+		display: inline-flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 24px;
+		width: 24px;
+		padding: 8px 0;
+		span {
+			height: 1px;
+			width: 24px;
+			background: currentColor;
+			border-radius: 1px;
+			position: relative;
+			transition: top $duration-normal $easing-out,
+						bottom $duration-normal $easing-out,
+						left $duration-normal $easing-out,
+						transform $duration-normal $easing-out,
+						width $duration-normal $easing-out;
+			will-change: transform, left, top, bottom, width;
+
+		}
+
+		&.is-open {
+			span {
+				width: 18px;
+				left: 3px;
+				&:first-child {
+					transform: rotate(45deg);
+					top: 4px;
+				}
+				&:last-child {
+					transform: rotate(-45deg);
+					bottom: 3px;
+				}
+			}
+		}
+	}
+}
+@import "header_nav/burger";

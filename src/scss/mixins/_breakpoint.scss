@@ -1,0 +1,14 @@
+// Bootstrap Grid
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 984px,
+	lg: 1304px,
+);
+$container-max-widths: (
+	sm: 577px,
+	md: 960px,
+	lg: 1280px,
+);
+$grid-columns: 16 !default;
+$grid-gutter-width: 24px !default;

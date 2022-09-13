@@ -1,0 +1,55 @@
+.menu-item {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.12;
+}
+
+.link {
+	&-default {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 1.29;
+		text-decoration-line: underline;
+	}
+	&-small {
+
+	}
+}
+
+.favorite-icon {
+	stroke: currentColor;
+	fill: transparent;
+
+	transition: fill $duration-normal $easing-out;
+
+	&:hover {
+		fill: currentColor;
+	}
+
+	&.is-active {
+		fill: currentColor;
+		&:hover {
+			fill: none;
+		}
+	}
+}
+
+.counter {
+	position: absolute;
+	top: -4px;
+	right: -10px;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 1.25;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	width: 22px;
+	height: 22px;
+	color: $color-white;
+	background-color: transparentize($color-dark-golden, 0.05);
+	padding: 3px 0 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+}
