@@ -6751,9 +6751,10 @@ iframe {
         height: 1px;
         bottom: -1px;
         left: 0;
-        background: transparent; }
+        background-color: transparent;
+        transition: 0.4s ease-out background-color; }
       .header__nav-item.is-open:after {
-        background: #736035; }
+        background-color: #736035; }
   .header__actions {
     display: flex;
     align-items: center; }
@@ -6776,6 +6777,7 @@ iframe {
         flex: 0 0 24px;
         margin-right: 4px; }
       .header__actions-personal--label {
+        transition: 0.4s ease-out color;
         color: #E0E0E0; }
     .header__actions-favorite {
       width: 24px;

@@ -48,11 +48,12 @@
 				height: 1px;
 				bottom: -1px;
 				left: 0;
-				background: transparent;
+				background-color: transparent;
+				transition: $duration-normal $easing-out background-color;
 			}
 			&.is-open {
 				&:after {
-					background: $color-dark-golden;
+					background-color: $color-dark-golden;
 				}
 			}
 		}
@@ -81,6 +82,7 @@
 				margin-right: 4px;
 			}
 			&--label {
+				transition: $duration-normal $easing-out color;
 				color: $color-space-gray;
 			}
 		}
