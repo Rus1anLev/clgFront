@@ -185,12 +185,10 @@ function closeBurgerWindow(window) {
 }
 
 function openBurgerMenu() {
+  $burgerBg.fadeIn(400);
   $headerBurgerBtn.addClass('is-open');
   $header.addClass('is-open');
   openBurgerWindow('main');
-  setTimeout(function () {
-    $burgerBg.fadeIn(100);
-  }, 400);
 }
 
 function closeBurgerMenu() {
