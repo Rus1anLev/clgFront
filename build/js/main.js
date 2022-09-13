@@ -194,11 +194,10 @@ function openBurgerMenu() {
 }
 
 function closeBurgerMenu() {
-  $burgerBg.fadeOut(400, function () {
-    $headerBurgerBtn.removeClass('is-open');
-    $header.removeClass('is-open');
-    closeBurgerWindow('all');
-  });
+  $burgerBg.fadeOut(400);
+  $headerBurgerBtn.removeClass('is-open');
+  $header.removeClass('is-open');
+  closeBurgerWindow('all');
 }
 
 function handlerBurgerButton() {

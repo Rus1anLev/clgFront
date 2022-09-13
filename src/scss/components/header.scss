@@ -4,7 +4,7 @@
 	transition: $duration-normal $easing-out background-color;
 	z-index: 30;
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		padding: 12px 0;
 	}
 	&.is-cover {
@@ -20,7 +20,7 @@
 	&-brand {
 		display: block;
 		max-width: 173px;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			max-width: 104px;
 			height: 36px;
 		}

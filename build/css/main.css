@@ -6597,7 +6597,7 @@ iframe {
   color: #FFF;
   transition: 0.4s ease-out background-color;
   z-index: 30; }
-  @media (max-width: 575.98px) {
+  @media (max-width: 983.98px) {
     .header {
       padding: 12px 0; } }
   .header.is-cover {
@@ -6611,7 +6611,7 @@ iframe {
   .header-brand {
     display: block;
     max-width: 173px; }
-    @media (max-width: 575.98px) {
+    @media (max-width: 983.98px) {
       .header-brand {
         max-width: 104px;
         height: 36px; } }
@@ -6699,6 +6699,11 @@ iframe {
     -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
     z-index: 10; }
+    @media (max-width: 983.98px) {
+      .burger-bg {
+        background: #FFF;
+        -webkit-backdrop-filter: none;
+                backdrop-filter: none; } }
   .burger__window {
     color: #2C2C2C;
     position: fixed;
@@ -6726,12 +6731,17 @@ iframe {
       padding: 84px 0 48px;
       overflow-y: scroll;
       height: 100vh;
-      background: #FFF;
-      z-index: 15; }
+      background: #FFF; }
       @media (min-width: 984px) and (max-width: 1303.98px) {
         .burger__window-nav {
           padding: 108px 0 72px;
           position: relative; } }
+      @media (max-width: 575.98px) {
+        .burger__window-nav {
+          margin: -12px; } }
+      .burger__window-nav--container {
+        position: relative;
+        z-index: 15; }
     .burger__window-item {
       padding: 16px 12px;
       border-bottom: 1px solid #EBEBEB;

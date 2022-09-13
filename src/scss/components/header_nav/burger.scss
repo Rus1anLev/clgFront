@@ -13,6 +13,11 @@
 		background: rgba(44, 44, 44, 0.4);
 		backdrop-filter: blur(8px);
 		z-index: 10;
+		@include media-breakpoint-down(md) {
+			//display: none !important;
+			background: #FFF;
+			backdrop-filter: none;
+		}
 	}
 	&__window {
 		color: $color-black;
@@ -46,10 +51,16 @@
 			overflow-y: scroll;
 			height: 100vh;
 			background: $color-white;
-			z-index: 15;
 			@include media-breakpoint-only(md) {
 				padding: 108px 0 72px;
 				position: relative;
+			}
+			@include media-breakpoint-only(xs) {
+				margin: 0 -($grid-gutter-width / 2);
+			}
+			&--container {
+				position: relative;
+				z-index: 15;
 			}
 		}
 		&-item {
