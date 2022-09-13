@@ -65,12 +65,47 @@ function destroyBurger() {
 	closeBurgerWindow('all')
 }
 
+let $megaMenuItem = $('.js-mega-menu-item'),
+	$megaMenuWindow = $('.mega-menu__window')
+
+function MegaMenuClose() {
+	$header.removeClass('is-open')
+	$megaMenuItem.removeClass('is-open')
+	$megaMenuWindow.removeClass('is-open')
+}
+
+function MegaMenuOpen() {
+	let $btn = $(this),
+		target = $btn.data('mega-menu-dropdown')
+	$header.addClass('is-open')
+	$btn.addClass('is-open')
+	$(`[data-mega-menu-dropdown="${target}"]`).addClass('is-open')
+}
+
+function initMegaMenu() {
+	$megaMenuItem.on('mouseenter', MegaMenuOpen)
+	$megaMenuItem.on('mouseleave', MegaMenuClose)
+	$megaMenuWindow.on('mouseenter', MegaMenuOpen)
+	$megaMenuWindow.on('mouseleave', MegaMenuClose)
+}
+
+function destroyMegaMenu() {
+	$megaMenuItem.off('mouseenter', MegaMenuOpen)
+	$megaMenuItem.off('mouseleave', MegaMenuClose)
+	$megaMenuWindow.off('mouseenter', MegaMenuOpen)
+	$megaMenuWindow.off('mouseleave', MegaMenuClose)
+	$("[data-mega-menu-dropdown]").removeClass('is-open')
+}
+
+
 function init() {
 	initBurger()
+	initMegaMenu()
 }
 
 function destroy() {
 	destroyBurger()
+	destroyMegaMenu()
 }
 
 export default {

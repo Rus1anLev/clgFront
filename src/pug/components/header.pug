@@ -18,7 +18,7 @@ mixin header(headerClass)
 					nav.header__nav
 						a.header__nav-item.menu-item(href="#") Новинки
 						a.header__nav-item.menu-item(href="#") Sale
-						a.header__nav-item.menu-item(href="#") Одежда
+						a.header__nav-item.menu-item.js-mega-menu-item(href="#" data-mega-menu-dropdown="clothes") Одежда
 						a.header__nav-item.menu-item(href="#") Верхняя одежда
 						a.header__nav-item.menu-item(href="#") Подборки по стилю
 						a.header__nav-item.menu-item(href="#") Lookbook
@@ -41,3 +41,4 @@ mixin header(headerClass)
 						span
 						span
 	include header_nav/burger-menu
+	include header_nav/mega-menu

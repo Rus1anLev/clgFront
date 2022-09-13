@@ -1,11 +1,13 @@
 .header {
-	padding: 24px 0;
 	color: $color-white;
 	transition: $duration-normal $easing-out background-color;
 	z-index: 30;
 
 	@include media-breakpoint-down(md) {
 		padding: 12px 0;
+	}
+	@include media-breakpoint-only(md) {
+		padding: 24px 0;
 	}
 	&.is-cover {
 		position: absolute;
@@ -17,6 +19,9 @@
 	&.is-dark {
 		background: #FFF;
 		color: $color-black;
+		.header__actions-personal--label {
+			color: $color-silver-brown;
+		}
 	}
 
 	&-brand {
@@ -34,6 +39,22 @@
 		display: flex;
 		&-item {
 			margin-right: 24px;
+			position: relative;
+			padding: 45px 0;
+			&:after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 1px;
+				bottom: -1px;
+				left: 0;
+				background: transparent;
+			}
+			&.is-open {
+				&:after {
+					background: $color-dark-golden;
+				}
+			}
 		}
 	}
 	&__actions {
@@ -120,3 +141,4 @@
 	}
 }
 @import "header_nav/burger";
+@import "header_nav/mega-menu";
