@@ -24,7 +24,7 @@ mixin header(headerClass)
 						a.header__nav-item.menu-item(href="#") Lookbook
 				.col-auto.ms-auto
 					.header__actions
-						button.header__actions-search
+						button.header__actions-search.js-searchbar-btn
 							+svg("search")
 						a.header__actions-personal(href="#").d-none.d-lg-flex
 							.header__actions-personal--icon
@@ -42,3 +42,4 @@ mixin header(headerClass)
 						span
 	include header/burger-menu
 	include header/mega-menu
+	include searchbar

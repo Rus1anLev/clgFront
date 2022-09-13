@@ -1,3 +1,5 @@
+import {closeSearchbar} from './searchbar'
+
 let $header = $('.header'),
 	$headerBurgerBtn = $('.header-burger'),
 	$burgerOpenBtn = $('.js-burger-open'),
@@ -33,6 +35,7 @@ function closeBurgerMenu() {
 }
 
 function handlerBurgerButton() {
+	closeSearchbar()
 	if ($headerBurgerBtn.hasClass('is-open')) {
 		closeBurgerMenu()
 	} else {
@@ -75,6 +78,7 @@ function MegaMenuClose() {
 }
 
 function MegaMenuOpen() {
+	closeSearchbar()
 	let $btn = $(this),
 		target = $btn.data('mega-menu-dropdown')
 	$header.addClass('is-open')
@@ -97,7 +101,7 @@ function destroyMegaMenu() {
 	$("[data-mega-menu-dropdown]").removeClass('is-open')
 }
 
-function init() {
+function headerInit() {
 	initBurger()
 	initMegaMenu()
 }
@@ -107,7 +111,9 @@ function destroy() {
 	destroyMegaMenu()
 }
 
-export default {
-	init,
+export {
+	headerInit,
+	closeBurgerWindow,
+	closeBurgerMenu,
 	destroy
 };

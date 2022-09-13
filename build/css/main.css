@@ -6951,4 +6951,37 @@ iframe {
       border-radius: 6px;
       display: block; }
 
+.searchbar {
+  position: absolute;
+  top: 108px;
+  left: 0;
+  right: 0;
+  z-index: 35;
+  padding: 44px 0 48px;
+  background: #FFF;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: 0.4s ease-out opacity, 0.4s ease-out overflow; }
+  @media (min-width: 984px) and (max-width: 1303.98px) {
+    .searchbar {
+      top: 0;
+      padding: 0;
+      background: none; } }
+  @media (max-width: 983.98px) {
+    .searchbar {
+      top: 60px;
+      padding: 24px 0;
+      border-radius: 0px 0px 12px 12px; } }
+  .searchbar.is-open {
+    opacity: 1;
+    overflow: visible;
+    pointer-events: all; }
+  @media (min-width: 984px) and (max-width: 1303.98px) {
+    .searchbar-input {
+      position: absolute;
+      top: 25px;
+      width: 450px;
+      transform: translateX(-50%); } }
+
 /*# sourceMappingURL=main.css.map */

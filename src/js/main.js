@@ -4,7 +4,8 @@ import './components/social';
 import {ieFix} from './vendor/ie-fix';
 import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';
-import header from './components/header';
+import {headerInit} from './components/header';
+import {initSearchbar} from './components/searchbar';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 
@@ -13,5 +14,6 @@ vhFix();
 actualYear();
 scrollToAnchor.init();
 
-header.init();
+headerInit();
+initSearchbar()
 lazyLoading.init();

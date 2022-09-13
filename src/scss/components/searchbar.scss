@@ -1,0 +1,41 @@
+.searchbar {
+  position: absolute;
+  top: 108px;
+  left: 0;
+  right: 0;
+  z-index: 35;
+  padding: 44px 0 48px;
+  background: #FFF;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: $duration-normal $easing-out opacity,
+              $duration-normal $easing-out overflow;
+
+  @include media-breakpoint-only(md) {
+    top: 0;
+    padding: 0;
+    background: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    top: 60px;
+    padding: 24px 0;
+    border-radius: 0px 0px 12px 12px;
+  }
+
+  &.is-open{
+    opacity: 1;
+    overflow: visible;
+    pointer-events: all;
+  }
+
+  &-input {
+    @include media-breakpoint-only(md) {
+      position: absolute;
+      top: 25px;
+      width: 450px;
+      transform: translateX(-50%);
+    }
+  }
+}
