@@ -159,11 +159,17 @@
 /*!*************************************!*\
   !*** ./src/js/components/header.js ***!
   \*************************************/
-/*! exports provided: default */
+/*! exports provided: headerInit, closeBurgerWindow, closeBurgerMenu, destroy */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerInit", function() { return headerInit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeBurgerWindow", function() { return closeBurgerWindow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeBurgerMenu", function() { return closeBurgerMenu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroy", function() { return destroy; });
+/* harmony import */ var _searchbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchbar */ "./src/js/components/searchbar.js");
+
 let $header = $('.header'),
     $headerBurgerBtn = $('.header-burger'),
     $burgerOpenBtn = $('.js-burger-open'),
@@ -185,23 +191,22 @@ function closeBurgerWindow(window) {
 }
 
 function openBurgerMenu() {
+  $burgerBg.fadeIn(400);
   $headerBurgerBtn.addClass('is-open');
   $header.addClass('is-open');
   openBurgerWindow('main');
-  setTimeout(function () {
-    $burgerBg.fadeIn(100);
-  }, 400);
 }
 
 function closeBurgerMenu() {
-  $burgerBg.fadeOut(400, function () {
-    $headerBurgerBtn.removeClass('is-open');
-    $header.removeClass('is-open');
-    closeBurgerWindow('all');
-  });
+  $burgerBg.fadeOut(400);
+  $headerBurgerBtn.removeClass('is-open');
+  $header.removeClass('is-open');
+  closeBurgerWindow('all');
 }
 
 function handlerBurgerButton() {
+  Object(_searchbar__WEBPACK_IMPORTED_MODULE_0__["closeSearchbar"])();
+
   if ($headerBurgerBtn.hasClass('is-open')) {
     closeBurgerMenu();
   } else {
@@ -235,18 +240,87 @@ function destroyBurger() {
   closeBurgerWindow('all');
 }
 
-function init() {
+let $megaMenuItem = $('.js-mega-menu-item'),
+    $megaMenuWindow = $('.mega-menu__window');
+
+function MegaMenuClose() {
+  $header.removeClass('is-open');
+  $megaMenuItem.removeClass('is-open');
+  $megaMenuWindow.removeClass('is-open');
+}
+
+function MegaMenuOpen() {
+  Object(_searchbar__WEBPACK_IMPORTED_MODULE_0__["closeSearchbar"])();
+  let $btn = $(this),
+      target = $btn.data('mega-menu-dropdown');
+  $header.addClass('is-open');
+  $btn.addClass('is-open');
+  $(`[data-mega-menu-dropdown="${target}"]`).addClass('is-open');
+}
+
+function initMegaMenu() {
+  $megaMenuItem.on('mouseenter', MegaMenuOpen);
+  $megaMenuItem.on('mouseleave', MegaMenuClose);
+  $megaMenuWindow.on('mouseenter', MegaMenuOpen);
+  $megaMenuWindow.on('mouseleave', MegaMenuClose);
+}
+
+function destroyMegaMenu() {
+  $megaMenuItem.off('mouseenter', MegaMenuOpen);
+  $megaMenuItem.off('mouseleave', MegaMenuClose);
+  $megaMenuWindow.off('mouseenter', MegaMenuOpen);
+  $megaMenuWindow.off('mouseleave', MegaMenuClose);
+  $("[data-mega-menu-dropdown]").removeClass('is-open');
+}
+
+function headerInit() {
   initBurger();
+  initMegaMenu();
 }
 
 function destroy() {
   destroyBurger();
+  destroyMegaMenu();
 }
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  init,
-  destroy
-});
+
+
+/***/ }),
+
+/***/ "./src/js/components/searchbar.js":
+/*!****************************************!*\
+  !*** ./src/js/components/searchbar.js ***!
+  \****************************************/
+/*! exports provided: initSearchbar, closeSearchbar */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initSearchbar", function() { return initSearchbar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeSearchbar", function() { return closeSearchbar; });
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ "./src/js/components/header.js");
+
+let $header = $('.header'),
+    $searchbar = $('.searchbar'),
+    $searchbarBtn = $('.js-searchbar-btn');
+
+const closeSearchbar = () => {
+  $header.removeClass('is-open');
+  $searchbar.removeClass('is-open');
+};
+
+function handlerSwitcherSearchbar() {
+  Object(_header__WEBPACK_IMPORTED_MODULE_0__["closeBurgerWindow"])('all');
+  Object(_header__WEBPACK_IMPORTED_MODULE_0__["closeBurgerMenu"])();
+  $header.toggleClass('is-open');
+  $searchbar.toggleClass('is-open');
+}
+
+function initSearchbar() {
+  $searchbarBtn.on('click', handlerSwitcherSearchbar);
+}
+
+
 
 /***/ }),
 
@@ -516,8 +590,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_vh_fix__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./vendor/vh-fix */ "./src/js/vendor/vh-fix.js");
 /* harmony import */ var _modules_actualYear__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/actualYear */ "./src/js/modules/actualYear.js");
 /* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/header */ "./src/js/components/header.js");
-/* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
-/* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
+/* harmony import */ var _components_searchbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/searchbar */ "./src/js/components/searchbar.js");
+/* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
+/* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
+
 
 
 
@@ -530,9 +606,10 @@ __webpack_require__.r(__webpack_exports__);
 Object(_vendor_ie_fix__WEBPACK_IMPORTED_MODULE_3__["ieFix"])();
 Object(_vendor_vh_fix__WEBPACK_IMPORTED_MODULE_4__["vhFix"])();
 Object(_modules_actualYear__WEBPACK_IMPORTED_MODULE_5__["actualYear"])();
-_modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_8__["default"].init();
-_components_header__WEBPACK_IMPORTED_MODULE_6__["default"].init();
-_modules_lazyLoading__WEBPACK_IMPORTED_MODULE_7__["default"].init();
+_modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+Object(_components_header__WEBPACK_IMPORTED_MODULE_6__["headerInit"])();
+Object(_components_searchbar__WEBPACK_IMPORTED_MODULE_7__["initSearchbar"])();
+_modules_lazyLoading__WEBPACK_IMPORTED_MODULE_8__["default"].init();
 
 /***/ }),
 

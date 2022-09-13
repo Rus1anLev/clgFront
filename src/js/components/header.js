@@ -1,3 +1,5 @@
+import {closeSearchbar} from './searchbar'
+
 let $header = $('.header'),
 	$headerBurgerBtn = $('.header-burger'),
 	$burgerOpenBtn = $('.js-burger-open'),
@@ -19,23 +21,21 @@ function closeBurgerWindow(window) {
 }
 
 function openBurgerMenu() {
+	$burgerBg.fadeIn(400)
 	$headerBurgerBtn.addClass('is-open')
 	$header.addClass('is-open')
 	openBurgerWindow('main')
-	setTimeout(function () {
-		$burgerBg.fadeIn(100)
-	}, 400)
 }
 
 function closeBurgerMenu() {
-	$burgerBg.fadeOut(400, function () {
-		$headerBurgerBtn.removeClass('is-open')
-		$header.removeClass('is-open')
-		closeBurgerWindow('all')
-	})
+	$burgerBg.fadeOut(400)
+	$headerBurgerBtn.removeClass('is-open')
+	$header.removeClass('is-open')
+	closeBurgerWindow('all')
 }
 
 function handlerBurgerButton() {
+	closeSearchbar()
 	if ($headerBurgerBtn.hasClass('is-open')) {
 		closeBurgerMenu()
 	} else {
@@ -68,15 +68,52 @@ function destroyBurger() {
 	closeBurgerWindow('all')
 }
 
-function init() {
+let $megaMenuItem = $('.js-mega-menu-item'),
+	$megaMenuWindow = $('.mega-menu__window')
+
+function MegaMenuClose() {
+	$header.removeClass('is-open')
+	$megaMenuItem.removeClass('is-open')
+	$megaMenuWindow.removeClass('is-open')
+}
+
+function MegaMenuOpen() {
+	closeSearchbar()
+	let $btn = $(this),
+		target = $btn.data('mega-menu-dropdown')
+	$header.addClass('is-open')
+	$btn.addClass('is-open')
+	$(`[data-mega-menu-dropdown="${target}"]`).addClass('is-open')
+}
+
+function initMegaMenu() {
+	$megaMenuItem.on('mouseenter', MegaMenuOpen)
+	$megaMenuItem.on('mouseleave', MegaMenuClose)
+	$megaMenuWindow.on('mouseenter', MegaMenuOpen)
+	$megaMenuWindow.on('mouseleave', MegaMenuClose)
+}
+
+function destroyMegaMenu() {
+	$megaMenuItem.off('mouseenter', MegaMenuOpen)
+	$megaMenuItem.off('mouseleave', MegaMenuClose)
+	$megaMenuWindow.off('mouseenter', MegaMenuOpen)
+	$megaMenuWindow.off('mouseleave', MegaMenuClose)
+	$("[data-mega-menu-dropdown]").removeClass('is-open')
+}
+
+function headerInit() {
 	initBurger()
+	initMegaMenu()
 }
 
 function destroy() {
 	destroyBurger()
+	destroyMegaMenu()
 }
 
-export default {
-	init,
+export {
+	headerInit,
+	closeBurgerWindow,
+	closeBurgerMenu,
 	destroy
 };

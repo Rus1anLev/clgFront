@@ -1,0 +1,86 @@
+main.test
+    .container
+        .row
+            .col-md-4
+                h2 Инпуты
+
+                form.form
+                    .form-row
+                        .form-control
+                            input(type="text" placeholder="Дескриптор").form-control--input
+                            label.form-control--label Дескриптор
+                    .form-row
+                        .form-control.form-control--icon-left
+                            .form-control--icon
+                                +svg('calenader')
+                            input(type="text" placeholder="Дескриптор").form-control--input
+                            label.form-control--label Дескриптор
+                    .form-row
+                        .form-control.form-control--icon-right
+                            .form-control--icon
+                                +svg('calenader')
+                            input(type="text" placeholder="Дескриптор").form-control--input
+                            label.form-control--label Дескриптор
+
+                    .form-row
+                        .form-control.is-disabled
+                            input(type="text" placeholder="Дескриптор").form-control--input
+                            label.form-control--label Дескриптор
+                    .form-row
+                        .form-control.form-control--icon-left.is-disabled
+                            .form-control--icon
+                                +svg('calenader')
+                            input(type="text" placeholder="Дескриптор").form-control--input
+                            label.form-control--label Дескриптор
+                    .form-row
+                        .form-control.form-control--icon-right.is-disabled
+                            .form-control--icon
+                                +svg('calenader')
+                            input(type="text" placeholder="Дескриптор").form-control--input
+                            label.form-control--label Дескриптор
+                    .form-row
+                        .form-control
+                            input(type="text" placeholder="Дескриптор").form-control--input
+                            label.form-control--label Дескриптор
+                        .form-control--notify
+                            | Текст ошибки или уведомления
+                    .form-row
+                        .form-control.is-error
+                            input(type="text" placeholder="Дескриптор").form-control--input
+                            label.form-control--label Дескриптор
+                        .form-control--notify
+                            | Текст ошибки или уведомления
+                    .form-row
+                        .form-control.form-control--icon-right.is-error
+                            .form-control--icon
+                                +svg('calenader')
+                            input(type="text" placeholder="Дескриптор").form-control--input
+                            label.form-control--label Дескриптор
+                        .form-control--notify
+                            | Текст ошибки или уведомления
+            .col-md-6
+                h2 Кнопки
+                button.btn.btn-primary НАЗВАНИЕ КНОПКИ
+                br
+                br
+                button.btn.btn-primary.is-disabled НАЗВАНИЕ КНОПКИ
+                br
+                br
+                br
+                button.btn.btn-secondary НАЗВАНИЕ КНОПКИ
+                br
+                br
+                button.btn.btn-secondary.is-disabled НАЗВАНИЕ КНОПКИ
+                br
+                br
+                br
+                div(style="background: #000; padding: 20px 30px; display: inline-block")
+                    button.btn.btn-darken НАЗВАНИЕ КНОПКИ
+                    br
+                    br
+                    button.btn.btn-darken.is-disabled НАЗВАНИЕ КНОПКИ
+                br
+                br
+                br
+
+

@@ -2,7 +2,7 @@
 
 	.burger__window(data-burger="main")
 		.burger-bg
-		.container
+		.container.burger__window-nav--container
 			.row
 				.col-md-8
 					nav.burger__window-nav
@@ -30,6 +30,7 @@
 							a(href="#").menu-item.burger__window-item--label Lookbook
 
 	.burger__window(data-burger="clothes")
+		.burger-bg.is-hidden
 		.container
 			.row
 				.col-md-8
@@ -67,7 +68,9 @@
 								src: `${baseDir}images/header/burgerBanner.jpeg`,
 								alt: '',
 							})
+
 	.burger__window(data-burger="up-clothes")
+		.burger-bg.is-hidden
 		.container
 			.row
 				.col-md-8
@@ -105,7 +108,9 @@
 								src: `${baseDir}images/header/burgerBanner.jpeg`,
 								alt: '',
 							})
+
 	.burger__window(data-burger="style")
+		.burger-bg.is-hidden
 		.container
 			.row
 				.col-md-8
@@ -126,5 +131,3 @@
 							a(href="#").menu-item.burger__window-item--label Натуральная кожа
 						.burger__window-item
 							a(href="#").menu-item.burger__window-item--label Кашемир
-
-

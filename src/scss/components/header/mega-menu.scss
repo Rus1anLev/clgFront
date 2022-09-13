@@ -1,0 +1,70 @@
+.mega-menu {
+  &__window {
+    position: absolute;
+    top: 108px;
+    left: 0;
+    right: 0;
+    z-index: 25;
+    background: $color-white;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: $duration-normal $easing-out opacity,
+                $duration-normal $easing-out overflow;
+    &.is-open{
+      opacity: 1;
+      overflow: visible;
+      pointer-events: all;
+    }
+    &--wrapper {
+      padding: 58px 0 48px;
+      border-top: 1px solid #F7F7F7;
+    }
+    &-row {
+
+    }
+    &-col {
+      flex: 0 0 auto;
+      margin-right: 134px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &-heading {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.12;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      color: $color-silver-brown;
+      border-bottom: 1px solid $color-space-gray;
+    }
+    &-nav {
+      &--item {
+        display: block;
+        margin-bottom: 8px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &--row {
+        div {
+          margin-right: 60px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &-img {
+      display: block;
+      max-width: 402px;
+      img {
+        width: 100%;
+        border-radius: 6px;
+        display: block;
+      }
+    }
+  }
+}
