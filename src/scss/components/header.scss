@@ -13,10 +13,12 @@
 		left: 0;
 		top: 0;
 	}
-	&.is-open {
+	&.is-open,
+	&.is-dark {
 		background: #FFF;
 		color: $color-black;
 	}
+
 	&-brand {
 		display: block;
 		max-width: 173px;

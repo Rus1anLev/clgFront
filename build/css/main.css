@@ -6606,7 +6606,7 @@ iframe {
     right: 0;
     left: 0;
     top: 0; }
-  .header.is-open {
+  .header.is-open, .header.is-dark {
     background: #FFF;
     color: #2C2C2C; }
   .header-brand {
