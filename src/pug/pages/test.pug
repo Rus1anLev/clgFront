@@ -1,7 +1,7 @@
-main.test
-    .container
+main.test.mb-120
+    .container.mb-120
         .row
-            .col-md-4
+            .col-md-3
                 h2 Инпуты
 
                 form.form
@@ -58,7 +58,7 @@ main.test
                             label.form-control--label Дескриптор
                         .form-control--notify
                             | Текст ошибки или уведомления
-            .col-md-6
+            .col-md-4
                 h2 Кнопки
                 button.btn.btn-primary НАЗВАНИЕ КНОПКИ
                 br
@@ -82,5 +82,91 @@ main.test
                 br
                 br
                 br
-
-
+            .col-md-6
+                h2 Чекбоксы
+                label.checkbox
+                    input(type="checkbox").checkbox-input
+                    .checkbox-box
+                        +svg('checkbox')
+                    .checkbox-text.checkbox-text--big Текст
+                br
+                label.checkbox
+                    input(type="checkbox" checked).checkbox-input
+                    .checkbox-box
+                        +svg('checkbox')
+                    .checkbox-text.checkbox-text--big Текст
+                br
+                br
+                br
+                label.checkbox
+                    input(type="checkbox").checkbox-input
+                    .checkbox-box
+                        +svg('checkbox')
+                    .checkbox-text.checkbox-text--small Текст
+                br
+                label.checkbox
+                    input(type="checkbox" checked).checkbox-input
+                    .checkbox-box
+                        +svg('checkbox')
+                    .checkbox-text.checkbox-text--small Текст
+                br
+                br
+                br
+                h2 Чекбоксы с унифицированным текстом
+                label.checkbox
+                    input(type="checkbox").checkbox-input
+                    .checkbox-box
+                        +svg('checkbox')
+                    .checkbox-text.checkbox-text--small
+                        | Согласен на <a href="#">получение рассылок</a> и <a href="#">с политикой обработки персональных данных</a>
+                br
+                label.checkbox
+                    input(type="checkbox").checkbox-input
+                    .checkbox-box
+                        +svg('checkbox')
+                    .checkbox-text.checkbox-text--small
+                        | Согласен на <a href="#">обработку персональных данных</a>
+                br
+                label.checkbox
+                    input(type="checkbox").checkbox-input
+                    .checkbox-box
+                        +svg('checkbox')
+                    .checkbox-text.checkbox-text--small
+                        | Согласен на <a href="#">получение маркетинговых рассылок</a>
+                br
+                br
+                br
+                h2 Радиокнопки
+                label.radio
+                    input(type="radio" name="radio-big").radio-input
+                    .radio-box
+                    .radio-text.radio-text--big Текст
+                br
+                label.radio
+                    input(type="radio" name="radio-big" checked).radio-input
+                    .radio-box
+                    .radio-text.radio-text--big Текст
+                br
+                br
+                label.radio
+                    input(type="radio" name="radio-small").radio-input
+                    .radio-box
+                    .radio-text.radio-text--small Текст
+                br
+                label.radio
+                    input(type="radio" name="radio-small" checked).radio-input
+                    .radio-box
+                    .radio-text.radio-text--small Текст
+                br
+                br
+                br
+                h2 Селект
+                select(placeholder="Дескриптор").select
+                    option
+                    option Описание инпута 1
+                    option Описание инпута 2
+                    option Описание инпута 3
+                    option Описание инпута 4
+                    option Описание инпута 5
+            .col-md-3
+                h2 Тумблер

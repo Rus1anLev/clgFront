@@ -8,6 +8,32 @@
 	line-height: 0;
 }
 
+.mb-120 {
+	margin-bottom: 120px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 80px;
+	}
+}
+.mt-120 {
+	margin-top: 120px;
+	@include media-breakpoint-down(md) {
+		margin-top: 80px;
+	}
+}
+
+.mb-60 {
+	margin-bottom: 60px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 36px;
+	}
+}
+.mt-60 {
+	margin-top: 60px;
+	@include media-breakpoint-down(md) {
+		margin-top: 36px;
+	}
+}
+
 .mb-48 {
 	margin-bottom: 48px;
 	@include media-breakpoint-down(md) {
@@ -20,3 +46,4 @@
 		margin-top: 24px;
 	}
 }
+
