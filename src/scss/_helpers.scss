@@ -47,3 +47,24 @@
 	}
 }
 
+.mb-24 {
+	margin-bottom: 24px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 12px;
+	}
+}
+.mt-24 {
+	margin-top: 24px;
+	@include media-breakpoint-down(md) {
+		margin-top: 12px;
+	}
+}
+
+.mb-12 {
+	margin-bottom: 12px;
+}
+.mt-12 {
+	margin-top: 12px;
+}
+
+

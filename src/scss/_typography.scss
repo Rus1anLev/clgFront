@@ -1,3 +1,22 @@
+h1, .h1 {
+
+}
+
+h2, .h2 {
+	font-family: $font-secondary;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 47px;
+	line-height: 0.91;
+	color: $color-black;
+	margin: 0;
+
+	@include media-breakpoint-down(md) {
+		font-size: 30px;
+		line-height: 1.07;
+	}
+}
+
 .menu-item {
 	font-weight: 300;
 	font-size: 16px;
@@ -8,14 +27,46 @@
 }
 
 .link {
-	&-default {
+	letter-spacing: 0.5px;
+	font-weight: 400;
+	text-transform: uppercase;
+	display: inline-block;
+	&-primary {
+		color: $color-dark-golden;
+		transition: color $duration-normal $easing-out;
+		&:hover {
+			color: $color-accent;
+		}
+	}
+	&-photo {
+		color: $color-white;
+		transition: color $duration-normal $easing-out;
+		&:hover {
+			color: $color-space-gray;
+		}
+	}
+
+	&--big {
+		font-size: 16px;
+		line-height: 1.12;
+		padding: 12px 0;
+		@include media-breakpoint-only(xs) {
+			font-size: 14px;
+			line-height: 1.29;
+		}
+	}
+
+	&--small {
+		font-size: 10px;
+		line-height: 1.8;
+		padding: 6px 0;
+	}
+
+	&-personal {
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 1.29;
 		text-decoration-line: underline;
-	}
-	&-small {
-
 	}
 }
 

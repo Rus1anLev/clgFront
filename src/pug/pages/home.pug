@@ -1,2 +1,31 @@
 main.home
-	+block_cover()
+    +block_cover().mb-120
+    +block_banners([
+        {
+            button: 'Название кнопки',
+            img: '/images/pages/main/bannersImg1.jpg',
+            href: "#"
+        },
+        {
+            button: 'Название кнопки',
+            img: '/images/pages/main/bannersImg2.jpg',
+            href: "#"
+        }
+    ]).mb-120
+    +block_content_aside([
+        {
+            heading: 'Заголовок',
+            img: '/images/pages/main/contentAsideImg1.jpg',
+            href: "#",
+            button: 'Название кнопки',
+            text: 'Пример текста, написаного из админ. части сайта. <br/> Предвкушаем весну с Caterina Leman и вступаем в модную <br/> игру нового сезона весна-лето 21. Выразительность, <br/> уверенность, динамичность - три ключевых слова коллекции, <br/> которые найдут отклик в каждом сердце.',
+            position: 'left'
+        },{
+            heading: 'Заголовок',
+            img: '/images/pages/main/contentAsideImg1.jpg',
+            href: "#",
+            button: 'Название кнопки',
+            text: 'Пример текста, написаного из админ. части сайта. <br/> Предвкушаем весну с Caterina Leman и вступаем в модную <br/> игру нового сезона весна-лето 21. Выразительность, <br/> уверенность, динамичность - три ключевых слова коллекции, <br/> которые найдут отклик в каждом сердце.',
+            position: 'right'
+        },
+    ]).mb-120
