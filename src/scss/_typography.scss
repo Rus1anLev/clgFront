@@ -306,3 +306,57 @@
 		color: $color-cold-brown;
 	}
 }
+
+.tumblr {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+
+	&-input {
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+	}
+	&-caption {
+		font-size: 14px;
+		line-height: 1.29;
+		color: $color-silver-brown;
+		margin-right: 8px;
+		transition: color $duration-normal $easing-out;
+		&:last-child {
+			margin-right: 0;
+			margin-left: 8px;
+		}
+	}
+	&-box {
+		width: 36px;
+		height: 20px;
+		background: #EBEBEB;
+		border-radius: 50px;
+		position: relative;
+		transition: background $duration-normal $easing-out;
+		&:before {
+			content: "";
+			width: 16px;
+			height: 16px;
+			top: 2px;
+			left: 2px;
+			background: $color-white;
+			position: absolute;
+			display: block;
+			border-radius: 100%;
+			transition: left $duration-normal $easing-out;
+		}
+	}
+	&-input:checked ~ &-box {
+		background: $color-dark-golden;
+		&:before {
+			left: 18px;
+		}
+	}
+	&-input:checked ~ &-caption {
+		color: $color-dark-golden;
+	}
+}

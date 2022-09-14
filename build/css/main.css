@@ -6592,6 +6592,50 @@ template {
   .radio-input:checked + .radio-box + .radio-text {
     color: #6B6452; }
 
+.tumblr {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer; }
+  .tumblr-input {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute; }
+  .tumblr-caption {
+    font-size: 14px;
+    line-height: 1.29;
+    color: #98938C;
+    margin-right: 8px;
+    transition: color 0.4s ease-out; }
+    .tumblr-caption:last-child {
+      margin-right: 0;
+      margin-left: 8px; }
+  .tumblr-box {
+    width: 36px;
+    height: 20px;
+    background: #EBEBEB;
+    border-radius: 50px;
+    position: relative;
+    transition: background 0.4s ease-out; }
+    .tumblr-box:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      left: 2px;
+      background: #FFF;
+      position: absolute;
+      display: block;
+      border-radius: 100%;
+      transition: left 0.4s ease-out; }
+  .tumblr-input:checked ~ .tumblr-box {
+    background: #736035; }
+    .tumblr-input:checked ~ .tumblr-box:before {
+      left: 18px; }
+  .tumblr-input:checked ~ .tumblr-caption {
+    color: #736035; }
+
 *,
 *::before,
 *::after {
