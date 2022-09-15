@@ -1,0 +1,15 @@
+mixin block_consulting(object)
+    .block_consulting&attributes(attributes)
+        +lazyPicture({
+            src: object.images,
+            alt: '',
+        }).block_consulting-img
+        .container
+            .row
+                .col-lg-8.col-md-11
+                    .block_consulting-content
+                        .block_consulting-title.mb-48
+                            h2 !{object.heading}
+                        .block_consulting-text.mb-24 !{object.text}
+                        .block_consulting-btn
+                            a(href=object.btnHref).btn.btn-darken !{object.btnText}

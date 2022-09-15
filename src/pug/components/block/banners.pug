@@ -1,0 +1,14 @@
+mixin block_banners(items)
+    .block_banners&attributes(attributes)
+        .container
+            .row
+                each item in items
+                    .col-md.block_banners-item--wrapper
+                        a(href=item.href).block_banners-item
+                            +lazyPicture({
+                                src: item.img,
+                                alt: '',
+                            }).block_banners-img
+                            .block_banners-content--wrapper
+                                .block_banners-content
+                                    .link.link-photo.link--big !{item.button}

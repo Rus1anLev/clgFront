@@ -1,0 +1,37 @@
+.block_subscribe {
+  &-heading {
+    color: $color-black;
+  }
+  &-text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.33;
+    color: $color-black;
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+      margin-bottom: 36px;
+    }
+  }
+  &-row {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+  }
+  &-input {
+    flex: 0 0 296px;
+    margin-right: 16px;
+    @include media-breakpoint-down(lg) {
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+  }
+  &-btn {
+    .btn {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+  }
+}

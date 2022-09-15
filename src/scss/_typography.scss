@@ -1,25 +1,19 @@
-h1, h2, h3, h4, h5, h6 {
-	font-family: $font-heading;
+h1, .h1 {
+
+}
+
+h2, .h2 {
+	font-family: $font-secondary;
+	font-style: normal;
 	font-weight: 400;
-	line-height: 43px;
-}
-
-h1 {
-	font-size: 52px;
-	
-}
-
-h2 {
 	font-size: 47px;
-	margin-bottom: 60px;
-	@include media-breakpoint-down(md) {
-		font-size: 30px;
-		margin-bottom: 48px;
-	}
-}
+	line-height: 0.91;
+	margin: 0;
 
-h3 {
-	font-size: 29px;
+	@include media-breakpoint-down(lg) {
+		font-size: 30px;
+		line-height: 1.07;
+	}
 }
 
 .menu-item {
@@ -29,17 +23,53 @@ h3 {
 	&:hover {
 		color: $color-dark-golden;
 	}
+	@include media-breakpoint-down(md) {
+		font-size: 14px;
+		line-height: 1.29;
+	}
 }
 
 .link {
-	&-default {
+	letter-spacing: 0.5px;
+	font-weight: 400;
+	text-transform: uppercase;
+	display: inline-block;
+	&-primary {
+		color: $color-dark-golden;
+		transition: color $duration-normal $easing-out;
+		&:hover {
+			color: $color-accent;
+		}
+	}
+	&-photo {
+		color: $color-white;
+		transition: color $duration-normal $easing-out;
+		&:hover {
+			color: $color-space-gray;
+		}
+	}
+
+	&--big {
+		font-size: 16px;
+		line-height: 1.12;
+		padding: 12px 0;
+		@include media-breakpoint-only(xs) {
+			font-size: 14px;
+			line-height: 1.29;
+		}
+	}
+
+	&--small {
+		font-size: 10px;
+		line-height: 1.8;
+		padding: 6px 0;
+	}
+
+	&-personal {
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 1.29;
 		text-decoration-line: underline;
-	}
-	&-small {
-
 	}
 }
 
@@ -102,8 +132,6 @@ h3 {
 			background: #FFF;
 			outline: none;
 			border-radius: 4px;
-			-webkit-transition: padding 0.3s;
-			-o-transition: padding 0.3s;
 			transition: padding 0.3s;
 			color: $color-black;
 			font-weight: 300;
@@ -128,8 +156,6 @@ h3 {
 			padding: 16px 11px;
 			font-size: 14px;
 			line-height: 1.29;
-			-webkit-transition: padding 0.3s, font-size 0.3s;
-			-o-transition: padding 0.3s, font-size 0.3s;
 			transition: padding 0.3s, font-size 0.3s;
 			font-weight: 300;
 		}
@@ -220,5 +246,181 @@ h3 {
 		font-family: $font-primary;
 		font-size: 12px;
 		letter-spacing: -0.1px;
+	}
+}
+
+.checkbox {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	&-input {
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+	}
+	&-box {
+		flex: 0 0 16px;
+		width: 16px;
+		height: 16px;
+		border-radius: 2px;
+		color: #FFF;
+		transition: background-color $duration-normal $easing-out;
+		position: relative;
+
+		&:before {
+			content: "";
+			border: 1px solid $color-beige;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			border-radius: 2px;
+			transition: border-color $duration-normal $easing-out;
+		}
+	}
+	&-text {
+		line-height: 1.33;
+		margin-left: 6px;
+		font-weight: 300;
+		color: $color-silver-brown;
+		transition: color $duration-normal $easing-out;
+		&--big {
+			font-size: 18px;
+		}
+		&--small {
+			font-size: 12px;
+		}
+		a {
+			text-decoration: underline;
+			text-decoration-thickness: from-font;
+			text-decoration-skip-ink: none;
+		}
+	}
+
+	&-input:checked + &-box {
+		background-color: $color-dark-golden;
+		&:before {
+			border-color: $color-dark-golden;
+		}
+	}
+
+	&-input:checked + &-box + &-text {
+		color: $color-cold-brown;
+	}
+}
+
+.radio {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	&-input {
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+	}
+	&-box {
+		flex: 0 0 16px;
+		width: 16px;
+		height: 16px;
+		border-radius: 100%;
+		color: #FFF;
+		position: relative;
+		border: 1px solid $color-beige;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 3px;
+			right: 3px;
+			bottom: 3px;
+			left: 3px;
+			border-radius: 100%;
+			transition: background-color $duration-normal $easing-out;
+			background-color: transparent;
+		}
+	}
+	&-text {
+		line-height: 1.33;
+		margin-left: 6px;
+		font-weight: 300;
+		color: $color-silver-brown;
+		transition: color $duration-normal $easing-out;
+		&--big {
+			font-size: 18px;
+		}
+		&--small {
+			font-size: 14px;
+			line-height: 1.07;
+		}
+	}
+
+	&-input:checked + &-box {
+		border-color: $color-dark-golden;
+		&:before {
+			background-color: $color-dark-golden;
+		}
+	}
+
+	&-input:checked + &-box + &-text {
+		color: $color-cold-brown;
+	}
+}
+
+.tumblr {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+
+	&-input {
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+	}
+	&-caption {
+		font-size: 14px;
+		line-height: 1.29;
+		color: $color-silver-brown;
+		margin-right: 8px;
+		transition: color $duration-normal $easing-out;
+		&:last-child {
+			margin-right: 0;
+			margin-left: 8px;
+		}
+	}
+	&-box {
+		width: 36px;
+		height: 20px;
+		background: #EBEBEB;
+		border-radius: 50px;
+		position: relative;
+		transition: background $duration-normal $easing-out;
+		&:before {
+			content: "";
+			width: 16px;
+			height: 16px;
+			top: 2px;
+			left: 2px;
+			background: $color-white;
+			position: absolute;
+			display: block;
+			border-radius: 100%;
+			transition: left $duration-normal $easing-out;
+		}
+	}
+	&-input:checked ~ &-box {
+		background: $color-dark-golden;
+		&:before {
+			left: 18px;
+		}
+	}
+	&-input:checked ~ &-caption {
+		color: $color-dark-golden;
 	}
 }

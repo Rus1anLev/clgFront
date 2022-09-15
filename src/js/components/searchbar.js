@@ -9,11 +9,20 @@ const closeSearchbar = () => {
     $searchbar.removeClass('is-open')
 }
 
+const openSearchbar = () => {
+    $header.addClass('is-open')
+    $searchbar.addClass('is-open')
+}
+
 function handlerSwitcherSearchbar() {
     closeBurgerWindow('all')
     closeBurgerMenu()
-    $header.toggleClass('is-open')
-    $searchbar.toggleClass('is-open')
+
+    if( $searchbar.hasClass('is-open') ) {
+        closeSearchbar()
+    } else {
+        openSearchbar()
+    }
 }
 
 function initSearchbar() {
