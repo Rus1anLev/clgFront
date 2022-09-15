@@ -20,3 +20,17 @@
 		margin-top: 24px;
 	}
 }
+.mt-120 {
+	margin-top: 120px;
+	@include media-breakpoint-down(md) {
+		margin-top: 80px;
+	}
+}
+
+.mb-120 {
+	margin-bottom: 120px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 80px;
+	}
+}
+

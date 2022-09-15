@@ -2,11 +2,13 @@ import * as bodyScrollLock from 'body-scroll-lock';
 
 let vars = {};
 
+vars.path = "/"
+
 vars.$document = $(document);
 vars.$window = $(window);
 vars.$body = $(document.body);
 vars.$html = $(document.documentElement);
-vars.isMobile = () => innerWidth <= 1024;
+vars.isMobile = () => innerWidth <= 960;
 vars.isIE = () => vars.$html.hasClass('is-browser-ie');
 vars.isIOS = () => vars.$html.hasClass('is-os-ios');
 vars.winWidth = window.innerWidth;
@@ -38,6 +40,8 @@ vars.setCookie = (name, value, days) => {
 	document.cookie = `${name}=${value || ''}${expires}; path=/`;
 };
 
+window.setCookie = vars.setCookie
+
 /**
 * Получить куки запись
 * @param {string} name Обязательное, название записи
@@ -60,6 +64,8 @@ vars.getCookie = (name) => {
 
 	return null;
 };
+
+window.getCookie = vars.getCookie
 
 /**
 * Удалить куки запись

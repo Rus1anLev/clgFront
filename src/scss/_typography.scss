@@ -1,3 +1,27 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-heading;
+	font-weight: 400;
+	line-height: 43px;
+}
+
+h1 {
+	font-size: 52px;
+	
+}
+
+h2 {
+	font-size: 47px;
+	margin-bottom: 60px;
+	@include media-breakpoint-down(md) {
+		font-size: 30px;
+		margin-bottom: 48px;
+	}
+}
+
+h3 {
+	font-size: 29px;
+}
+
 .menu-item {
 	font-weight: 300;
 	font-size: 16px;
@@ -183,8 +207,18 @@
 				}
 			}
 		}
-		&.is-error + &--notify {
+		&--notify.is-error {
+			display: none;
+		}
+		&.is-error ~ &--notify.is-error {
+			display: block;
 			color: $color-system-red;
 		}
+	}
+	.info-top {
+		color: $color-silver-brown;
+		font-family: $font-primary;
+		font-size: 12px;
+		letter-spacing: -0.1px;
 	}
 }

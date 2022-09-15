@@ -23,6 +23,15 @@ main.test
                             label.form-control--label Дескриптор
 
                     .form-row
+                        .form-control.form-control--icon-right.is-error
+                            .form-control--icon
+                                +svg('calenader')
+                            input(type="text" placeholder="Дескриптор").form-control--input
+                            label.form-control--label Дескриптор
+                        .form-control--notify
+                            | Текст ошибки или уведомления
+
+                    .form-row
                         .form-control.is-disabled
                             input(type="text" placeholder="Дескриптор").form-control--input
                             label.form-control--label Дескриптор
