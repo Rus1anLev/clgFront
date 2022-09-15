@@ -1,0 +1,31 @@
+mixin block_content_aside(items)
+    .block_content_aside&attributes(attributes)
+        .container
+            each item in items
+                .block_content_aside-item
+                    .row
+                        if item.position === 'right'
+                            .col-md-8.d-none.d-md-block
+                                +lazyPicture({
+                                    src: item.img,
+                                    alt: '',
+                                }).block_content_aside-img
+                        .col-md-8
+                            .block_content_aside-content( class='block_content_aside-content--' + item.position )
+                                .block_content_aside-title.mb-48
+                                    h2 !{item.heading}
+                                +lazyPicture({
+                                    src: item.img,
+                                    alt: '',
+                                }).block_content_aside-img.d-md-none.mb-12
+                                .block_content_aside-text.mb-24 !{item.text}
+                                .block_content_aside-link
+                                    a(href=item.href).link.link-primary.link--big !{item.button}
+                        if item.position === 'left'
+                            .col-md-8.d-none.d-md-block
+                                +lazyPicture({
+                                    src: item.img,
+                                    alt: '',
+                                }).block_content_aside-img
+
+

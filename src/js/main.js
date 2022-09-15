@@ -8,6 +8,7 @@ import {headerInit} from './components/header';
 import {initSearchbar} from './components/searchbar';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
+import './components/select';
 
 ieFix();
 vhFix();

@@ -1,0 +1,108 @@
+.select2-container .select2-selection--single .select2-selection__rendered {
+
+}
+.select2-container .select2-selection--single {
+  height: 58px;
+}
+.select2-container--default .select2-selection--single {
+  border: 1px solid $color-beige;
+  border-radius: 4px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  height: 58px;
+  padding: 20px 12px;
+  font-size: 14px;
+  line-height: 1.29;
+  font-weight: 300;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 12px;
+  width: 24px;
+}
+.select2-selection__placeholder{
+
+}
+.select2-selection__placeholder-top {
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.select2-selection__rendered-value {
+  position: relative;
+  top: 7px;
+  font-size: 14px;
+  line-height: 1.29;
+  font-weight: 300;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border: none;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b svg {
+  transform: rotate(180deg);
+}
+
+.select2-results__option {
+  padding: 9px 8px 9px 14px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.33;
+  color: $color-silver-brown;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: #F7F7F7;
+  color: $color-silver-brown;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background: transparent;
+  color: $color-cold-brown;
+}
+
+.select2-container--default .select2-selection--single:hover {
+  background: #F7F7F7;
+}
+
+.select2-dropdown {
+  border: none;
+  box-shadow: 1px 1px 20px rgba(44, 44, 44, 0.05);
+  border-radius: 6px !important;
+  overflow: hidden;
+}
+
+.select2-container {
+  padding: 4px 0;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  &::-webkit-scrollbar {
+    width: 9px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #F4F4F4;
+    padding: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 2px solid #f4f4f4;
+    background-color: $color-dark-golden;
+    border-radius: 10px;
+  }
+}

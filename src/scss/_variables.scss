@@ -1,6 +1,7 @@
 // stylelint-disable scss/dollar-variable-empty-line-before
 
 // COLORS
+$color-accent: #AE9958;
 $color-black: #2C2C2C;
 $color-white: #FFF;
 $color-space-gray: #E0E0E0;
@@ -14,6 +15,7 @@ $color-cold-brown: #6B6452;
 	// FONTS
 // stylelint-disable-next-line
 $font-primary: "Jost", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-secondary: "Forum", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", serif;
 
 // EASING TRANSITIONS
 $duration-normal: 0.4s;

@@ -1,0 +1,26 @@
+mixin block_subscribe(object)
+    .block_subscribe&attributes(attributes)
+        .container
+            .row.align-items-center.justify-content-md-center
+                .col-lg-8.col-md-6
+                    .block_subscribe-heading.mb-12
+                        h2 Подписка на новости
+                    .block_subscribe-text
+                        | Подпишитесь на email-рассылку и будьте в курсе <br class="d-none d-lg-block"/> новостей бренда
+                .col-12.d-lg-none
+                .col-lg-8.col-md-6
+                    form.form.block_subscribe-form
+                        .block_subscribe-row.mb-12
+                            .block_subscribe-input
+                                .form-control
+                                    input(type="email" placeholder="Email" required).form-control--input
+                                    label.form-control--label Email
+                            .block_subscribe-btn
+                                button.btn.btn-primary ПОДПИСАТЬСЯ
+                        .block_subscribe-agree
+                            label.checkbox
+                                input(type="checkbox" required).checkbox-input
+                                .checkbox-box
+                                    +svg('checkbox')
+                                .checkbox-text.checkbox-text--small
+                                    | Согласен на <a href="#">получение рассылок</a> и <a href="#">с политикой обработки персональных данных</a>

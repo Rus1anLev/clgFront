@@ -1,2 +1,62 @@
 footer.footer
+    .container
+        .footer-top.d-md-flex.justify-content-lg-between
+            .footer-col
+                nav.footer-nav
+                    a(href="#").footer-nav--item.menu-item Забронировать визит в бутик
+                    a(href="#").footer-nav--item.menu-item Адреса бутиков
+                    a(href="#").footer-nav--item.menu-item Блог
+                    a(href="#").footer-nav--item.menu-item Подписаться на новости
+            .footer-col
+                nav.footer-nav
+                    a(href="#").footer-nav--item.menu-item Карьера
+                    a(href="#").footer-nav--item.menu-item B2b-клиентам
+            .footer-col
+                nav.footer-nav
+                    a(href="#").footer-nav--item.menu-item Контакты
+                    a(href="#").footer-nav--item.menu-item Оплаты
+                    a(href="#").footer-nav--item.menu-item Доставка
+            .footer-col
+                nav.footer-nav
+                    a(href="#").footer-nav--item.menu-item Публичная оферта
+                    a(href="#").footer-nav--item.menu-item Программа лояльности
+                    a(href="#").footer-nav--item.menu-item Политика конфиденциальности
+                    a(href="#").footer-nav--item.menu-item Политика обработки персональных данных
+                    a(href="#").footer-nav--item.menu-item Условия маркетинговых рассылок
+            .footer-col
+                .footer-social
+                    a(href="#").footer-social--item
+                        +svg('vk')
+                    a(href="#").footer-social--item
+                        +svg('ok')
+                    a(href="#").footer-social--item
+                        +svg('tg')
+        .footer-bottom.d-flex.justify-content-md-between.align-items-md-center.flex-column.flex-md-row
+            .footer-copy © Caterina Leman 2022 Все права защищены
+            .footer-payments
+                .footer-payments--label Принимаем к оплате
+                .footer-payments--item.footer-payments--item--mir
+                    +lazyPicture({
+                        src: `${baseDir}images/footer/mir.svg`,
+                        alt: '',
+                    })
+                .footer-payments--item.footer-payments--item--visa
+                    +lazyPicture({
+                        src: `${baseDir}images/footer/visa.svg`,
+                        alt: '',
+                    })
+                .footer-payments--item.footer-payments--item--mastercard
+                    +lazyPicture({
+                        src: `${baseDir}images/footer/mastercard.svg`,
+                        alt: '',
+                    })
+                .footer-payments--item.footer-payments--item--union
+                    +lazyPicture({
+                        src: `${baseDir}images/footer/union-pay.svg`,
+                        alt: '',
+                    })
+
+
+
+
 

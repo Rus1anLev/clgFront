@@ -309,11 +309,20 @@ const closeSearchbar = () => {
   $searchbar.removeClass('is-open');
 };
 
+const openSearchbar = () => {
+  $header.addClass('is-open');
+  $searchbar.addClass('is-open');
+};
+
 function handlerSwitcherSearchbar() {
   Object(_header__WEBPACK_IMPORTED_MODULE_0__["closeBurgerWindow"])('all');
   Object(_header__WEBPACK_IMPORTED_MODULE_0__["closeBurgerMenu"])();
-  $header.toggleClass('is-open');
-  $searchbar.toggleClass('is-open');
+
+  if ($searchbar.hasClass('is-open')) {
+    closeSearchbar();
+  } else {
+    openSearchbar();
+  }
 }
 
 function initSearchbar() {
@@ -321,6 +330,47 @@ function initSearchbar() {
 }
 
 
+
+/***/ }),
+
+/***/ "./src/js/components/select.js":
+/*!*************************************!*\
+  !*** ./src/js/components/select.js ***!
+  \*************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var select2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! select2 */ "./node_modules/select2/dist/js/select2.js");
+/* harmony import */ var select2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(select2__WEBPACK_IMPORTED_MODULE_0__);
+
+$(function () {
+  const $selectEl = $('.select');
+
+  if ($selectEl.length) {
+    $selectEl.each(function () {
+      let placeholder = $(this).attr('placeholder'),
+          field = $(this);
+      field.select2({
+        placeholder,
+        minimumResultsForSearch: -1,
+        width: '100%',
+        templateSelection: function (state) {
+          if (!state.id) {
+            return state.text;
+          }
+
+          return $(`
+                            <div class="select2-selection__placeholder select2-selection__placeholder-top">${placeholder}</div>
+                            <div class="select2-selection__rendered-value">${state.text}</div>
+                        `);
+        }
+      });
+    });
+    $('.select2-selection__arrow').find('b').append(`<svg><use xlink:href="/images/sprites.svg#arrow-down"></use></svg>`);
+  }
+});
 
 /***/ }),
 
@@ -593,6 +643,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_searchbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/searchbar */ "./src/js/components/searchbar.js");
 /* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
 /* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
+/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/select */ "./src/js/components/select.js");
+
 
 
 
