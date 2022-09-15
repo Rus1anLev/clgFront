@@ -1,3 +1,148 @@
 .footer {
+  background: #F7F7F7;
+  padding: 60px 0 24px;
+  color: $color-black;
+  @include media-breakpoint-down(lg) {
+    padding: 48px 0 24px;
+  }
 
+  &-top {
+    padding-bottom: 48px;
+    border-bottom: 1px solid $color-space-gray;
+    margin-bottom: 24px;
+    @include media-breakpoint-down(md) {
+      padding-bottom: 0;
+    }
+  }
+
+  &-col {
+    margin-right: 110px;
+
+    @include media-breakpoint-down(lg) {
+      margin-right: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-right: 0;
+      margin-bottom: 36px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-nav {
+    &--item {
+      display: block;
+      margin-bottom: 8px;
+      white-space: nowrap;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 12px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-social {
+    display: flex;
+    color: $color-dark-golden;
+
+    &--item {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      transition: transform $duration-normal $easing-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-right: 24px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+    }
+  }
+
+  &-copy {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.33;
+    @include media-breakpoint-only(md) {
+      font-size: 14px;
+      line-height: 1.07;
+    }
+    @include media-breakpoint-down(md) {
+      order: 2;
+      text-align: center;
+    }
+  }
+
+  &-payments {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      order: 1;
+      margin-bottom: 15px;
+    }
+
+    & > * {
+      margin-right: 16px;
+      @include media-breakpoint-down(md) {
+        margin-right: 4px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &--label {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.29;
+      @include media-breakpoint-only(md) {
+        line-height: 1.07;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 12px;
+        line-height: 1.33;
+        margin-right: auto;
+      }
+    }
+
+    &--item {
+      picture {
+        display: block;
+      }
+
+      @include media-breakpoint-down(md) {
+        &--mir {
+          width: 32px;
+        }
+        &--visa {
+          width: 27px;
+        }
+        &--mastercard {
+          width: 52px;
+        }
+        &--union {
+          width: 21px;
+        }
+      }
+    }
+  }
 }

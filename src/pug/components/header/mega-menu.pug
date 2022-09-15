@@ -40,4 +40,7 @@
 
                     .mega-menu__window-col
                         a(href="#").mega-menu__window-img
-                            img(src="/images/header/mega-menu-img.jpg")
+                            +lazyPicture({
+                                src: '/images/header/mega-menu-img.jpg',
+                                alt: '',
+                            })

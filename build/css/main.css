@@ -6363,7 +6363,7 @@ h2, .h2 {
   font-size: 47px;
   line-height: 0.91;
   margin: 0; }
-  @media (max-width: 983.98px) {
+  @media (max-width: 1303.98px) {
     h2, .h2 {
       font-size: 30px;
       line-height: 1.07; } }
@@ -6374,6 +6374,10 @@ h2, .h2 {
   line-height: 1.12; }
   .menu-item:hover {
     color: #736035; }
+  @media (max-width: 983.98px) {
+    .menu-item {
+      font-size: 14px;
+      line-height: 1.29; } }
 
 .link {
   letter-spacing: 0.5px;
@@ -7176,6 +7180,38 @@ iframe {
     font-size: 18px;
     line-height: 1.33; }
 
+.block_subscribe-heading {
+  color: #2C2C2C; }
+
+.block_subscribe-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #2C2C2C; }
+  @media (max-width: 1303.98px) {
+    .block_subscribe-text {
+      font-size: 16px;
+      margin-bottom: 36px; } }
+
+.block_subscribe-row {
+  display: flex;
+  align-items: center; }
+  @media (max-width: 1303.98px) {
+    .block_subscribe-row {
+      display: block; } }
+
+.block_subscribe-input {
+  flex: 0 0 296px;
+  margin-right: 16px; }
+  @media (max-width: 1303.98px) {
+    .block_subscribe-input {
+      margin-right: 0;
+      margin-bottom: 12px; } }
+
+@media (max-width: 1303.98px) {
+  .block_subscribe-btn .btn {
+    width: 100%; } }
+
 .header {
   color: #FFF;
   transition: 0.4s ease-out background-color;
@@ -7450,5 +7486,108 @@ iframe {
       top: 25px;
       width: 450px;
       transform: translateX(-50%); } }
+
+.footer {
+  background: #F7F7F7;
+  padding: 60px 0 24px;
+  color: #2C2C2C; }
+  @media (max-width: 1303.98px) {
+    .footer {
+      padding: 48px 0 24px; } }
+  .footer-top {
+    padding-bottom: 48px;
+    border-bottom: 1px solid #E0E0E0;
+    margin-bottom: 24px; }
+    @media (max-width: 983.98px) {
+      .footer-top {
+        padding-bottom: 0; } }
+  .footer-col {
+    margin-right: 110px; }
+    @media (max-width: 1303.98px) {
+      .footer-col {
+        margin-right: 40px; } }
+    @media (max-width: 983.98px) {
+      .footer-col {
+        margin-right: 0;
+        margin-bottom: 36px; } }
+    .footer-col:last-child {
+      margin-right: 0; }
+  .footer-nav--item {
+    display: block;
+    margin-bottom: 8px;
+    white-space: nowrap; }
+    @media (max-width: 983.98px) {
+      .footer-nav--item {
+        margin-bottom: 12px; } }
+    .footer-nav--item:last-child {
+      margin-bottom: 0; }
+  .footer-social {
+    display: flex;
+    color: #736035; }
+    .footer-social--item {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      transition: transform 0.4s ease-out; }
+      .footer-social--item:hover {
+        transform: scale(1.2); }
+      @media (max-width: 983.98px) {
+        .footer-social--item {
+          margin-right: 24px; } }
+      .footer-social--item:last-child {
+        margin-right: 0; }
+    @media (max-width: 983.98px) {
+      .footer-social {
+        justify-content: center; } }
+  .footer-copy {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.33; }
+    @media (min-width: 984px) and (max-width: 1303.98px) {
+      .footer-copy {
+        font-size: 14px;
+        line-height: 1.07; } }
+    @media (max-width: 983.98px) {
+      .footer-copy {
+        order: 2;
+        text-align: center; } }
+  .footer-payments {
+    display: flex;
+    align-items: center; }
+    @media (max-width: 983.98px) {
+      .footer-payments {
+        order: 1;
+        margin-bottom: 15px; } }
+    .footer-payments > * {
+      margin-right: 16px; }
+      @media (max-width: 983.98px) {
+        .footer-payments > * {
+          margin-right: 4px; } }
+      .footer-payments > *:last-child {
+        margin-right: 0; }
+    .footer-payments--label {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.29; }
+      @media (min-width: 984px) and (max-width: 1303.98px) {
+        .footer-payments--label {
+          line-height: 1.07; } }
+      @media (max-width: 983.98px) {
+        .footer-payments--label {
+          font-size: 12px;
+          line-height: 1.33;
+          margin-right: auto; } }
+    .footer-payments--item picture {
+      display: block; }
+    @media (max-width: 983.98px) {
+      .footer-payments--item--mir {
+        width: 32px; }
+      .footer-payments--item--visa {
+        width: 27px; }
+      .footer-payments--item--mastercard {
+        width: 52px; }
+      .footer-payments--item--union {
+        width: 21px; } }
 
 /*# sourceMappingURL=main.css.map */
