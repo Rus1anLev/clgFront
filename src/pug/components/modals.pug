@@ -1,0 +1,68 @@
+// модалка авторизации
+button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target="modal-auth") Модалка авторизации
+// The sheet component
+.bottom-sheet.column.items-center.justify-end.auto-height(aria-hidden="true")#modal-auth
+	// Dark background for the sheet
+	.overlay
+	// The sheet itself
+	.contents.column
+		// Sheet controls
+		header.controls
+			// The thing to drag if you want to resize the sheet
+			.draggable-area
+				.draggable-thumb
+		// Body of the sheet
+		main.body.fill.column
+			.inner-auth-block
+				h2 Войти или создать профиль
+				form.form
+					.block_callback__form-input
+						.form-row
+							.form-control.form-control--icon-right
+								.form-control--icon
+									+svg('calenader')
+								input(type="text" name="PHONE" placeholder="+7 ___ ___ __ __").form-control--input
+								label.form-control--label Ваш номер телефона
+							.form-control--notify.is-error
+								| Текст ошибки
+					button.btn.btn-primary(type="submit") Получить код
+
+// модалка sms-кода
+button.open-sheet.js-open-modal(type="button", aria-controls="sheet" data-target="modal-code") Модалка sms-code
+// The sheet component
+.bottom-sheet.column.items-center.justify-end.auto-height(aria-hidden="true")#modal-code
+	// Dark background for the sheet
+	.overlay
+	// The sheet itself
+	.contents.column
+		// Sheet controls
+		header.controls
+			// The thing to drag if you want to resize the sheet
+			.draggable-area
+				.draggable-thumb
+		// Body of the sheet
+		main.body.fill.column
+			.inner-auth-block
+				h2 Войти или создать профиль
+				form.form
+					.form-control.form-control--icon-right
+						.form-control--icon
+							+svg('done')
+						input(type="text" name="PHONE" placeholder="+7 ___ ___ __ __" value="+7 955 55-55-55" disabled="disabled").form-control--input
+						label.form-control--label Ваш номер телефона
+
+					p.info-top Введите код подтверждения, полученный по SMS
+					label.form__group.sms-code.form-control
+						input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1" placeholder="___" onFocus="this.select()")
+						input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1" placeholder="___" onFocus="this.select()")
+						input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1" placeholder="___" onFocus="this.select()")
+						input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1" placeholder="___" onFocus="this.select()")
+					.form-control--notify.is-error
+						| Текст ошибки
+					.timer.mb-24.info-top
+						| Повторная отправка доступна через 00:51
+					.form-btn
+							button.btn.btn-primary.btn-small.resend-code.is-disabled
+								span
+									| Запросить повторно
+			

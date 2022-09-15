@@ -233,9 +233,19 @@ h2, .h2 {
 				}
 			}
 		}
-		&.is-error + &--notify {
+		&--notify.is-error {
+			display: none;
+		}
+		&.is-error ~ &--notify.is-error {
+			display: block;
 			color: $color-system-red;
 		}
+	}
+	.info-top {
+		color: $color-silver-brown;
+		font-family: $font-primary;
+		font-size: 12px;
+		letter-spacing: -0.1px;
 	}
 }
 

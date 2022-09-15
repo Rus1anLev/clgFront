@@ -9,7 +9,11 @@ import {initSearchbar} from './components/searchbar';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import './components/select';
+import oneTimePasswd from "./components/oneTimePasswd";
+import './components/popup';
+import {bottomSheet} from "./components/bottomSheet";
 
+bottomSheet();
 ieFix();
 vhFix();
 actualYear();
@@ -18,3 +22,4 @@ scrollToAnchor.init();
 headerInit();
 initSearchbar()
 lazyLoading.init();
+oneTimePasswd.init();

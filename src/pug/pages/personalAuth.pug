@@ -1,0 +1,55 @@
+main.personal.mt-100
+
+	section.auth
+		.container
+			.row
+				.col-xs-12
+					.outer-auth-block.mt-120.mb-120
+						.inner-auth-block
+							h2.mb-60 Войти или создать профиль
+							form.form
+								.block_callback__form-input
+									.form-row
+										.form-control.form-control--icon-right
+											.form-control--icon
+												+svg('calenader')
+											input(type="text" name="PHONE" placeholder="+7 ___ ___ __ __").form-control--input
+											label.form-control--label Ваш номер телефона
+										.form-control--notify.is-error
+											| Текст ошибки
+								
+								button.btn.btn-primary(type="submit") Получить код
+	hr
+	section.code
+		.container
+			.row
+				.col-xs-12
+					.outer-auth-block.mt-120
+						.inner-auth-block
+							h2.mb-60 Войти или создать профиль
+							form.form
+								.form-control.form-control--icon-right
+									.form-control--icon
+										+svg('done')
+									input(type="text" name="PHONE" placeholder="+7 ___ ___ __ __" value="+7 955 55-55-55" disabled="disabled").form-control--input
+									label.form-control--label Ваш номер телефона
+
+								p.info-top Введите код подтверждения, полученный по SMS
+								label.form__group.sms-code.form-control
+									input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1" placeholder="___" onFocus="this.select()")
+									input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1" placeholder="___" onFocus="this.select()")
+									input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1" placeholder="___" onFocus="this.select()")
+									input.form__group-input.form__group__up-input.short(type="text" value="" maxlength="1" placeholder="___" onFocus="this.select()")
+								.form-control--notify.is-error
+									| Текст ошибки
+								.timer.mb-24.info-top
+									| Повторная отправка доступна через 00:51
+								.form-btn
+										button.btn.btn-primary.btn-small.resend-code.is-disabled
+											span
+												| Запросить повторно
+	br
+	br
+	br
+	br
+	br
