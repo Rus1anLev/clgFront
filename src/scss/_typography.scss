@@ -10,7 +10,7 @@ h2, .h2 {
 	line-height: 0.91;
 	margin: 0;
 
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		font-size: 30px;
 		line-height: 1.07;
 	}

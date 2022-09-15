@@ -29,4 +29,11 @@ main.home
             position: 'right'
         },
     ]).mb-120
-    +block_consulting().mb-120
+    +block_consulting({
+        images: '/images/pages/main/consultingImg.jpg',
+        heading: "Запишитесь на персональную консультацию стилиста",
+        text: 'На персональной консультации со стилистом Caterina Leman вы сможете собрать образ для важного события или подобрать комплекты одежды, которые будут подчеркивать ваш индивидуальный стиль.',
+        btnText: 'Записаться <span class="d-none d-md-inline">на консультацию</span>',
+        btnHref: '#'
+    }).mb-120
+    +block_subscribe().mb-120
