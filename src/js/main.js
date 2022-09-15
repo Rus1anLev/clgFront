@@ -12,6 +12,7 @@ import './components/select';
 import oneTimePasswd from "./components/oneTimePasswd";
 import './components/popup';
 import {bottomSheet} from "./components/bottomSheet";
+import {initFilter} from "./components/filter";
 
 bottomSheet();
 ieFix();
@@ -23,3 +24,5 @@ headerInit();
 initSearchbar()
 lazyLoading.init();
 oneTimePasswd.init();
+
+initFilter()

@@ -1,3 +1,108 @@
 .filter {
+  display: flex;
+  align-items: center;
+  padding-bottom: 23px;
+  position: relative;
+  border-bottom: 1px solid #F7F7F7;
 
+  &__params {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      margin-right: 36px;
+      position: relative;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &--link {
+
+      }
+
+    }
+
+    &-head {
+      display: flex;
+    }
+
+    &-name {
+      display: flex;
+      align-items: center;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.12;
+      color: $color-black;
+
+      &--icon {
+        margin-left: 4px;
+        width: 24px;
+        height: 24px;
+        flex: 0 0 24px;
+      }
+    }
+
+    //&-current {
+    //  display: flex;
+    //  align-items: center;
+    //  &--text {
+    //
+    //  }
+    //
+    //  &--icon {
+    //    margin-left: 4px;
+    //    width: 24px;
+    //    height: 24px;
+    //    flex: 0 0 24px;
+    //  }
+    //}
+
+    &-list {
+      display: none;
+      overflow-y: scroll;
+      position: absolute;
+      top: calc(100% + 4px);
+      width: 235px;
+      max-height: 252px;
+      background: #FFF;
+      box-shadow: 1px 1px 20px rgba(44, 44, 44, 0.05);
+      border-radius: 6px;
+
+
+      &::-webkit-scrollbar {
+        width: 9px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #F4F4F4;
+        padding: 2px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border: 2px solid #f4f4f4;
+        background-color: $color-dark-golden;
+        border-radius: 10px;
+      }
+      &--item {
+        &:nth-child(even) {
+          background: $color-silver-gray;
+        }
+      }
+      &--links &--item {
+        display: block;
+        padding: 9px 8px 9px 14px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.33;
+        color: $color-silver-brown;
+      }
+      &--checkbox &--item {
+        display: flex;
+        padding: 9px 8px 9px 14px;
+      }
+    }
+  }
 }
