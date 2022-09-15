@@ -1,7 +1,6 @@
 import Inputmask from "inputmask";
 
 
-
 function inputInsideOtpInput(el) {
     if (el.value.length > 1){
         el.value = el.value[el.value.length - 1];

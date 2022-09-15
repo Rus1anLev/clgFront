@@ -22,7 +22,6 @@ const bottomSheet = function () {
 
 
 		const openModal = function (modalID) {
-			// lockScroll()
 			if ($(modalID).length > 0) {
 				if ($(window).width() >= 576 || $(modalID).hasClass('bottom-full')) {
 					$.fancybox.open({
@@ -92,14 +91,6 @@ const bottomSheet = function () {
 		let firstInput = document.querySelector(selector)
 		window.setTimeout(() => firstInput.focus(), 100);
 
-		console.log(target)
-
-        // if ($el.length) {
-        //   $el.trigger("focus");
-        // } else {
-        //   self.focus(null, true);
-        // }
-
 	}
 
 	const closeBottomModal = function (target) {
@@ -121,14 +112,6 @@ const bottomSheet = function () {
 	
 	function setSheetHeight(value, modalID) {
 
-		// if (value === 100) {
-		// 	value = 99
-		// }
-
-		// if ($('html').hasClass('is-os-ios') && value > 90) {
-		// 	value = 90
-		// }
-
 		if (value > 90) {
 			value = 90
 		}		
@@ -144,11 +127,11 @@ const bottomSheet = function () {
 	}
 
 	function unlockScroll() {
-		$('html, body').css('overflow', 'inherit')
+		$('body').css('overflow', 'inherit')
 	}
 
 	function lockScroll() {
-		$('html, body').css('overflow', 'hidden')
+		$('body').css('overflow', 'hidden')
 	}
 
 	const setIsSheetShown = (value, modalID) => {
