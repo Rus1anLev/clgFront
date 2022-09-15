@@ -6879,6 +6879,18 @@ iframe {
     .mt-60 {
       margin-top: 36px; } }
 
+.pb-60 {
+  padding-bottom: 60px; }
+  @media (max-width: 983.98px) {
+    .pb-60 {
+      padding-bottom: 36px; } }
+
+.pt-60 {
+  padding-top: 60px; }
+  @media (max-width: 983.98px) {
+    .pt-60 {
+      padding-top: 36px; } }
+
 .mb-48 {
   margin-bottom: 48px; }
   @media (max-width: 983.98px) {

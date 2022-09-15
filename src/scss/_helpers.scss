@@ -34,6 +34,19 @@
 	}
 }
 
+.pb-60 {
+	padding-bottom: 60px;
+	@include media-breakpoint-down(md) {
+		padding-bottom: 36px;
+	}
+}
+.pt-60 {
+	padding-top: 60px;
+	@include media-breakpoint-down(md) {
+		padding-top: 36px;
+	}
+}
+
 .mb-48 {
 	margin-bottom: 48px;
 	@include media-breakpoint-down(md) {
