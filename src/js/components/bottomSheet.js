@@ -45,7 +45,6 @@ const bottomSheet = function () {
 		window.closeModal = closeModal
 
 		const setModalHeight = function(height, modalID) {
-			console.log(modalID)
 
 			if (modalID == undefined) {
 				modalID = window.lastModalShown
@@ -60,7 +59,6 @@ const bottomSheet = function () {
 			}
 
 			var newHeight = $(modalID).find('.body > *').outerHeight() + 80
-			console.log(newHeight)
 			setSheetHeight(getVH(newHeight), modalID)
 
 		}
@@ -87,7 +85,6 @@ const bottomSheet = function () {
 		}
 
 		let selector = `${target} input:enabled`
-		console.log(selector)
 		let firstInput = document.querySelector(selector)
 		window.setTimeout(() => firstInput.focus(), 100);
 
@@ -154,7 +151,6 @@ const bottomSheet = function () {
 	let dragPosition
 
 	const onDragStart = (event) => {
-		console.log('drag started')
 		dragPosition = touchPosition(event).pageY
 
 		hideAll()

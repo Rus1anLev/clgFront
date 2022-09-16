@@ -2,6 +2,7 @@ import Inputmask from "inputmask";
 
 
 function inputInsideOtpInput(el) {
+    
     if (el.value.length > 1){
         el.value = el.value[el.value.length - 1];
     }
@@ -17,13 +18,15 @@ function inputInsideOtpInput(el) {
 }
 
 function foucusOnInput(ele){
-    ele.focus().select();
-    let val = ele.value;
-    ele.value = "";
-    // ele.value = val;
-    setTimeout(()=>{
-        ele.value = val;
-    })
+    if ($(ele).length > 0) {
+        ele.focus();
+        let val = ele.value;
+        ele.value = "";
+        // ele.value = val;
+        setTimeout(()=>{
+            ele.value = val;
+        })
+    }
 }
 
 function init() {

@@ -215,1034 +215,115 @@
 	}
 }
 
-// .grey-line {
-// 	height: 2px;
-// 	background: red;
-// }
-// .ttu {
-// 	text-transform: uppercase;
-// }
-// .with-sup {
-// 	flex-direction: row;
-// 	align-items: center;
-// 	sup {
-// 		top: 0;
-// 	}
-// }
-// section.auth, section.code, section.captcha {
-
-
-
-// 	label.sms-code {
-// 		display: flex;
-// 		justify-content: space-between;
-
-// 		input.short {
-// 			width: 20%;
-// 			text-align: center;
-// 		}
-
-// 	}
-// 	.resend-code {
-// 		width: 100%;
-// 	}
-// 	.timer {
-// 		color: #696969;
-// 		text-align: center;
-// 	}
-// 	.pass-captcha {
-// 		margin: 0 auto;
-// 		display: block;
-// 	}
-
-// 	h1 {
-// 		margin-top: 0;
-// 		margin-bottom: 0;
-// 		font-family: 'FuturaBookC';
-// 		font-style: normal;
-// 		font-weight: 400;
-// 		font-size: 24px;
-// 		line-height: 26px;
-
-// 		text-align: center;
-// 		text-transform: uppercase;
-
-// 		color: #333333;
-// 	}
-// 	h4 {
-
-// 		font-family: 'FuturaLightC';
-// 		font-style: normal;
-// 		font-weight: 400;
-// 		font-size: 15px;
-// 		line-height: 20px;
-
-// 		letter-spacing: 1.5px;
-// 		text-transform: uppercase;
-// 		color: #000000;
-// 	}
-
-// 	form {
-// 		display: flex;
-// 		flex-direction: column;
-// 		max-width: 296px;
-// 		margin-left: auto;
-// 		margin-right: auto;
-// 		margin-bottom: 100px;
-
-// 	}
-// }
-// .personal h1 {
-// 	margin-top: 0;
-// 	line-height: 12px;
-// 	font-family: 'FuturaBookC';
-// 	margin-bottom: 37px;
-// }
-// .personal {
-// 	.data {
-// 		h1 {
-// 				margin-top: 7px;
-// 				margin-bottom: 30px;
-// 			}
-// 	}
-// }
-// .personal-data {
-
-// 	font-family: FuturaLightC;
-// 	margin-bottom: 48px;
-
-// 	.form__group__left .form__group__left-label {
-// 		width: 19.3%;
-// 		justify-content: end;
-// 		padding-right: 17px;
-// 		align-items: center;
-// 		flex-direction: row;
-// 	}
-// 	.form__group-error {
-// 		margin-left: 12% ;
-// 	}
-// 	.with-desc {
-// 		input {
-// 			width: 43%;
-// 		}
-// 		.input-description {
-// 			width: 38%;
-// 			padding-left: 30px;
-// 			padding-left: 27px;
-// 			font-size: 16px;
-// 			line-height: 16px;
-// 			color: red;
-// 			display: inline-flex;
-// 			align-items: center;
-// 		}
-// 	}
-// 	.form__group-input {
-// 		height: 44px;
-// 		width: 80.6%;
-// 	}
-// 	label.checkbox {
-// 		margin: 24px;
-// 		margin-left: 0;
-// 	}
-// }
-
-// .deliveries {
-// 	h3 {
-// 		margin-bottom: 8px;
-// 		font-size: 17px;
-// 		line-height: 17px;
-// 	}
-// 	.save-delivery-desc {
-// 		font-size: 14.2px;
-// 		margin-bottom: 27px;
-// 	}
-// 	.btn-primary {
-// 		margin-bottom: 50px;
-// 	}
-// 	.addresses {
-// 		font-family: FuturaLightC;
-
-// 		margin-bottom: 17px;
-
-// 		.item {
-// 			display: flex;
-// 			border-top: 1px solid #F5F5F5;
-// 			border-bottom: 1px solid #F5F5F5;
-// 			padding-top: 24px;
-// 			padding-bottom: 24px;
-// 			justify-content: space-between;
-// 			.text {
-// 				max-width: 75%;
-// 				width: 75%;
-// 				font-size: 17px;
-// 				letter-spacing: -0.4px;
-// 				line-height: 17px;
-// 			}
-// 			&.removed {
-// 				padding-top: 22px;
-// 				padding-bottom: 19px;
-// 				color: #696969;
-// 				justify-content: space-between;
-// 			}
-// 			svg {
-// 				width: 16px;
-// 				height: 16px;
-// 			}
-// 			.edit, .delete {
-// 				display: flex;
-// 				align-items: center;
-// 				span {
-// 					margin-left: 4px;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-// .delete-account {
-// 	text-align: right;
-// 	padding-top: 41px;
-// 	.btn-small {
-// 		font-size: 12px;
-// 	}
-// }
-
-
-// .mb-test {
-// 	margin-bottom: 74px;
-// }
-
-
-// [type="radio"]:checked,
-// [type="radio"]:not(:checked) {
-// 	position: absolute;
-// 	left: -9999px;
-// }
-// [type="radio"]:checked + label,
-// [type="radio"]:not(:checked) + label
-// {
-// 	position: relative;
-// 	padding-left: 33px;
-// 	margin-right: 20px;
-// 	cursor: pointer;
-// 	line-height: 20px;
-// 	display: inline-block;
-// 	color: #666;
-// }
-// [type="radio"]:checked + label:before,
-// [type="radio"]:not(:checked) + label:before {
-// 	content: '';
-// 	position: absolute;
-// 	left: 0;
-// 	top: 0;
-// 	width: 24px;
-// 	height: 24px;
-// 	border: 1px solid #000;
-// 	border-radius: 100%;
-// 	background: #fff;
-// }
-// [type="radio"]:checked + label:after,
-// [type="radio"]:not(:checked) + label:after {
-// 	content: '';
-// 	width: 16px;
-// 	height: 16px;
-// 	background: #000;
-// 	position: absolute;
-// 	top: 4px;
-// 	left: 4px;
-// 	border-radius: 100%;
-// 	-webkit-transition: all 0.2s ease;
-// 	transition: all 0.2s ease;
-// }
-// [type="radio"]:not(:checked) + label:after {
-// 	opacity: 0;
-// 	-webkit-transform: scale(0);
-// 	transform: scale(0);
-// }
-// [type="radio"]:checked + label:after {
-// 	opacity: 1;
-// 	-webkit-transform: scale(1);
-// 	transform: scale(1);
-// }
-// .radio-group {
-// 	margin-left: 19%;
-// 	margin-bottom: 26px;
-// 	label {
-// 		margin-right: 14px;
-// 	}
-// }
-
-// .personal {
-
-// }
-
-// .personal .orders {
-
-// 	font-family: FuturaLightC;
-
-// 	.status {
-// 		font-family: 'Futura';
-// 		display: inline-block;
-// 		padding: 4px 8px 2px 8px;
-// 		border-radius: 8px;
-// 		color: #fff;
-// 		font-weight: 500;
-// 		font-size: 14px;
-// 		height: 24px;
-
-// 		&.pending {
-// 			background: #4C5C68;
-// 		}
-// 		&.cancelled {
-// 			background: #C5C3C6;
-// 		}
-// 		&.completed {
-// 			background: #ABBAB0;
-// 		}
-
-// 	}
-
-// 	.orders-list {
-// 		margin-top: 56px;
-// 		.item {
-// 			display: flex;
-// 			padding: 24px;
-// 			border: 1px solid #E6E6E6;
-// 			margin-bottom: 24px;
-// 			justify-content: space-between;
-// 			align-items: center;
-// 			.order-id {
-// 				font-family: FuturaBookC;
-// 				margin-bottom: 3px;
-// 				display: block;
-// 			}
-// 			.delivery {
-// 				line-height: 19px;
-// 			}
-
-// 		}
-// 		.empty p {
-// 			color: #696969;
-// 		}
-
-// 	}
-
-// 	@include media-breakpoint-only(xs) {
-// 		h1 {
-// 			margin-bottom: 30px;
-// 		}
-// 		.orders-list {
-// 			margin-top: 26px;
-// 			.item {
-// 				align-items: flex-start;
-// 				padding: 7px;
-// 				margin-bottom: 9px;
-// 				position: relative;
-// 				.status {
-// 					height: auto;
-// 					&.pending {
-// 						position: absolute;
-// 						top: 10px;
-// 						right: 10px;
-// 						width: 92px;
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-
-// }
-// .personal  {
-// 	.order-detail {
-
-// 		margin-top: -3px;
-// 		h1 {
-// 			margin-bottom: 30px;
-// 		}
-// 		.back {
-// 			margin-bottom: 28px;
-// 			display: inline-block;
-// 			position: relative;
-// 			margin-left: 0;
-// 			padding-left: 20px;
-// 			svg {
-// 				position: absolute;
-// 				left: 0;
-// 				top: 4px;
-// 				width: 16px;
-// 				height: 12px;
-// 				fill: #fff;
-// 				@include media-breakpoint-only(xs) {
-// 					top: 1px !important;
-// 				}
-// 			}
-// 		}
-// 		.info {
-// 			margin-top: 21px;
-// 			margin-bottom: 20px;
-// 			& > div {
-// 				margin-bottom: 10px;
-// 			}
-// 		}
-// 		.actions {
-// 			display: flex;
-// 			margin-bottom: 50px;
-// 			.btn-primary {
-// 				display: inline-block;
-// 				padding: 16px 16px 16px;
-// 			}
-// 			.btn-secondary {
-// 				padding: 13px 11px;
-// 				text-transform: uppercase;
-// 				margin-left: 24px;
-// 				padding: 15px 16px 8px;
-// 			}
-// 		}
-// 		.summary {
-// 			margin-top: 47px;
-// 			margin-bottom: 48px;
-
-// 			.summary-row {
-// 				display: flex;
-// 				justify-content: flex-start;
-// 				margin-bottom: 10px;
-// 				.prop {
-// 					width: 164px;
-// 				}
-// 			}
-// 		}
-// 		.bonuses {
-// 			padding: 47px 0;
-// 		}
-// 		.order-contents {
-// 			margin-top: 48px;
-// 			h3 {
-// 				margin-top: 0;
-// 				font-family: 'FuturaLightC';
-// 				font-size: 20px;
-// 				margin-bottom: 22px;
-// 				color: #000;
-// 			}
-// 			.item {
-// 				display: flex;
-// 				margin-bottom: 24px;
-// 				align-items: center;
-
-// 				.image-block {
-// 					position: relative;
-
-// 					.sticker {
-// 						position: absolute;
-// 						bottom: 0;
-// 						padding: 0px 7px;
-// 						color: #fff;
-// 						font-family: 'FuturaBookC';
-// 						&.new {
-// 							background: #ABBAB0;
-// 						}
-// 						&.sale {
-// 							background: #E7C8BC;
-// 						}
-// 					}
-// 				}
-
-// 				.content-block {
-// 					margin-left: 50px;
-// 					max-width: 380px;
-// 					width: 380px;
-// 					.color {
-// 						color: #696969;
-// 					}
-// 					.size {
-// 						color: #696969;
-// 					}
-// 					.title {
-// 						line-height: 18px;
-// 						margin-bottom: 20px;
-// 					}
-// 					.price {
-// 						margin-top: 20px;
-// 						display: inline-flex;
-// 					}
-// 					.old-price {
-// 						margin-top: 20px;
-// 						display: inline-flex;
-// 						color: #696969;
-// 						text-decoration: line-through;
-// 						margin-left: 4px;
-// 					}
-// 				}
-// 				.price-block {
-// 					width: 192px;
-// 					display: flex;
-// 					justify-content: space-between;
-// 					align-items: center;
-// 					padding-left: 40px;
-// 					padding-right: 16px;
-// 					.total-price {
-// 						font-family: 'FuturaBookC';
-// 						font-size: 15px;
-// 					}
-// 				}
-
-// 			}
-// 		}
-// 		@include media-breakpoint-only(sm) {
-// 			.total-price {
-// 				margin-left: 30px;
-// 			}
-// 		}
-// 		@include media-breakpoint-only(xs) {
-// 			.back {
-// 				text-transform: uppercase;
-// 				font-size: 12px;
-// 				margin-left: 20px;
-// 				margin-top: 10px;
-// 				margin-bottom: 18px;
-// 			}
-// 			h1 {
-// 				font-size: 24px;
-// 				margin-bottom: 23px;
-// 			}
-// 			.info {
-// 				margin-top: 15px;
-// 				margin-bottom: 20px;
-// 				& > div {
-// 					margin-bottom: 10px;
-// 					line-height: 15px;
-// 				}
-// 			}
-// 			.summary {
-// 				margin-top: 41px;
-// 				margin-bottom: 45px;
-// 			}
-// 			.order-contents {
-// 				margin-top: 42px;
-// 				.item {
-// 					margin-bottom: 20px;
-// 					flex-wrap: wrap;
-// 					align-items: flex-start;
-// 					.image-block {
-// 						max-width: 96px;
-// 					}
-// 					.content-block {
-// 						max-width: 170px;
-// 						margin-left: 10px;
-// 						.title {
-// 							font-size: 15px;
-// 							margin-bottom: 8px;
-// 						}
-// 						.price {
-// 							margin-top: 10px;
-// 						}
-// 					}
-// 					.price-block {
-// 						width: 100%;
-// 						padding-left: 0;
-// 						padding-right: 0;
-// 						justify-content: flex-end;
-// 						align-items: baseline;
-// 						.total-price {
-// 							margin-top: 18px;
-// 							font-size: 16px;
-// 							margin-left: 40px;
-// 						}
-// 					}
-// 				}
-// 			}
-
-// 		}
-// 	}
-// }
-
-// .personal {
-// 	.loyalty {
-// 		a.back {
-// 			display: none;
-// 		}
-// 		font-family: 'FuturaLightC';
-// 		h1 {
-// 			margin-bottom: 56px;
-// 		}
-// 		.empty {
-// 			margin-bottom: 50px;
-// 			p {
-// 				margin-bottom: 8px;
-// 			}
-// 		}
-// 		.item {
-// 			margin-bottom: 50px;
-// 			display: flex;
-// 			.info {
-// 				margin-left: 50px;
-// 				h3 {
-// 					margin-top: 0;
-// 					font-size: 20px;
-// 					color: #000;
-// 					margin-bottom: 8px;
-// 				}
-// 				p {
-// 					color: #696969;
-// 					margin-bottom: 2px;
-// 					span {
-// 						color: #000;
-// 					}
-// 				}
-// 				p.total {
-// 					margin-bottom: 13px;
-// 				}
-// 				p.the-next-level-play {
-// 					margin-top: 16px;
-// 					line-height: 16px;
-// 					color: #000;
-// 				}
-// 			}
-// 		}
-// 		.loyalty-about {
-// 			color: #696969;
-// 			a {
-// 				text-decoration: underline;
-// 			}
-// 		}
-// 		@include media-breakpoint-down(md) {
-// 			h1 {
-// 				max-width: 200px;
-// 				margin-left: 39px;
-// 				font-family: 'FuturaLightC';
-// 				line-height: 19px;
-// 				margin-bottom: 28px;
-// 			}
-// 			.empty {
-// 				margin-bottom: 24px;
-// 			}
-// 			.loyalty-list {
-// 				.item {
-// 					flex-direction: column;
-// 					margin-bottom: 23px;
-// 					img {
-// 						max-width: 264px;
-// 					}
-// 					.info {
-// 						margin-left: 0;
-// 						margin-top: 23px;
-// 						h3 {
-// 							font-family: 'FuturaLightC';
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 		@include media-breakpoint-only(sm) {
-// 			.loyalty-list {
-// 				.item {
-// 					align-items: center;
-// 					flex-direction: row;
-// 					.info {
-// 						padding-left: 20px;
-// 						margin-top: 0;
-// 					}
-// 				}
-// 			}
-
-// 			.back {
-// 				display: none;
-// 			}
-// 		}
-// 	}
-// }
-
-// .personal {
-// 	.form__group {
-// 		margin-bottom: 24px;
-// 	}
-// 	font-family: 'FuturaLightC';
-// 	.subscriptions {
-// 		h1 {
-// 			margin-bottom: 56px;
-// 		}
-// 		.form {
-// 			display: block;
-// 			margin-bottom: 24px;
-// 		}
-// 		.checkbox-text {
-// 			font-size: 16px;
-// 		}
-// 	}
-// }
-// #modal-delete-acc {
-// 	p {
-// 		text-align: center;
-// 		max-width: 330px;
-// 		margin: 0 auto;
-// 		margin-top: 60px;
-// 		box-sizing: border-box;
-// 	}
-// 	.btn-primary {
-// 		width: 220px;
-// 		margin: auto;
-// 	}
-// }
-
-// .bottom-sheet section.address .container form .btn-primary {
-// 	background: #000;
-// 	color: #fff;
-// }
-
-// #modal-deleted-acc {
-// 	p {
-// 		margin: auto;
-// 		text-align: center;
-// 		margin-top: 60px;
-// 		margin-bottom: 60px;
-// 	}
-// }
-
-// // xs и sm (мобилка)
-// @include media-breakpoint-down(md) {
-
-// 	.personal {
-
-// 		.personal-aside {
-// 			margin-top: 9px;
-// 			display: none;
-// 		}
-// 		margin-bottom: 22px;
-// 		h1 {
-// 			margin-top: 4px;
-// 			margin-bottom: 26px;
-// 		}
-// 		.personal-data {
-
-// 			margin-bottom: 24px;
-
-// 			.form__group {
-// 				flex-direction: column;
-// 				margin-bottom: 12px;
-// 			}
-// 			.form__group-label {
-// 				width: 100%;
-// 				margin-bottom: 10px;
-// 				justify-content: flex-start;
-// 				br {
-// 					display: none;
-// 				}
-// 			}
-// 			.form__group__left input {
-// 				width: 100%;
-// 			}
-// 			.radio-group {
-// 				margin-left: 0;
-// 				margin-top: 15px;
-// 				margin-bottom: 15px;
-// 			}
-// 			.input-description {
-// 				width: 100%;
-// 				margin-left: 0;
-// 				padding-left: 0;
-// 				font-size: 12px;
-// 				font-family: 'FuturaLightC';
-// 				margin-top: 6px;
-// 				line-height: 13px;
-// 			}
-// 			.checkbox {
-// 				margin-top: 16px;
-// 				margin-bottom: 16px;
-// 			}
-
-// 		}
-// 		.deliveries {
-// 			h3 {
-// 				font-family: 'FuturaLightC';
-// 				font-size: 20px;
-// 				margin-top: 27px;
-// 			}
-// 			.btn-primary {
-// 				margin-bottom: 24px;
-// 			}
-// 			.edit, .delete {
-// 				span {
-// 					display: none;
-// 				}
-// 			}
-// 			.delete {
-// 				margin-right: 10px;
-// 			}
-// 		}
-// 		.save-delivery-desc {
-// 			font-size: 16px;
-// 			margin-bottom: 15px;
-// 		}
-// 		.delete-account {
-// 			text-align: left;
-// 			padding-top: 4px;
-// 			font-size: 30px;
-// 			.btn-small {
-// 				font-size: 14px;
-// 			}
-// 		}
-// 		& .loyalty a.back {
-// 			display: block;
-// 			position: absolute;
-// 			svg {
-// 				position: relative;
-// 				top: 14px;
-// 				left: 2px;
-// 				width: 20px;
-// 				height: 15px;
-// 			}
-// 		}
-// 	}
-
-// 	#modal-delete-acc {
-// 		p {
-// 			margin-top: 24px;
-// 			margin-bottom: 24px;
-// 		}
-// 	}
-// }
-
-// // планшеты
-// @include media-breakpoint-only(md) {
-// 	.personal {
-// 		h1 {
-// 			margin-top: 0;
-// 			line-height: 25px;
-// 			font-family: 'FuturaBookC';
-// 			margin-bottom: 25px;
-// 		}
-// 		.radio-group {
-// 			margin-left: 26%;
-// 			margin-bottom: 26px;
-// 		}
-// 		.with-desc input {
-// 			width: 46%;
-// 		}
-// 		.personal-data .with-desc .input-description {
-// 			width: 34%;
-// 			padding-left: 11px;
-// 			font-size: 12px;
-// 			line-height: 11px;
-// 		}
-// 		.deliveries {
-// 			.delete {
-// 				margin-left: 10px;
-// 			}
-// 		}
-// 		.deliveries h3 {
-// 			margin-bottom: 8px;
-// 			font-size: 20px;
-// 			line-height: 20px;
-// 			font-family: 'FuturaLightC';
-// 		}
-// 		.deliveries .save-delivery-desc {
-// 			font-size: 16px;
-// 			margin-bottom: 22px;
-// 		}
-// 	}
-// }
-
-// .bottom-sheet {
-// 	.auth, .code, .address {
-// 		.container {
-// 			padding: 48px 30px;
-// 			form {
-// 				margin-top: 60px;
-// 				max-width: 445px;
-// 				width: 100%;
-// 				margin-bottom: 10px;
-// 				.form__group {
-// 					margin-bottom: 25px;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	section.auth form, section.code form, section.captcha form {
-// 		margin-bottom: 0;
-// 	}
-// 	.code {
-// 		.container {
-// 			width: 640px;
-// 			max-width: 100%;
-// 			h4 {
-// 				margin-top: 28px;
-// 				letter-spacing: 1.6px;
-// 			}
-// 		}
-// 	}
-// 	section.address {
-// 		.container {
-// 			padding: 49px 48px;
-// 			form {
-// 				margin: auto;
-// 				margin-top: 50px;
-// 				.inline-labels {
-// 					display: flex;
-// 					justify-content: space-between;
-// 					& > label {
-// 						width: 20%;
-// 					}
-// 					margin-bottom: 20px;
-// 				}
-// 				.courier-comments {
-// 					margin-bottom: 50px;
-// 				}
-
-// 			}
-// 		}
-// 		h1 {
-// 			text-align: center;
-// 		}
-
-// 		.form-group-info {
-// 			margin-top: 8px;
-// 			font-family: 'FuturaLightC';
-// 			font-style: normal;
-// 			font-weight: 400;
-// 			font-size: 12px;
-// 			line-height: 12px;
-// 			letter-spacing: 0.1px;
-// 			color: #333333;
-
-// 		}
-// 		.magic-checkbox-label {
-// 			line-height: 20px;
-// 			display: inline-block;
-// 			margin-bottom: 30px;
-// 			font-family: 'FuturaLightC';
-// 			font-style: normal;
-// 			font-weight: 400;
-// 			font-size: 16px;
-// 			letter-spacing: 0.1px;
-// 			color: #000000;
-// 		}
-// 	}
-// }
-
-// // xs и sm (мобилка)
-// @include media-breakpoint-down(md) {
-// 	.bottom-sheet {
-// 		.auth, .code, .address {
-// 			.container {
-// 				.row {
-// 					margin-right: 0;
-// 					margin-left: 0;
-// 				}
-// 				padding: 0;
-// 				.form {
-// 					margin-top: 14px;
-// 					max-width: 100%;
-// 				}
-// 			}
-// 		}
-// 		section.auth form, section.code form, section.captcha form {
-// 			margin-bottom: 0;
-// 		}
-// 		section.code {
-// 			.container {
-// 				width: 100%;
-// 			}
-// 			.row {
-// 				padding-right: 0;
-// 				padding-left: 0;
-// 			}
-// 		}
-// 	}
-
-// 	.bottom-sheet section.address .container {
-// 		padding: 0;
-// 	}
-// 	.bottom-sheet section.address .container form .inline-labels > label {
-// 		width: 22%;
-// 	}
-// 	.bottom-sheet section.address .container form .courier-comments {
-// 		margin-bottom: 30px;
-// 	}
-// 	.bottom-sheet section.address .container form .btn-primary {
-// 		background: #000;
-// 		color: #fff;
-// 	}
-// 	.bottom-sheet .contents {
-// 		width: 100%;
-// 	}
-// 	.bottom-sheet .block_callback-content {
-// 		padding-bottom: 40px;
-// 	}
-// 	.bottom-sheet .block_callback__form-btn {
-// 		margin-left: 0;
-// 	}
-// 	input.ios8-switch {
-// 		opacity: 0;
-// 		position: absolute;
-// 		z-index: -1;
-// 	}
-
-// }
-
-
-// input[type="checkbox"].ios8-switch {
-// 	position: absolute;
-// 	margin: 8px 0 0 16px;
-// }
-// input[type="checkbox"].ios8-switch + label {
-// 	position: relative;
-// 	padding: 5px 0 0 50px;
-// 	line-height: 2.0em;
-// }
-// input[type="checkbox"].ios8-switch + label:before {
-// 	content: "";
-// 	position: absolute;
-// 	display: block;
-// 	left: 0;
-// 	top: 0;
-// 	width: 38px; /* x*5 */
-// 	height: 24px; /* x*3 */
-// 	border-radius: 16px; /* x*2 */
-// 	background: #fff;
-// 	-webkit-transition: all 0.3s;
-// 	transition: all 0.3s;
-// 	background: #E6E6E6;
-// }
-// input[type="checkbox"].ios8-switch + label:after {
-// 	content: "";
-// 	border: 2px solid #000;
-// 	position: absolute;
-// 	display: block;
-// 	left: 2px;
-// 	top: 2px;
-// 	width: 20px; /* x*3 */
-// 	height: 20px; /* x*3 */
-// 	border-radius: 16px; /* x*2 */
-// 	background: #fff;
-// 	border: 2px solid #fff;
-// 	-webkit-transition: all 0.3s;
-// 	transition: all 0.3s;
-// 	background: #E6E6E6;
-// }
-// input[type="checkbox"].ios8-switch + label:hover:after {
-// 	border-color: #000;
-// }
-// input[type="checkbox"].ios8-switch:checked + label:after {
-// 	margin-left: 14px;
-// }
-// input[type="checkbox"].ios8-switch:checked + label:before {
-// 	background: #333;
-// }
-// input[type="checkbox"].ios8-switch:checked + label:after {
-// 	background: #333;
-// }
-// input[type="checkbox"].ios8-switch:checked + label:hover:after {
-// 	background: #E6E6E6;
-// }
-
-
-// @include media-breakpoint-down(md) {
-// 	.hidden-mobile {
-// 		display: none;
-// 	}
-// }
-
-// @include media-breakpoint-up(sm) {
-// 	.hidden-desktop {
-// 		display: none;
-// 	}
-// }
+.personal {
+	position: relative;
+	.info-top-plate {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		.info-plate {
+			padding: 10px;
+		}
+		z-index: 1000;
+
+		&.notified {
+			display: flex;
+		}
+	}
+	.button {
+		cursor: pointer;
+		svg {
+			width: 25px;
+			fill: $color-dark-golden;
+		}
+	}
+	 
+}
+
+@include media-breakpoint-up(xl) {
+	.personal-data {
+		.form-row {
+			max-width: 296px;
+		}
+		.save {
+			max-width: 296px;
+		}
+	}
+	.address-block-wrap {
+		max-width: 614px;
+	}
+}
+
+
+
+.info-plate {
+	display: flex;
+    justify-content: space-between;
+	border-radius: 6px;
+	box-shadow: 1px 1px 20px #e6e6e6;
+	background: #fff;
+	padding: 10px;
+	.info {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		svg {
+			width: 24px;
+			height: 24px;
+    		fill: #fff;
+			margin-right: 15px;
+		}
+		p {
+			font-size: 18px;
+			letter-spacing: -0.2px;
+			color: $color-dark-golden;
+		}
+	}
+	
+}
+.email-wrap {
+	display: none;
+	position: relative;
+	.info-plate {
+		position: absolute;
+    left: 309px;
+    width: 410px;
+    top: -4px;
+	}
+}
+.email-wrap.notified {
+	display: flex;
+}
+
+
+@include media-breakpoint-only(lg) {
+	.email-wrap .info-plate {
+		left: 329px;
+		width: 350px;
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.email-wrap .info-plate {
+		display: none;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.addresses-block {
+		padding-right: 0 !important;
+	}
+	.email-wrap .email {
+		width: 100%;
+	}
+	
+}
+
+@include media-breakpoint-down(lg) {
+	.personal .info-top-plate {
+		position: fixed;
+		top: 20px;
+	}
+}
