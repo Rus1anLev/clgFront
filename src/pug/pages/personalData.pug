@@ -1,0 +1,76 @@
+main.personal.mb-120
+	.container.data.mt-60
+		.row
+			.col-12.col-md-4
+				include ../components/personalAside
+			.col-12.col-md-8.col-lg-8.col-lg-offset-1
+				h2.h2 Личные данные
+				form.form.personal-data.mt-60
+					.row 
+						.col-xs-12.col-md-8
+							.form-row
+								.form-control
+									input(type="text" placeholder="Имя" value="Елизаета").form-control--input
+									label.form-control--label Имя
+							.form-row
+								.form-control
+									input(type="text" placeholder="Фамилия" value="Христорождественская").form-control--input
+									label.form-control--label Фамилия
+							.form-row
+								.form-control.form-control--icon-left
+									.form-control--icon
+										+svg('calenader')
+									input(type="text" placeholder="Дата рождения" value="24.08.1985").form-control--input
+									label.form-control--label Дата рождения
+									.form-control--notify
+										| Получайте дополнительные привелегии в свой день рождения.
+							.form-row
+								.form-control.email
+									input(type="email" placeholder="Email" value="ohmylovelymail@mail.ru").form-control--input
+									label.form-control--label Email
+									.form-control--notify
+										| На указанный Email мы будем отправлять чеки от покупок на сайте.
+							.form-row
+								.form-control.email
+									input(type="text" placeholder="Телефон" value="+7 978 567 45 98").form-control--input
+									label.form-control--label Телефон
+							label.checkbox.policy
+								input(type="checkbox").checkbox-input
+								.checkbox-box
+									+svg('checkbox')
+								.checkbox-text.checkbox-text--small
+									| Согласен на <a href="#">обработку персональных данных</a>
+							
+							button.btn.btn-primary.save(type="submit") Сохранить
+
+
+				.deliveries-block
+					h3.h3 Адрес доставки
+					p.save-delivery-desc Сохраняйте адреса доставки, чтобы не вводить их при повторных заказах.
+					.addresses-block
+						.item
+							input(type="radio" name="address")
+							.text
+								| 234123, Москва, Профсоюзная, 38, Комментарии: под.6, домофон 165Вызов, эт.15, кв.165.
+							a.icon.edit
+								+svg('edit')
+							a.icon.delete
+								+svg('delete')
+						.item
+							input(type="radio" name="address")
+							.text
+								| 125009, г. Москва, ул. Большая Никитская ул., 15 ст 1
+							a.icon.edit
+								+svg('edit')
+							a.icon.delete
+								+svg('delete')
+						.item.removed
+							.text
+								| Адрес удален
+							a.undo
+								| Восстановить
+						button(type="submit").new-address + Новый адрес
+
+			.delete-account
+				a.ttu(href="#") 
+					span Удалить аккаунт

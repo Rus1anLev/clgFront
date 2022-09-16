@@ -77,6 +77,144 @@
 	}
 }
 
+.personal-data {
+	.form-control--input:not(:placeholder-shown) {
+		padding: 28px 11px 10px;
+	}
+	.form-row {
+		margin-bottom: 12px;
+	}
+	.form-control--icon-left {
+		.form-control--icon {
+			max-height: 57px;
+		}
+		.form-control--input:not(:placeholder-shown) {
+			padding: 27px 11px 10px 44px;
+		}
+		.form-control--notify {
+			margin-top: 6px;
+		}
+	}
+	.policy {
+		margin-top: 11px;
+	}
+	.save {
+		width: 100%;
+		margin-top: 8px;
+	}
+}
+
+.personal {
+	.deliveries-block {
+		margin-top: 47px;
+	}
+	.addresses-block {
+		margin-top: 13px;
+	}
+}
+
+.deliveries-block {
+	.save-delivery-desc {
+		margin-top: 25px;
+		font-size: 18px;
+		letter-spacing: -0.1px;
+		color: $color-black;
+	}
+}
+
+.addresses-block {
+	padding-right: 16px;
+	.item {
+		border-radius: 6px;
+		background: #F7F7F7;
+		display: flex;
+		align-items: center;
+		svg {
+			fill: $color-white;
+			width: 25px;
+			height: 25px;
+		}
+		input[type="radio"] {
+			display: none;
+		}
+		& + .item {
+			margin-top: 15px;
+		}
+		.text {
+			height: auto;
+    		padding: 24px;
+    		font-size: 14px;
+			line-height: 18px;
+			flex-grow: 2;
+			color: $color-black;
+		}
+		.icon.edit {
+			margin-right: 11px;
+		}
+		.icon.delete {
+			margin-right: 23px;
+		}
+		&.removed {
+			.text {
+				color: $color-silver-brown;
+			}
+		}
+		.undo {
+			margin-right: 23px;
+			font-size: 14px;
+			text-decoration: underline;
+			color: $color-dark-golden;
+		}
+	}
+	.new-address {
+		font-size: 14px;
+    	margin-top: 12px;
+		color: $color-dark-golden;
+	}
+}
+
+.delete-account {
+	text-align: right;
+    margin-top: 50px;
+    font-size: 14px;
+	text-decoration: underline;
+	color: $color-dark-golden;
+}
+
+
+
+.aside.personal-aside {
+	background: #F7F7F7;
+    max-width: 272px;
+	padding-top: 50px;
+	padding-left: 24px;
+	padding-bottom: 56px;
+	border-radius: 6px;
+	ul {
+		li + li {
+			margin-top: 13px;
+		}
+		li {
+
+			&.active a {
+				color: $color-dark-golden;
+				text-decoration: underline;
+			}
+			a {
+				color: $color-black;
+			}
+			
+		}
+	}
+	.logout {
+		margin-top: 60px;
+		display: block;
+		font-size: 16px;
+		text-transform: uppercase;
+		color: $color-silver-brown;
+	}
+}
+
 // .grey-line {
 // 	height: 2px;
 // 	background: red;
