@@ -1,0 +1,36 @@
+.accordion {
+  &-item {
+    border-bottom: 1px solid #F7F7F7;
+    &:first-child {
+      border-top: 1px solid #F7F7F7;
+    }
+  }
+  &-heading {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 24px 0;
+    &--icon {
+      height: 24px;
+      width: 24px;
+      flex: 0 0 24px;
+      transition: transform $duration-normal $easing-out;
+    }
+    &--text {
+      margin-left: 6px;
+    }
+    &.is-open &--icon{
+      transform: rotate(90deg);
+    }
+  }
+
+  &-content {
+    display: none;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.33;
+    color: $color-black;
+    margin-bottom: 24px;
+    margin-top: -12px;
+  }
+}
