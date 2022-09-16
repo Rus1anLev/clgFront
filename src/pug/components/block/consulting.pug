@@ -1,9 +1,17 @@
 mixin block_consulting(object)
     .block_consulting&attributes(attributes)
-        +lazyPicture({
-            src: object.images,
-            alt: '',
-        }).block_consulting-img
+        +lazyPicture(
+            {
+                src: object.image,
+                alt: '',
+            },
+            [
+                {
+                    srcset: object.image_mob,
+                    media: '(max-width: 1008px)'
+                }
+            ]
+        ).block_consulting-img
         .container
             .row
                 .col-lg-8.col-md-11
