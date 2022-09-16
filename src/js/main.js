@@ -13,6 +13,7 @@ import oneTimePasswd from "./components/oneTimePasswd";
 import './components/popup';
 import {bottomSheet} from "./components/bottomSheet";
 import {initFilter} from "./components/filter";
+import {initAccordion} from "./components/accordion";
 
 bottomSheet();
 ieFix();
@@ -26,3 +27,4 @@ lazyLoading.init();
 oneTimePasswd.init();
 
 initFilter()
+initAccordion()

@@ -1,0 +1,46 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media-breakpoint-only(xs) {
+    justify-content: space-between;
+  }
+  &-arrow {
+    height: 24px;
+    width: 24px;
+    flex: 0 0 24px;
+
+    color: $color-silver-brown;
+    &--disabled {
+      color: $color-space-gray;
+    }
+  }
+  &-list {
+    margin: 0 24px;
+    a,
+    span {
+      font-size: 18px;
+      line-height: 1.33;
+      font-weight: 300;
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      color: $color-silver-brown;
+    }
+
+    span {
+      color: $color-black;
+    }
+  }
+  &-btn {
+    @include media-breakpoint-only(xs) {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.catalog {
+  &-item {
+    @include media-breakpoint-up(lg) {
+      margin-top: 48px;
+      &:nth-child(-n+3) {
+        margin-top: 0;
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      margin-top: 36px;
+      &:nth-child(-n+2) {
+        margin-top: 0;
+      }
+    }
+  }
+}

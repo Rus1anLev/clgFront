@@ -1,6 +1,8 @@
 .card {
   &-img {
     display: block;
+    border-radius: 6px;
+    overflow: hidden;
     img {
       display: block;
     }
@@ -8,21 +10,57 @@
 
   &__content {
     display: flex;
+    justify-content: space-between;
+
     &-name {
       display: block;
       font-weight: 300;
       font-size: 18px;
       line-height: 1.11;
       color: $color-cold-brown;
+      @include media-breakpoint-down(xl) {
+        font-size: 14px;
+      }
+    }
+
+    &-tag {
+
     }
 
     &-price {
       margin-left: 12px;
       white-space: nowrap;
+
+      @include media-breakpoint-only(xs) {
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+      }
       &--current {
         font-weight: 300;
         font-size: 18px;
         line-height: 1.11;
+        @include media-breakpoint-down(xl) {
+          font-size: 14px;
+        }
+      }
+
+      &--old {
+        text-align: right;
+        margin-top: 6px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.4375;
+        text-decoration-line: line-through;
+        color: $color-silver-brown;
+        @include media-breakpoint-down(xl) {
+          font-size: 12px;
+        }
+        @include media-breakpoint-only(xs) {
+          text-align: left;
+          margin-top: 0;
+          margin-left: 4px;
+        }
       }
     }
   }

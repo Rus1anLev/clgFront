@@ -2,13 +2,25 @@ mixin card(data)
     .card
         a(href="#").card-img.mb-12
             +lazyPicture({
-                src: `${baseDir}images/card/card1.jpg`,
+                src: data.img,
                 alt: '',
             })
         .card__content
             div
-                a(href="#").card__content-name.mb-12 Брюки узкого кроя с застежками-молниями на штанинах
-                .card__content-tag Sale
-            div.card__content-price
-                .card__content-price--current 34 658 руб.
+                a(href="#").card__content-name !{data.name}
+                if data.price
+                    div.card__content-price.d-sm-none.mt-12
+                        .card__content-price--current !{data.price}
+                        if data.price_old
+                            .card__content-price--old !{data.price_old}
+
+                if data.tag
+                    .card__content-tag.tag.mt-12 !{data.tag}
+                if data.coming_soon
+                    a(href="#").link.link-primary.link--big Узнать о поступлении
+            if data.price
+                div.card__content-price.d-none.d-sm-block
+                    .card__content-price--current !{data.price}
+                    if data.price_old
+                        .card__content-price--old !{data.price_old}
 
