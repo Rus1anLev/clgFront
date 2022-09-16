@@ -1,0 +1,14 @@
+mixin card(data)
+    .card
+        a(href="#").card-img.mb-12
+            +lazyPicture({
+                src: `${baseDir}images/card/card1.jpg`,
+                alt: '',
+            })
+        .card__content
+            div
+                a(href="#").card__content-name.mb-12 Брюки узкого кроя с застежками-молниями на штанинах
+                .card__content-tag Sale
+            div.card__content-price
+                .card__content-price--current 34 658 руб.
+

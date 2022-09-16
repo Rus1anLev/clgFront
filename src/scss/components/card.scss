@@ -1,0 +1,29 @@
+.card {
+  &-img {
+    display: block;
+    img {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    &-name {
+      display: block;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.11;
+      color: $color-cold-brown;
+    }
+
+    &-price {
+      margin-left: 12px;
+      white-space: nowrap;
+      &--current {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.11;
+      }
+    }
+  }
+}

@@ -4,15 +4,27 @@
   padding-bottom: 23px;
   position: relative;
   border-bottom: 1px solid #F7F7F7;
-
+  @include media-breakpoint-down(lg) {
+    display: block;
+    border: none;
+  }
   &__params {
     display: flex;
     align-items: center;
-
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
     &-item {
       margin-right: 36px;
       position: relative;
+      @include media-breakpoint-down(lg) {
+        margin-right: 0;
+        &:first-child {
+          border-top: 1px solid #F7F7F7;
+        }
+        border-bottom: 1px solid #F7F7F7;
 
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -25,16 +37,19 @@
 
     &-head {
       display: flex;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        padding: 16px 0;
+      }
     }
 
     &-name {
       display: flex;
       align-items: center;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 1.12;
-      color: $color-black;
-
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        justify-content: space-between;
+      }
       &--icon {
         margin-left: 4px;
         width: 24px;
@@ -68,7 +83,12 @@
       background: #FFF;
       box-shadow: 1px 1px 20px rgba(44, 44, 44, 0.05);
       border-radius: 6px;
-
+      @include media-breakpoint-down(lg) {
+        position: relative;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+      }
 
       &::-webkit-scrollbar {
         width: 9px;
@@ -103,6 +123,56 @@
         display: flex;
         padding: 9px 8px 9px 14px;
       }
+
+
+      &--sort {
+        background: #FFF;
+      }
+      &--sort &--item{
+        display: flex;
+        padding: 9px 8px 9px 14px;
+      }
+    }
+  }
+
+  &-reset {
+    margin-left: 60px;
+    color: $color-silver-brown;
+  }
+
+  &-sort {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    &--label {
+      margin-right: 4px;
+    }
+    &--icon {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    &-show {
+      display: flex;
+      align-items: center;
+      &--label {
+        margin-right: 4px;
+      }
+      &--icon {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 16px;
+      }
+    }
+  }
+
+  &-popup {
+    @include media-breakpoint-between(sm, lg) {
+      width: 400px;
     }
   }
 }

@@ -1,7 +1,7 @@
-.filter.mb-60
+.filter.d-none.d-lg-flex
     .filter__params
         .filter__params-item.filter__params-item--link
-            button.filter__params-head
+            button.filter__params-head.menu-item
                 .filter__params-name
                     | Категория
                     .filter__params-name--icon
@@ -25,7 +25,7 @@
                 a(href="#").filter__params-list--item Категория 4
 
         .filter__params-item.filter__params-item--link
-            button.filter__params-head
+            button.filter__params-head.menu-item
                 .filter__params-name
                     | Коллекция
                     .filter__params-name--icon
@@ -35,19 +35,19 @@
                     input(type="checkbox" value="Параметр 1").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 1
+                    .checkbox-text.checkbox-text--big Параметр 1
                 label.checkbox.filter__params-list--item
                     input(type="checkbox" value="Параметр 2").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 2
+                    .checkbox-text.checkbox-text--big Параметр 2
                 label.checkbox.filter__params-list--item
                     input(type="checkbox" value="Параметр 3").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 3
+                    .checkbox-text.checkbox-text--big Параметр 3
         .filter__params-item.filter__params-item--link
-            button.filter__params-head
+            button.filter__params-head.menu-item
                 .filter__params-name
                     | Цена
                     .filter__params-name--icon
@@ -56,7 +56,7 @@
                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, beatae commodi, cupiditate eum
                 | eveniet fuga fugiat in iste minima nemo neque numquam pariatur reiciendis rem repellat repudiandae
         .filter__params-item.filter__params-item--link
-            button.filter__params-head
+            button.filter__params-head.menu-item
                 .filter__params-name
                     | Цвет
                     .filter__params-name--icon
@@ -66,19 +66,19 @@
                     input(type="checkbox" value="Параметр 1").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 1
+                    .checkbox-text.checkbox-text--big Параметр 1
                 label.checkbox.filter__params-list--item
                     input(type="checkbox" value="Параметр 2").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 2
+                    .checkbox-text.checkbox-text--big Параметр 2
                 label.checkbox.filter__params-list--item
                     input(type="checkbox" value="Параметр 3").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 3
+                    .checkbox-text.checkbox-text--big Параметр 3
         .filter__params-item.filter__params-item--link
-            button.filter__params-head
+            button.filter__params-head.menu-item
                 .filter__params-name
                     | Размер
                     .filter__params-name--icon
@@ -88,19 +88,19 @@
                     input(type="checkbox" value="Параметр 1").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 1
+                    .checkbox-text.checkbox-text--big Параметр 1
                 label.checkbox.filter__params-list--item
                     input(type="checkbox" value="Параметр 2").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 2
+                    .checkbox-text.checkbox-text--big Параметр 2
                 label.checkbox.filter__params-list--item
                     input(type="checkbox" value="Параметр 3").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 3
+                    .checkbox-text.checkbox-text--big Параметр 3
         .filter__params-item.filter__params-item--link
-            button.filter__params-head
+            button.filter__params-head.menu-item
                 .filter__params-name
                     | Стиль
                     .filter__params-name--icon
@@ -110,14 +110,215 @@
                     input(type="checkbox" value="Параметр 1").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 1
+                    .checkbox-text.checkbox-text--big Параметр 1
                 label.checkbox.filter__params-list--item
                     input(type="checkbox" value="Параметр 2").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 2
+                    .checkbox-text.checkbox-text--big Параметр 2
                 label.checkbox.filter__params-list--item
                     input(type="checkbox" value="Параметр 3").checkbox-input
                     .checkbox-box
                         +svg('checkbox')
-                    .checkbox-text.checkbox-text--small Параметр 3
+                    .checkbox-text.checkbox-text--big Параметр 3
+    button.menu-item.filter-reset.d-none.d-lg-block
+        | Сбросить фильтры
+    .filter-sort.d-none.d-lg-block
+        .filter__params-item.filter__params-item--link
+            button.filter__params-head.menu-item
+                .filter__params-name
+                    | Упорядочить
+                    .filter__params-name--icon
+                        +svg('sort')
+            .filter__params-list.filter__params-list--checkbox
+                label.radio.filter__params-list--item
+                    input(type="radio" name="sort" checked).radio-input
+                    .radio-box
+                    .radio-text.radio-text--big По популярности
+                label.radio.filter__params-list--item
+                    input(type="radio" name="sort").radio-input
+                    .radio-box
+                    .radio-text.radio-text--big Цена по возрастанию
+                label.radio.filter__params-list--item
+                    input(type="radio" name="sort").radio-input
+                    .radio-box
+                    .radio-text.radio-text--big Цена по убыванию
+
+
+.filter__mobile.d-lg-none.mb-60
+    button.filter__mobile-show.js-open-modal(type="button" aria-controls="sheet" data-target="modal-filter")
+        .filter__mobile-show--label.menu-item
+            | Фильтр
+        .filter__mobile-show--icon
+            +svg('filter')
+    button.filter-sort.js-open-modal(type="button" aria-controls="sheet" data-target="modal-filter-sort")
+        .filter__params-name.menu-item
+            | Упорядочить
+            .filter__params-name--icon
+                +svg('sort')
+
+.bottom-sheet.column.items-center.justify-end.auto-height(aria-hidden="true")#modal-filter
+    // Dark background for the sheet
+    .overlay
+    // The sheet itself
+    .contents.column
+        // Sheet controls
+        header.controls
+            // The thing to drag if you want to resize the sheet
+            .draggable-area
+                .draggable-thumb
+        // Body of the sheet
+        main.body.fill.column
+            .filter-popup
+                h2.text-center.mb-60 Фильтры
+                .filter
+                    .filter__params
+                        .filter__params-item.filter__params-item--link
+                            button.filter__params-head.menu-item
+                                .filter__params-name
+                                    | Категория
+                                    .filter__params-name--icon
+                                        +svg('arrow-down')
+                            .filter__params-list.filter__params-list--links
+                                a(href="#").filter__params-list--item Категория 1
+                                a(href="#").filter__params-list--item Категория 2
+                                a(href="#").filter__params-list--item Категория 3
+                                a(href="#").filter__params-list--item Категория 4
+                                a(href="#").filter__params-list--item Категория 1
+                                a(href="#").filter__params-list--item Категория 2
+                                a(href="#").filter__params-list--item Категория 3
+                                a(href="#").filter__params-list--item Категория 4
+                                a(href="#").filter__params-list--item Категория 1
+                                a(href="#").filter__params-list--item Категория 2
+                                a(href="#").filter__params-list--item Категория 3
+                                a(href="#").filter__params-list--item Категория 4
+                                a(href="#").filter__params-list--item Категория 1
+                                a(href="#").filter__params-list--item Категория 2
+                                a(href="#").filter__params-list--item Категория 3
+                                a(href="#").filter__params-list--item Категория 4
+
+                        .filter__params-item.filter__params-item--link
+                            button.filter__params-head.menu-item
+                                .filter__params-name
+                                    | Коллекция
+                                    .filter__params-name--icon
+                                        +svg('arrow-down')
+                            .filter__params-list.filter__params-list--checkbox
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 1").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 1
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 2").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 2
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 3").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 3
+                        .filter__params-item.filter__params-item--link
+                            button.filter__params-head.menu-item
+                                .filter__params-name
+                                    | Цена
+                                    .filter__params-name--icon
+                                        +svg('arrow-down')
+                            .filter__params-list.filter__params-list--price
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, beatae commodi, cupiditate eum
+                                | eveniet fuga fugiat in iste minima nemo neque numquam pariatur reiciendis rem repellat repudiandae
+                        .filter__params-item.filter__params-item--link
+                            button.filter__params-head.menu-item
+                                .filter__params-name
+                                    | Цвет
+                                    .filter__params-name--icon
+                                        +svg('arrow-down')
+                            .filter__params-list.filter__params-list--checkbox
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 1").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 1
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 2").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 2
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 3").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 3
+                        .filter__params-item.filter__params-item--link
+                            button.filter__params-head.menu-item
+                                .filter__params-name
+                                    | Размер
+                                    .filter__params-name--icon
+                                        +svg('arrow-down')
+                            .filter__params-list.filter__params-list--checkbox
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 1").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 1
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 2").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 2
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 3").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 3
+                        .filter__params-item.filter__params-item--link
+                            button.filter__params-head.menu-item
+                                .filter__params-name
+                                    | Стиль
+                                    .filter__params-name--icon
+                                        +svg('arrow-down')
+                            .filter__params-list.filter__params-list--checkbox
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 1").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 1
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 2").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 2
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 3").checkbox-input
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 3
+.bottom-sheet.column.items-center.justify-end.auto-height(aria-hidden="true")#modal-filter-sort
+    // Dark background for the sheet
+    .overlay
+    // The sheet itself
+    .contents.column
+        // Sheet controls
+        header.controls
+            // The thing to drag if you want to resize the sheet
+            .draggable-area
+                .draggable-thumb
+        // Body of the sheet
+        main.body.fill.column
+            .filter-popup
+                h2.text-center.mb-60 Упорядочить
+                .filter
+                    .filter__params-list--sort
+                        label.radio.filter__params-list--item
+                            input(type="radio" name="sort" checked).radio-input
+                            .radio-box
+                            .radio-text.radio-text--big По популярности
+                        label.radio.filter__params-list--item
+                            input(type="radio" name="sort").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Цена по возрастанию
+                        label.radio.filter__params-list--item
+                            input(type="radio" name="sort").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Цена по убыванию

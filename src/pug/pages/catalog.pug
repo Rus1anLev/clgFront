@@ -1,5 +1,14 @@
 main.catalog.pt-60
-    .container
+    .container.mb-60
         .catalog-title.text-center.mb-60
             h1.h2 Каталог
         include ../components/filter
+    .container
+        .row.row-cols-3
+            div.catalog-item
+                +card()
+            div.catalog-item
+                +card()
+            div.catalog-item
+                +card()
+
