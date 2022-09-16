@@ -52,9 +52,11 @@ main.product.pt-60.mb-120
                     .product__size-select
                         select(placeholder="Выберите размер").select
                             option
+                            option(disabled) XS - disabled
                             option XS
                             option XL
                             option XXL
+                            option(disabled) XXL - disabled
                             option XXXL
                 .product__actions.mb-48
                     .product__actions-cart
@@ -62,7 +64,7 @@ main.product.pt-60.mb-120
                     .product__actions-like
                         button.btn.btn-secondary
                             +svg('favorite').favorite-icon
-                .product__accordion
+                .product__accordion.mb-24
                     .accordion
                         .accordion-item
                             .accordion-heading
@@ -104,3 +106,6 @@ main.product.pt-60.mb-120
                                 | цветочного мотива, навеянного персонажем из фильма Франсуа Трюфо. Передняя часть
                                 | платья с пуговицами украшена элегантными складками вдоль кокетки, а пояс из той же
                                 | ткани аккуратно утягивает талию, формируя женственный силуэт.
+
+                .product__look
+                    a(href="#").btn.btn-secondary Подобрать образ
