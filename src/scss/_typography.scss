@@ -30,10 +30,10 @@ h3, .h3 {
 	&:hover {
 		color: $color-dark-golden;
 	}
-	@include media-breakpoint-down(md) {
-		font-size: 14px;
-		line-height: 1.29;
-	}
+	//@include media-breakpoint-down(md) {
+	//	font-size: 14px;
+	//	line-height: 1.29;
+	//}
 }
 
 .link {

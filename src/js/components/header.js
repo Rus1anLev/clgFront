@@ -1,4 +1,5 @@
 import {closeSearchbar} from './searchbar'
+import helpers from "../helpers"
 
 let $header = $('.header'),
 	$headerBurgerBtn = $('.header-burger'),
@@ -25,6 +26,7 @@ function openBurgerMenu() {
 	$headerBurgerBtn.addClass('is-open')
 	$header.addClass('is-open')
 	openBurgerWindow('main')
+	helpers.lockScroll(true, $('[data-burger=main]'), 'burger-menu')
 }
 
 function closeBurgerMenu() {
@@ -32,6 +34,7 @@ function closeBurgerMenu() {
 	$headerBurgerBtn.removeClass('is-open')
 	$header.removeClass('is-open')
 	closeBurgerWindow('all')
+	helpers.lockScroll(false, $('[data-burger=main]'), 'burger-menu')
 }
 
 function handlerBurgerButton() {
