@@ -17,6 +17,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
+	margin: 0;
 	font-family: $font-secondary;
 	font-style: normal;
 	font-weight: 400;
@@ -78,6 +79,25 @@ h3, .h3 {
 		line-height: 1.29;
 		text-decoration-line: underline;
 	}
+}
+
+.link-or-text {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 1.29;
+	&--underline {
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+	}
+}
+
+.tag {
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 1.25;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: $color-silver-brown;
 }
 
 .favorite-icon {

@@ -2,3 +2,63 @@ main.product.pt-60.mb-120
     .mb-60
         include ../components/breadcrumbs
     .container.mb-60
+        .row
+            .col-lg-10
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto assumenda error eveniet fugiat fugit harum incidunt inventore magnam maxime minus optio, pariatur porro quam repudiandae similique sint temporibus veniam!
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, amet architecto est explicabo in nisi officiis perferendis possimus quisquam quos, rem sunt unde velit? Maiores natus necessitatibus nihil quisquam sapiente.
+            .col-lg-6
+                .product-article_number.link-or-text.mb-24 Артикул: 221ML983MF106
+                .product-tag.tag.mb-12 Sale
+                .product-title.mb-12
+                    h1.h3 Рубашка из шелковой ткани эпонж Bamboo Print с блестящей петелькой
+                .product__price.mb-48
+                    .product__price-current 36 768 руб.
+                    .product__price-old 56 947 руб.
+                .product__color.mb-24
+                    .product__color-label.link-or-text.mb-12 Цвет: Светло-лиловый
+                    .product__color-list
+                        a.product__color-list--item
+                            +lazyPicture({
+                                src: '/images/colors/color-1.svg',
+                                alt: '',
+                            })
+                        a.product__color-list--item
+                            +lazyPicture({
+                                src: '/images/colors/color-2.svg',
+                                alt: '',
+                            })
+                        a.product__color-list--item
+                            +lazyPicture({
+                                src: '/images/colors/color-3.svg',
+                                alt: '',
+                            })
+                        a.product__color-list--item
+                            +lazyPicture({
+                                src: '/images/colors/color-4.svg',
+                                alt: '',
+                            })
+                        a.product__color-list--item.product__color-list--item--active
+                            +lazyPicture({
+                                src: '/images/colors/color-5.svg',
+                                alt: '',
+                            })
+                        a.product__color-list--item
+                            +lazyPicture({
+                                src: '/images/colors/color-6.svg',
+                                alt: '',
+                            })
+                .product__size.mb-24
+                    a(href="#").product__size-label.link-or-text.link-or-text--underline.mb-12 Гид по размерам
+                    .product__size-select
+                        select(placeholder="Выберите размер").select
+                            option
+                            option XS
+                            option XL
+                            option XXL
+                            option XXXL
+                .product__actions.mb-48
+                    .product__actions-cart
+                        button.btn.btn-primary В корзину
+                    .product__actions-like
+                        button.btn.btn-secondary
+                            +svg('favorite').favorite-icon
