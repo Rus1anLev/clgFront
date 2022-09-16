@@ -1,0 +1,52 @@
+main.personal.personal-orders.mt-60.mb-120
+	.container.orders
+		.row
+			.d-none.d-sm-block.col-sm-7.col-md-5.col-lg-5.col-xl-4
+				include ../components/personalAside
+			.col-16.col-sm-9.col-md-11.col-lg-11.col-xl-8
+				h2 Заказы
+				//- .orders-list
+				//- 	.empty
+				//- 		p Вы еще не совершали покупки.
+				//- 	hr
+				.orders-list.mt-60
+					.item
+						.info
+							a.order-id(href="/personal-order.html")
+								| №<номер заказа> от <дата>
+							a.number(href="/personal-order.html")
+								| [Номер заказа]
+						.status.pending
+							| в обработке
+
+						.price 
+							| 89 560 руб.
+						.delivery
+							| <span>Доставка:</span> [Адрес доставки], [Время доставки], [Тайм слот]
+						
+					.item
+						.info
+							a.order-id(href="/personal-order.html")
+								| От 07.03.22
+							a.number(href="/personal-order.html")
+								| A-006543725
+						.status.completed
+							| выполнен
+						.price 
+							| 89 560 руб.
+						.delivery
+							| <span>Самовывоз:</span> Москва, Метромаркет ТЦ, Ленинградский проспект, д. 76а, 1 этаж 
+						
+					.item
+						.info
+							a.order-id(href="/personal-order.html")
+								| От 23.02.22
+							a.number(href="/personal-order.html")
+								| A-006543724
+						.status.cancelled
+							| отменен
+						.price 
+							| 89 560 руб.
+						.delivery
+							| <span>VIP-шопер:</span> Москва, ул. Большая Ордынка; 15.03.22; 10:00-18:00 
+						

@@ -2,6 +2,7 @@ import Inputmask from "inputmask";
 
 
 function inputInsideOtpInput(el) {
+    
     if (el.value.length > 1){
         el.value = el.value[el.value.length - 1];
     }
@@ -17,19 +18,21 @@ function inputInsideOtpInput(el) {
 }
 
 function foucusOnInput(ele){
-    ele.focus().select();
-    let val = ele.value;
-    ele.value = "";
-    // ele.value = val;
-    setTimeout(()=>{
-        ele.value = val;
-    })
+    if ($(ele).length > 0) {
+        ele.focus();
+        let val = ele.value;
+        ele.value = "";
+        // ele.value = val;
+        setTimeout(()=>{
+            ele.value = val;
+        })
+    }
 }
 
 function init() {
 
     var selectors = document.querySelectorAll(".block_callback__form-input input[name=PHONE]");
-    var im = new Inputmask("+7 (999) 999-99-99");
+    var im = new Inputmask("+7 999 999-99-99");
     var firstPhoneInput = document.querySelector(".block_callback__form-input input[name=PHONE]");
     firstPhoneInput.focus()
     selectors.forEach(x => {
