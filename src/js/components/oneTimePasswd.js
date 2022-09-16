@@ -32,7 +32,7 @@ function foucusOnInput(ele){
 function init() {
 
     var selectors = document.querySelectorAll(".block_callback__form-input input[name=PHONE]");
-    var im = new Inputmask("+7 (999) 999-99-99");
+    var im = new Inputmask("+7 999 999-99-99");
     var firstPhoneInput = document.querySelector(".block_callback__form-input input[name=PHONE]");
     firstPhoneInput.focus()
     selectors.forEach(x => {
