@@ -51,6 +51,9 @@
 				background-color: transparent;
 				transition: $duration-normal $easing-out background-color;
 			}
+			@include media-breakpoint-only(lg) {
+				margin-right: 12px;
+			}
 			&.is-open {
 				&:after {
 					background-color: $color-dark-golden;
