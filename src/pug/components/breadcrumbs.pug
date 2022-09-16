@@ -1,0 +1,17 @@
+.container
+    .breadcrumbs.d-none.d-md-flex
+        a(href="#").breadcrumbs-item
+            |Главная
+        a(href="#").breadcrumbs-item
+            .breadcrumbs-item--icon
+                +svg('line-for-breadcrumbs')
+            |Рубашки
+        a(href="#").breadcrumbs-item
+            .breadcrumbs-item--icon
+                +svg('line-for-breadcrumbs')
+            | Длинный рукав
+    a(href="#").breadcrumbs-prev.d-md-none
+        .breadcrumbs-prev--icon
+            +svg('arrow-left')
+        .breadcrumbs-prev--text
+            | Предыдущий раздел
