@@ -1,16 +1,30 @@
 main.personal.mb-120
+	.info-top-plate.notified
+		.container
+			.row
+				.col-xs-16
+					.info-plate 
+						.info
+							+svg('info')
+							p Вам отправлено письмо с просьбой подвердить Email
+						.button 
+							| <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+							|	<path fill-rule="evenodd" clip-rule="evenodd" d="M12.3536 3.64645C12.5488 3.84171 12.5488 4.15829 12.3536 4.35355L4.35355 12.3536C4.15829 12.5488 3.84171 12.5488 3.64645 12.3536C3.45118 12.1583 3.45118 11.8417 3.64645 11.6464L11.6464 3.64645C11.8417 3.45118 12.1583 3.45118 12.3536 3.64645Z" />
+							|	<path fill-rule="evenodd" clip-rule="evenodd" d="M3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L11.6464 12.3536C11.8417 12.5488 12.1583 12.5488 12.3536 12.3536C12.5488 12.1583 12.5488 11.8417 12.3536 11.6464L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645Z" />
+							| </svg>
+
 	.container.data.mt-60
 		.row
-			.col-12.col-md-4
+			.d-none.d-sm-block.col-sm-7.col-md-6.col-lg-5.col-xl-4
 				include ../components/personalAside
-			.col-12.col-md-8.col-lg-8.col-lg-offset-1
+			.col-16.col-sm-9.col-md-10.col-lg-11.col-xl-12
 				h2.h2 Личные данные
 				form.form.personal-data.mt-60
 					.row 
-						.col-xs-12.col-md-8
+						.col-16.col-md-10.col-lg-8.col-xl-6
 							.form-row
 								.form-control
-									input(type="text" placeholder="Имя" value="Елизаета").form-control--input
+									input(type="text" placeholder="Имя" value="Елизавета").form-control--input
 									label.form-control--label Имя
 							.form-row
 								.form-control
@@ -24,16 +38,21 @@ main.personal.mb-120
 									label.form-control--label Дата рождения
 									.form-control--notify
 										| Получайте дополнительные привелегии в свой день рождения.
-							.form-row
+							.form-row.email-wrap.notified
 								.form-control.email
 									input(type="email" placeholder="Email" value="ohmylovelymail@mail.ru").form-control--input
 									label.form-control--label Email
 									.form-control--notify
 										| На указанный Email мы будем отправлять чеки от покупок на сайте.
+								.info-plate 
+									.info
+										+svg('info')
+										p Вам отправлено письмо с просьбой подвердить Email
 							.form-row
-								.form-control.email
-									input(type="text" placeholder="Телефон" value="+7 978 567 45 98").form-control--input
+								.form-control
+									input(type="text" disabled="disabled" placeholder="Телефон" value="+7 978 567 45 98").form-control--input
 									label.form-control--label Телефон
+								
 							label.checkbox.policy
 								input(type="checkbox").checkbox-input
 								.checkbox-box
@@ -47,29 +66,30 @@ main.personal.mb-120
 				.deliveries-block
 					h3.h3 Адрес доставки
 					p.save-delivery-desc Сохраняйте адреса доставки, чтобы не вводить их при повторных заказах.
-					.addresses-block
-						.item
-							input(type="radio" name="address")
-							.text
-								| 234123, Москва, Профсоюзная, 38, Комментарии: под.6, домофон 165Вызов, эт.15, кв.165.
-							a.icon.edit
-								+svg('edit')
-							a.icon.delete
-								+svg('delete')
-						.item
-							input(type="radio" name="address")
-							.text
-								| 125009, г. Москва, ул. Большая Никитская ул., 15 ст 1
-							a.icon.edit
-								+svg('edit')
-							a.icon.delete
-								+svg('delete')
-						.item.removed
-							.text
-								| Адрес удален
-							a.undo
-								| Восстановить
-						button(type="submit").new-address + Новый адрес
+					.address-block-wrap
+						.addresses-block
+							.item
+								input(type="radio" name="address")
+								.text
+									| 234123, Москва, Профсоюзная, 38, Комментарии: под.6, домофон 165Вызов, эт.15, кв.165.
+								a.icon.edit
+									+svg('edit')
+								a.icon.delete
+									+svg('delete')
+							.item
+								input(type="radio" name="address")
+								.text
+									| 125009, г. Москва, ул. Большая Никитская ул., 15 ст 1
+								a.icon.edit
+									+svg('edit')
+								a.icon.delete
+									+svg('delete')
+							.item.removed
+								.text
+									| Адрес удален
+								a.undo
+									| Восстановить
+							button(type="submit").new-address + Новый адрес
 
 			.delete-account
 				a.ttu(href="#") 
