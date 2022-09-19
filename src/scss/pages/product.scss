@@ -1,6 +1,124 @@
 .product {
+  &__gallery {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 24px;
+    }
+
+    &-thumb {
+      &--wrapper {
+        flex: 0 0 100px;
+        margin-right: 12px;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        @include media-breakpoint-down(lg) {
+          flex: 0 0 auto;
+          margin-right: 0;
+          order: 2;
+          margin-top: 12px;
+        }
+      }
+      &--arrow {
+        @include media-breakpoint-down(lg) {
+          display: none !important;
+        }
+        &--up {
+          margin-bottom: 24px;
+        }
+        &--down {
+          margin-top: 24px;
+        }
+      }
+      &--item {
+        display: block;
+        border-radius: 6px;
+
+        &--wrapper {
+          display: block !important;
+          margin: 6px 0;
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 2px solid $color-dark-golden;
+            opacity: 0;
+            border-radius: 6px;
+            transition: opacity $duration-normal $easing-out;
+          }
+          @include media-breakpoint-down(lg) {
+            margin: 0 6px;
+            width: 100px !important;
+          }
+        }
+      }
+      .slick-list {
+        margin: -6px 0;
+        @include media-breakpoint-down(lg) {
+          margin: 0 -6px;
+        }
+      }
+      .slick-slide.slick-current &--item--wrapper:after{
+        opacity: 1;
+      }
+    }
+    &-preview {
+      &--wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        @include media-breakpoint-down(lg) {
+          order: 1;
+        }
+      }
+      &--item {
+        display: block;
+        @include media-breakpoint-down(md) {
+          border-radius: 6px;
+        }
+        &--wrapper {
+          display: block !important;
+        }
+      }
+      &--arrow {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+        @include media-breakpoint-down(md) {
+          display: none !important;
+        }
+        &--left {
+          left: 24px;
+          @include media-breakpoint-down(lg) {
+            left: 12px;
+          }
+        }
+        &--right {
+          right: 24px;
+          @include media-breakpoint-down(lg) {
+            right: 12px;
+          }
+        }
+      }
+    }
+  }
+
+
   &-article_number {
     color: $color-black;
+    span {
+      color: $color-silver-brown;
+    }
   }
   &-tag {
 
@@ -27,20 +145,24 @@
   }
   &__color {
     &-label {
-      color: $color-silver-brown;
+      color: $color-black;
+      span {
+        color: $color-silver-brown;
+      }
     }
     &-list {
       display: flex;
       &--item {
         margin-right: 12px;
-        border-radius: 50px;
+        border-radius: 100%;
         overflow: hidden;
         width: 36px;
         height: 36px;
         flex: 0 0 36px;
         position: relative;
-        img {
-          display: block;
+        display: flex;
+        &--value {
+          flex: 1 1;
         }
         &:last-child {
           margin-right: 0;

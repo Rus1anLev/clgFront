@@ -451,3 +451,15 @@ h3, .h3 {
 		color: $color-dark-golden;
 	}
 }
+
+.arrow {
+	width: 48px;
+	height: 48px;
+	padding: 12px;
+	background: #EDEDED;
+	border-radius: 100%;
+	&.slick-disabled {
+		opacity: 0;
+		pointer-events: none;
+	}
+}

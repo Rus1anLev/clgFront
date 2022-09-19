@@ -3,50 +3,78 @@ main.product.pt-60.mb-120
         include ../components/breadcrumbs
     .container.mb-60
         .row
-            .col-lg-10
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto assumenda error eveniet fugiat fugit harum incidunt inventore magnam maxime minus optio, pariatur porro quam repudiandae similique sint temporibus veniam!
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, amet architecto est explicabo in nisi officiis perferendis possimus quisquam quos, rem sunt unde velit? Maiores natus necessitatibus nihil quisquam sapiente.
-            .col-lg-6
-                .product-article_number.link-or-text.mb-24 Артикул: 221ML983MF106
+            .col-18.d-md-none
                 .product-tag.tag.mb-12 Sale
                 .product-title.mb-12
-                    h1.h3 Рубашка из шелковой ткани эпонж Bamboo Print с блестящей петелькой
+                    .h3 Рубашка из шелковой ткани эпонж Bamboo Print с блестящей петелькой
                 .product__price.mb-48
                     .product__price-current 36 768 руб.
                     .product__price-old 56 947 руб.
+            .col-lg-10.col-md-8
+                .product__gallery
+                    .product__gallery-thumb--wrapper
+                        button.arrow.arrow-up.product__gallery-thumb--arrow.product__gallery-thumb--arrow--up
+                            +svg('arrow-up')
+                        .product__gallery-thumb
+                            .product__gallery-thumb--item--wrapper
+                                img.product__gallery-thumb--item(src='/images/pages/product/photo-thumb-1.jpg')
+                            .product__gallery-thumb--item--wrapper
+                                img.product__gallery-thumb--item(src='/images/pages/product/photo-thumb-2.jpg')
+                            .product__gallery-thumb--item--wrapper
+                                img.product__gallery-thumb--item(src='/images/pages/product/photo-thumb-3.jpg')
+                            .product__gallery-thumb--item--wrapper
+                                img.product__gallery-thumb--item(src='/images/pages/product/photo-thumb-4.jpg')
+                            .product__gallery-thumb--item--wrapper
+                                img.product__gallery-thumb--item(src='/images/pages/product/photo-thumb-5.jpg')
+
+                        button.arrow.arrow-down.product__gallery-thumb--arrow.product__gallery-thumb--arrow--down
+                            +svg('arrow-down')
+
+                    .product__gallery-preview--wrapper
+                        button.arrow.arrow-left.product__gallery-preview--arrow.product__gallery-preview--arrow--left
+                            +svg('arrow-left')
+                        .product__gallery-preview
+                            .product__gallery-preview--item--wrapper
+                                img.product__gallery-preview--item(src='/images/pages/product/photo-preview-1.jpg')
+                            .product__gallery-preview--item--wrapper
+                                img.product__gallery-preview--item(src='/images/pages/product/photo-preview-2.jpg')
+                            .product__gallery-preview--item--wrapper
+                                img.product__gallery-preview--item(src='/images/pages/product/photo-preview-3.jpg')
+                            .product__gallery-preview--item--wrapper
+                                img.product__gallery-preview--item(src='/images/pages/product/photo-preview-4.jpg')
+                            .product__gallery-preview--item--wrapper
+                                img.product__gallery-preview--item(src='/images/pages/product/photo-preview-5.jpg')
+
+                        button.arrow.arrow-right.product__gallery-preview--arrow.product__gallery-preview--arrow--right
+                            +svg('arrow-right')
+
+            .col-lg-6.col-md-8
+                .product-article_number.link-or-text.mb-24 <span>Артикул: </span> 221ML983MF106
+                .d-none.d-md-block
+                    .product-tag.tag.mb-12 Sale
+                    .product-title.mb-12
+                        h1.h3 Рубашка из шелковой ткани эпонж Bamboo Print с блестящей петелькой
+                    .product__price.mb-48
+                        .product__price-current 36 768 руб.
+                        .product__price-old 56 947 руб.
                 .product__color.mb-24
-                    .product__color-label.link-or-text.mb-12 Цвет: Светло-лиловый
+                    .product__color-label.link-or-text.mb-12 <span>Цвет: </span> Светло-лиловый
                     .product__color-list
                         a.product__color-list--item
-                            +lazyPicture({
-                                src: '/images/colors/color-1.svg',
-                                alt: '',
-                            })
+                            .product__color-list--item--value(style="background-color: #604F23;")
                         a.product__color-list--item
-                            +lazyPicture({
-                                src: '/images/colors/color-2.svg',
-                                alt: '',
-                            })
+                            .product__color-list--item--value(style="background-color: #DFA94A;")
                         a.product__color-list--item
-                            +lazyPicture({
-                                src: '/images/colors/color-3.svg',
-                                alt: '',
-                            })
+                            .product__color-list--item--value(style="background-color: #232D40;")
                         a.product__color-list--item
-                            +lazyPicture({
-                                src: '/images/colors/color-4.svg',
-                                alt: '',
-                            })
+                            .product__color-list--item--value(style="background-color: #EBEBEB;")
+                            .product__color-list--item--value(style="background-color: #998057;")
                         a.product__color-list--item.product__color-list--item--active
-                            +lazyPicture({
-                                src: '/images/colors/color-5.svg',
-                                alt: '',
-                            })
+                            .product__color-list--item--value(style="background-color: #E2AC48;")
+                            .product__color-list--item--value(style="background-color: #594A1F;")
                         a.product__color-list--item
-                            +lazyPicture({
-                                src: '/images/colors/color-6.svg',
-                                alt: '',
-                            })
+                            .product__color-list--item--value(style="background-color: #DBB29B;")
+                            .product__color-list--item--value(style="background-color: #55547C;")
                 .product__size.mb-24
                     a(href="#").product__size-label.link-or-text.link-or-text--underline.mb-12 Гид по размерам
                     .product__size-select
