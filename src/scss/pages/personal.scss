@@ -365,23 +365,7 @@
 		}
 		.status {
 			margin-top: 10px;
-			padding: 7px 12px;
-			font-size: 14px;
-			display: block;
-			width: auto;
-			border-radius: 6px;
-			display: inline-block;
-			color: $color-white;
-			&.pending {
-				background-color: $color-cold-brown;
-			}
-			&.completed {
-				background-color: $color-system-green;
-			}
-			&.cancelled {
-				background-color: $color-gray-2;
-				color: $color-black;
-			}
+			
 		}
 		.price {
 			margin-top: 26px;
@@ -401,6 +385,26 @@
 		}
 	}
 }
+.status {
+	padding: 7px 12px;
+	font-size: 14px;
+	display: block;
+	width: auto;
+	border-radius: 6px;
+	display: inline-block;
+	color: $color-white;
+	&.pending {
+		background-color: $color-cold-brown;
+	}
+	&.completed {
+		background-color: $color-system-green;
+	}
+	&.cancelled {
+		background-color: $color-gray-2;
+		color: $color-black;
+	}
+}
+
 @include media-breakpoint-only(sm) {
 	.personal.personal-orders {
 		.orders-list {
@@ -454,4 +458,314 @@
 		}
 	}
 	
+}
+
+.orders {
+	.order-detail {
+		color: {
+			color: $color-black;
+		}
+		.back {
+			display: flex;
+			align-items: center;
+			text-transform: uppercase;
+			letter-spacing: -0.9px;
+			font-weight: 300;
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+		}
+		.headline {
+			margin-top: 60px;
+			display: flex;
+			h3 {
+				line-height: 32px;
+			}
+			.headline-right {
+				display: flex;
+				flex-grow: 2;
+			}
+			.status {
+				height: 30px;
+				margin-left: 13px;
+			}
+			.date {
+				font-size: 18px;
+				margin-top: 10px;
+				font-weight: 300;
+			}
+		}
+		.order-contents {
+			.item {
+				margin-top: 51px;
+    			display: flex;
+				font-weight: 300;
+				// justify-content: space-between;
+				& + .item {
+					margin-top: 15px;
+				}
+				.image-block {
+					flex: 0 0 145px;
+    				margin-right: 12px;
+				}
+				.description {
+					display: flex;
+					justify-content: space-between;
+					flex: 1 1;
+				}
+				.content-block {
+					flex: 0 0 299px;
+					margin-right: 70px;
+					
+					.title {
+						margin-top: 12px;
+						font-size: 18px;
+					}
+					.color {
+						margin-top: 42px;
+    					font-size: 14px;
+					}
+					.size {
+						margin-top: 8px;
+						font-size: 14px;
+					}
+				}
+				.price-block {
+					flex: 0 0 150px;
+					margin-right: 34px;
+					justify-content: center;
+    				display: flex;
+    				flex-direction: column;
+					.old-price {
+						text-decoration: line-through;	
+						margin-top: -18px;		
+						color: $color-silver-brown;
+					}
+					.price {
+						margin-top: 10px;
+    					font-size: 18px;
+					}
+				}
+				.total-block {
+					justify-content: space-between;
+					display: flex;
+					flex: 1 1;
+					align-items: center;
+					.amount {
+						margin-top: 10px;
+    					font-size: 18px;
+					}
+					.total-price {
+						font-weight: 500;
+						font-size: 18px;
+						letter-spacing: 0.4px;
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+		.summary {
+			padding: 25px;
+			background: #F7F7F7;
+			border-radius: 6px;
+			font-weight: 300;
+			max-width: 600px;
+    		padding: 25px;
+			.summary-row {
+				display: flex;
+				justify-content: space-between;
+				font-size: 18px;
+				& + .summary-row {
+					margin-top: 16px;
+				}
+				&.total {
+					color: $color-black;
+					font-weight: 500;
+					.prop {
+						color: $color-black;
+						font-weight: 500;
+					}
+				}
+				.prop {
+					color: $color-silver-brown;
+				}
+			}
+		}
+		.bonuses {
+			display: flex;
+			justify-content: space-between;
+			max-width: 600px;
+			padding: 25px;
+			border-bottom: 1px solid #E0E0E0;
+			font-size: 18px;
+			font-weight: 300;
+		}
+		.info  {
+			font-size: 18px;
+			font-weight: 300;
+			div + div {
+				margin-top: 10px;
+			}
+			div {
+				span {
+					color: $color-silver-brown;
+				}
+				a {
+					color: $color-silver-brown;
+					text-decoration: underline;
+					font-size: 14px;
+				}
+			}
+		}
+		.actions {
+			.ml-24 {
+				margin-left: 24px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(xl) {
+	.orders .order-detail .order-contents .item .content-block {
+		flex: 0 0 199px;
+		margin-right: 10px;
+	}
+	.orders .order-detail .order-contents .item .price-block {
+		flex: 0 0 120px;
+    	margin-right: 0px;
+	}
+	.orders .order-detail .order-contents .item .total-block .amount {
+		// display: none;
+	}
+	.orders .order-detail .order-contents .item .total-block .total-price {
+		text-align: right;
+	}
+	.orders .order-detail .order-contents .item .total-block {
+		justify-content: flex-end;
+	}
+}
+
+@include media-breakpoint-down(xl) {
+	.orders .order-detail .order-contents .item .description {
+		display: block;
+	}
+	.orders .order-detail .order-contents .item .total-block {
+		justify-content: flex-start;
+	}
+	.orders .order-detail .order-contents .item .price-block {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	.orders .order-detail .order-contents .item .price-block .price {
+		order: -1;
+	}
+	.orders .order-detail .order-contents .item .price-block {
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: baseline;
+	}
+	.orders .order-detail .order-contents .item .price-block .old-price {
+		margin-left: 10px;
+	}
+	.orders .order-detail .order-contents .item .total-block {
+		justify-content: flex-start;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.orders .order-detail .order-contents .item .content-block .color {
+		margin-top: 10px;
+	}
+}
+@include media-breakpoint-down(md) { 
+	.orders .order-detail .actions {
+		display: flex;
+    	flex-direction: column;
+		text-align: center;
+		.btn {
+			& + .btn {
+				margin-top: 20px;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-only(xs) {
+	.orders .order-detail .headline .headline-right {
+		flex-direction: column;
+		align-items: flex-start;
+		.status {
+			margin-left: 0;
+			margin-top: 10px;
+		}
+	}
+	.orders .order-detail .order-contents .item .price-block .price {
+		font-size: 14px;
+	}
+	.orders .order-detail .order-contents .item .price-block .old-price {
+		font-size: 12px;
+	}
+	.orders .order-detail .order-contents .item .image-block {
+		flex: 0 0 105px;
+	}
+	.orders .order-detail .headline {
+		margin-top: 48px;
+	}
+	.orders .order-detail .headline .date {
+		font-size: 16px;
+	}
+	.orders .order-detail .headline .headline-right .status {
+		margin-top: 6px;
+    	font-size: 12px;
+	}
+	.orders .order-detail .order-contents .item .image-block {
+		margin-right: 8px;
+	}
+	.orders .order-detail .order-contents .item {
+		margin-top: 38px;
+	}
+	.orders .order-detail .order-contents .item .content-block .title {
+		font-size: 14px;
+	}
+	.orders .order-detail .order-contents .item .content-block .color {
+		font-size: 12px;
+		margin-top: 14px;
+	}
+	.orders .order-detail .order-contents .item .content-block .size {
+		margin-top: 4px;
+		font-size: 12px;
+	}
+	.orders .order-detail .order-contents .item .total-block .amount {
+		margin-top: 10px;
+		font-size: 12px;
+	}
+	.orders .order-detail .order-contents .item .total-block .total-price {
+		font-size: 14px;
+	}
+	.orders .order-detail .summary .summary-row {
+		font-size: 16px;
+	}
+	.orders .order-detail .summary .summary-row + .summary-row {
+		margin-top: 14px;
+	}
+	.orders .order-detail .summary .summary-row.total {
+		font-size: 15px;
+	}
+	.orders .order-detail .bonuses {
+		padding: 25px 10px;
+		font-size: 16px;
+	}
+	.orders .order-detail .info {
+		font-size: 16px;
+	}
+	.orders .order-detail .info div + div {
+		margin-top: 15px;
+	}
+	.orders .order-detail .actions {
+		margin-top: 50px;
+	}
+	.orders .order-detail .actions .btn + .btn {
+		margin-top: 12px;
+	}
 }
