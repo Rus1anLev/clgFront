@@ -22,6 +22,11 @@ h3, .h3 {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 30px;
+	@include media-breakpoint-down(md) {
+		font-size: 19px;
+		line-height: 1.16;
+		color: $color-black;
+	}
 }
 
 .menu-item {
@@ -452,6 +457,29 @@ h3, .h3 {
 	}
 	&-input:checked ~ &-caption {
 		color: $color-dark-golden;
+	}
+}
+
+.list {
+	li {
+		padding-left: 27px;
+		position: relative;
+		margin-bottom: 8px;
+		color: $color-black;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:before {
+			content: "";
+			width: 2px;
+			height: 2px;
+			border-radius: 2px;
+			background: currentColor;
+			position: absolute;
+			display: block;
+			left: 12px;
+			top: 10px;
+		}
 	}
 }
 
