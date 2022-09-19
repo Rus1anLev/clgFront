@@ -1,0 +1,109 @@
+main.personal.mt-60.mb-120
+	.container.orders
+		.row
+			.d-none.d-md-block.col-md-5.col-lg-5.col-xl-4
+				include ../components/personalAside
+			.col-16.col-sm-16.col-md-11.col-lg-11.col-xl-12
+				.order-detail
+					a(href="/personal-orders.html").back
+						+svg('left')
+						| Назад
+					.headline
+						.headline-right
+							h3 A-006543725
+							.status.pending
+								| на комплектации
+						.date От 24.02.22
+					.order-contents
+						.item
+							.image-block
+								a(href="#")
+								+lazyPicture({
+                                    src: "/images/pages/order/photo1.png",
+                                    alt: '',
+                                })
+							.description
+								.content-block
+									.title [Наименование товара]
+									.color [Наименование цвета]
+									.size [Размер]
+								.price-block
+									.old-price 23 659 руб.
+									.price 24 780 руб.
+								.total-block
+									.amount
+										| 1 шт.
+									.total-price
+										| 23 659 руб.
+						.item
+							.image-block
+								a(href="#")
+								+lazyPicture({
+                                    src: "/images/pages/order/photo2.png",
+                                    alt: '',
+                                })
+							.description
+								.content-block
+									.title Рубашка из шелковой ткани эпонж Bamboo Print с блестящей петелькой
+									.color Пепельно-серый
+									.size 48
+								.price-block
+									.old-price 224 780 руб.
+									.price 223 659 руб.
+								.total-block
+									.amount
+										| 1 шт.
+									.total-price
+										| 223 659 руб.
+						.item
+							.image-block
+								a(href="#")
+								+lazyPicture({
+                                    src: "/images/pages/order/photo3.png",
+                                    alt: '',
+                                })
+							.description
+								.content-block
+									.title Зауженые джинсы с разрезами
+									.color Тёмно-синий
+									.size 52
+								.price-block
+									.price 13 354 руб.
+								.total-block
+									.amount
+										| 1 шт.
+									.total-price
+										| 13 354 руб.
+					.summary.mt-60
+						.summary-row
+							.prop Товаров на сумму
+							.value 172 580 руб.
+						.summary-row
+							.prop Скидка
+							.value -567 руб.
+						.summary-row
+							.prop Бонусы
+							.value -765 руб.
+						.summary-row
+							.prop Доставка
+							.value 400 руб.
+						.summary-row.total
+							.prop Итого
+							.value 164 678 руб.
+					.bonuses
+						.prop Начисленно бонусов
+						.value 12 876
+					.info.mt-60
+						div
+							| <span>Вид доставки:</span> Доставка курьером
+						div
+							| <span>Адрес:</span> Москва, Профсоюзная, 38, под.6, домофон 165, эт.15, кв.165.
+						div
+							| <span>Способ оплаты:</span> При получении (картой или наличными)
+						div
+							| <span>Дата и время доставки:</span> 24.05.2022, 10:00 - 18:00. <a href="#">Изменить</a>
+						div
+							| <span>Получатель:</span> Екатерина, 8 978 876 66 87, ohmymail@mail.ru
+					.actions.mt-60
+						a(href="#").btn.btn-primary Оплатить
+						a(href="#").btn.btn-secondary.ml-24 Отменить заказ  
