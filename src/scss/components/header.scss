@@ -52,7 +52,10 @@
 				transition: $duration-normal $easing-out background-color;
 			}
 			@include media-breakpoint-only(lg) {
-				margin-right: 12px;
+				margin-right: 16px;
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 			&.is-open {
 				&:after {
