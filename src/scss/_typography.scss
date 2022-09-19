@@ -22,6 +22,11 @@ h3, .h3 {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 30px;
+	@include media-breakpoint-down(md) {
+		font-size: 19px;
+		line-height: 1.16;
+		color: $color-black;
+	}
 }
 
 .menu-item {
@@ -30,6 +35,9 @@ h3, .h3 {
 	line-height: 1.12;
 	&:hover {
 		color: $color-dark-golden;
+	}
+	@include media-breakpoint-only(lg) {
+		font-size: 14px;
 	}
 	//@include media-breakpoint-down(md) {
 	//	font-size: 14px;
@@ -449,5 +457,95 @@ h3, .h3 {
 	}
 	&-input:checked ~ &-caption {
 		color: $color-dark-golden;
+	}
+}
+
+.list {
+	li {
+		padding-left: 27px;
+		position: relative;
+		margin-bottom: 8px;
+		color: $color-black;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:before {
+			content: "";
+			width: 2px;
+			height: 2px;
+			border-radius: 2px;
+			background: currentColor;
+			position: absolute;
+			display: block;
+			left: 12px;
+			top: 10px;
+		}
+	}
+}
+
+.arrow {
+	width: 48px;
+	height: 48px;
+	padding: 12px;
+	background: #EDEDED;
+	border-radius: 100%;
+	&.slick-disabled {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.slick-dots {
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+
+	@include media-breakpoint-down(md) {
+		display: none !important;
+	}
+
+	li {
+		flex: 0 0 12px;
+
+		margin-right: 8px;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		button {
+			width: 12px;
+			height: 12px;
+			display: block;
+			font-size: 0;
+			background-color: $color-space-gray;
+			border-radius: 100%;
+		}
+
+		&.slick-active button {
+			background: $color-dark-golden;
+		}
+	}
+}
+
+.progress {
+	background-image: linear-gradient(to right, $color-dark-golden, $color-dark-golden);
+	background-repeat: no-repeat;
+	background-size: 0 100%;
+	border-radius: 2px;
+	height: 100%;
+	transition: background-size $duration-normal $easing-out;
+
+	&-wrapper {
+		display: block;
+		width: 100px;
+		height: 9px;
+		border-radius: 2px;
+		overflow: hidden;
+		background-color: #F4F4F4;
+		padding: 2px;
+		margin: 36px auto 0;
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
 	}
 }

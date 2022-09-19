@@ -12,6 +12,11 @@
     pointer-events: none;
     transition: $duration-normal $easing-out opacity,
                 $duration-normal $easing-out overflow;
+
+    @include media-breakpoint-only(lg) {
+      top: 106px;
+    }
+
     &.is-open{
       opacity: 1;
       overflow: visible;
