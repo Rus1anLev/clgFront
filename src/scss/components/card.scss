@@ -1,8 +1,14 @@
 .card {
+
   &-img {
     display: block;
     border-radius: 6px;
     overflow: hidden;
+    margin-bottom: 12px;
+    picture {
+      display: block;
+    }
+
     img {
       display: block;
     }
@@ -62,6 +68,16 @@
           margin-left: 4px;
         }
       }
+    }
+  }
+
+
+  @include media-breakpoint-down(md) {
+    .mb-12 {
+      margin-bottom: 6px;
+    }
+    .mt-12 {
+      margin-top: 6px;
     }
   }
 }
