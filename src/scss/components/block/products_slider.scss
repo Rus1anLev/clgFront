@@ -1,0 +1,48 @@
+.block_products_slider {
+  &__slider{
+    &-wrapper {
+      position: relative;
+    }
+    &--arrow {
+      position: absolute;
+      top: 222px;
+      @include media-breakpoint-down(xl) {
+        top: 176px;
+      }
+      @include media-breakpoint-down(md) {
+        display: none !important;
+      }
+      &--left {
+        left: -25px;
+        @include media-breakpoint-down(xl) {
+          left: 24px;
+        }
+      }
+      &--right {
+        right: -25px;
+        @include media-breakpoint-down(xl) {
+          right: 24px;
+        }
+      }
+    }
+    &-item {
+      padding: 0 12px;
+      @include media-breakpoint-down(lg) {
+        width: 261px !important;
+        padding: 0 6px;
+      }
+    }
+
+    .slick-list {
+      margin: 0 -12px;
+      @include media-breakpoint-down(lg) {
+        margin: 0 -6px;
+      }
+    }
+
+    &-progress {
+
+    }
+  }
+
+}

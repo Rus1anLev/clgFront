@@ -1,7 +1,7 @@
 main.product.pt-60.mb-120
     .mb-60
         include ../components/breadcrumbs
-    .container.mb-60
+    .container.mb-120
         .row
             .col-18.d-md-none
                 .product-tag.tag.mb-12 Sale
@@ -26,7 +26,6 @@ main.product.pt-60.mb-120
                                 img.product__gallery-thumb--item(src='/images/pages/product/photo-thumb-4.jpg')
                             .product__gallery-thumb--item--wrapper
                                 img.product__gallery-thumb--item(src='/images/pages/product/photo-thumb-5.jpg')
-
                         button.arrow.arrow-down.product__gallery-thumb--arrow.product__gallery-thumb--arrow--down
                             +svg('arrow-down')
 
@@ -44,7 +43,6 @@ main.product.pt-60.mb-120
                                 img.product__gallery-preview--item(src='/images/pages/product/photo-preview-4.jpg')
                             .product__gallery-preview--item--wrapper
                                 img.product__gallery-preview--item(src='/images/pages/product/photo-preview-5.jpg')
-
                         button.arrow.arrow-right.product__gallery-preview--arrow.product__gallery-preview--arrow--right
                             +svg('arrow-right')
 
@@ -137,3 +135,5 @@ main.product.pt-60.mb-120
 
                 .product__look
                     a(href="#").btn.btn-secondary Подобрать образ
+    .mb-120
+        +block_products_slider()

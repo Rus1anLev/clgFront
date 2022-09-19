@@ -466,3 +466,58 @@ h3, .h3 {
 		pointer-events: none;
 	}
 }
+
+.slick-dots {
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+
+	@include media-breakpoint-down(md) {
+		display: none !important;
+	}
+
+	li {
+		flex: 0 0 12px;
+
+		margin-right: 8px;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		button {
+			width: 12px;
+			height: 12px;
+			display: block;
+			font-size: 0;
+			background-color: $color-space-gray;
+			border-radius: 100%;
+		}
+
+		&.slick-active button {
+			background: $color-dark-golden;
+		}
+	}
+}
+
+.progress {
+	background-image: linear-gradient(to right, $color-dark-golden, $color-dark-golden);
+	background-repeat: no-repeat;
+	background-size: 0 100%;
+	border-radius: 2px;
+	height: 100%;
+	transition: background-size $duration-normal $easing-out;
+
+	&-wrapper {
+		display: block;
+		width: 100px;
+		height: 9px;
+		border-radius: 2px;
+		overflow: hidden;
+		background-color: #F4F4F4;
+		padding: 2px;
+		margin: 36px auto 0;
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+}

@@ -16,6 +16,8 @@ import {initFilter} from "./components/filter";
 import {initAccordion} from "./components/accordion";
 import {initProductSlider} from "./components/product";
 
+import {initProductsSlider} from "./components/block/products_slider";
+
 bottomSheet();
 ieFix();
 vhFix();
@@ -31,3 +33,4 @@ initFilter()
 initAccordion()
 
 initProductSlider()
+initProductsSlider()
