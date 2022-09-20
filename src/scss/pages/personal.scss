@@ -993,3 +993,22 @@
 		}
 	}
 }
+
+.personal .subscriptions {
+	.subscriptions-list {
+		@include media-breakpoint-only(xs) {
+			margin-top: 48px;
+		}
+		.tumblr ~ .tumblr {
+			margin-top: 8px;
+		}
+		.btn {
+			margin-top: 43px;
+			width: 100%;
+			max-width: 294px;
+			@include media-breakpoint-only(xs) {
+				margin-top: 19px;
+			}
+		}
+	}
+}
