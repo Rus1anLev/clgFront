@@ -123,6 +123,7 @@
         right: 24px;
         z-index: 20;
         color: $color-dark-golden;
+        pointer-events: none;
         @include media-breakpoint-down(md) {
           display: none;
         }
