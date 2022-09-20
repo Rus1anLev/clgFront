@@ -340,7 +340,9 @@
 	.empty {
 		font-size: 18px;
 		letter-spacing: -0.2px;
-		color: $color-dark-golden;
+		color: $black;
+		margin-top: 24px;
+		font-weight: 300;
 	}
 	hr {
 		margin-top: 20px;
