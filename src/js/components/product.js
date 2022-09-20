@@ -4,13 +4,16 @@ import panzoom from "panzoom";
 
 let $productGalleryThumb = $('.product__gallery-thumb'),
     $productGalleryPreview = $('.product__gallery-preview'),
-    $productGalleryPreviewZoom = $('.product__gallery-preview--zoom'),
+    $productGalleryPreviewZoom = $('.product__gallery-preview--item--wrapper'),
     $productGalleryWindowWrapper = $('.product__gallery__window--wrapper'),
     $productGalleryWindowThumb = $('.product__gallery__window-thumb'),
     $productGalleryWindowBig = $('.product__gallery__window-big'),
     $productGalleryWindowBigClose = $('.product__gallery__window-big--close'),
     $productGalleryWindowBigZoomIn = $('.product__gallery__window-big--zoom--in'),
     $productGalleryWindowBigZoomOut = $('.product__gallery__window-big--zoom--out'),
+    zoomInstance
+
+if ($productGalleryWindowBig.length) {
     zoomInstance = panzoom($productGalleryWindowBig.get(0), {
         bounds: true,
         boundsPadding: 1,
@@ -26,8 +29,15 @@ let $productGalleryThumb = $('.product__gallery-thumb'),
             setTimeout(function () {
                 hideZoomButton(zoomInstance.getTransform().scale)
             }, 300)
+        },
+        onTouch: function(e) {
+
         }
     })
+    zoomInstance.on('zoomend', function(e) {
+        hideZoomButton(e.getTransform().scale)
+    });
+}
 
 function initSliderThumb() {
     $productGalleryThumb.slick({
@@ -74,8 +84,7 @@ function initSliderPreview() {
 }
 
 function initWindowSliderThumb() {
-    let countSlide = Math.ceil($productGalleryWindowThumb.height() / 130);
-
+    let countSlide = Math.floor($productGalleryWindowThumb.height() / 130);
     $productGalleryWindowThumb.slick({
         slidesToShow: countSlide,
         slidesToScroll: 1,
@@ -87,20 +96,19 @@ function initWindowSliderThumb() {
         vertical: true,
         verticalSwiping: true,
         responsive: [
-            // {
-            //     breakpoint: 1008,
-            //     settings: {
-            //         slidesToShow: 1,
-            //         variableWidth: true,
-            //         vertical: false,
-            //         verticalSwiping: false,
-            //     }
-            // },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    variableWidth: true,
+                    vertical: false,
+                    verticalSwiping: false,
+                }
+            },
             // {
             //     breakpoint: 1008,
             //     settings: {
             //         slidesToShow: 3,
-            //         slidesToScroll: 1,
             //     }
             // }
         ]
@@ -167,8 +175,8 @@ function handlerZoomOut() {
 function initGalleryZoom() {
     window.zoomInsance = zoomInstance
 
-    $productGalleryWindowBigZoomIn.on('click', handlerZoomIn)
-    $productGalleryWindowBigZoomOut.on('click', handlerZoomOut)
+    $productGalleryWindowBigZoomIn.click(handlerZoomIn)
+    $productGalleryWindowBigZoomOut.click(handlerZoomOut)
     hideZoomButton(1)
 }
 
@@ -187,17 +195,13 @@ function hideZoomButton(scale) {
     }
 }
 
-zoomInstance.on('zoomend', function(e) {
-    hideZoomButton(e.getTransform().scale)
-});
-
 
 function initProductSlider() {
     initSliderThumb()
     initSliderPreview()
     initGalleryZoom()
-    $productGalleryPreviewZoom.on('click', openWindowGallery)
-    $productGalleryWindowBigClose.on('click', closeWindowGallery)
+    $productGalleryPreviewZoom.click(openWindowGallery)
+    $productGalleryWindowBigClose.click(closeWindowGallery)
 }
 
 export {initProductSlider}

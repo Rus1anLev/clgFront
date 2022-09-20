@@ -38,11 +38,12 @@
       &--item {
         display: block;
         border-radius: 6px;
-
         &--wrapper {
           display: block !important;
           margin: 6px 0;
           position: relative;
+          cursor: pointer;
+
           &:after {
             content: "";
             position: absolute;
@@ -76,17 +77,20 @@
         overflow: hidden;
         position: relative;
         width: 100%;
+
         @include media-breakpoint-down(lg) {
           order: 1;
         }
       }
       &--item {
         display: block;
+
         @include media-breakpoint-down(md) {
           border-radius: 6px;
         }
         &--wrapper {
           display: block !important;
+          cursor: pointer;
         }
       }
       &--arrow {
@@ -119,6 +123,9 @@
         right: 24px;
         z-index: 20;
         color: $color-dark-golden;
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
       }
     }
 
@@ -133,7 +140,10 @@
       z-index: 100 !important;
       display: flex;
       background: #FFF;
-
+      @include media-breakpoint-down(md) {
+        flex-direction: column;
+        padding: 64px 12px 26px;
+      }
       &--wrapper {
         display: none;
       }
@@ -142,6 +152,7 @@
         overflow: hidden;
         width: 100%;
         flex: 1 1;
+
         &--wrapper {
           flex: 0 0 196px;
           padding: 90px 48px;
@@ -150,16 +161,25 @@
           display: flex;
           flex-direction: column;
           position: relative;
+          @include media-breakpoint-down(md) {
+            order: 2;
+            width: 100%;
+            flex: 0 0 auto;
+            padding: 0;
+            margin-top: 8px;
+          }
         }
         &--item {
           display: block;
           border-radius: 6px;
+
           &--wrapper {
             height: 120px;
             width: 100px;
             display: block !important;
             margin: 6px 0;
             position: relative;
+            cursor: pointer;
             &:after {
               content: "";
               position: absolute;
@@ -172,7 +192,7 @@
               border-radius: 6px;
               transition: opacity $duration-normal $easing-out;
             }
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(md) {
               margin: 0 6px;
               width: 100px !important;
             }
@@ -180,7 +200,8 @@
         }
         .slick-list {
           margin: -6px 0;
-          @include media-breakpoint-down(lg) {
+          overflow: visible;
+          @include media-breakpoint-down(md) {
             margin: 0 -6px;
           }
         }
@@ -192,6 +213,9 @@
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
+          @include media-breakpoint-down(md) {
+            display: none !important;
+          }
           &--up {
             top: 18px;
           }
@@ -205,6 +229,13 @@
         &--wrapper {
           height: 100vh;
           overflow: hidden;
+          @include media-breakpoint-down(md) {
+            order: 1;
+            flex: 1 1;
+            height: auto;
+            border-radius: 6px;
+          }
+
         //  overflow-x: hidden;
         //  overflow-y: scroll;
         //  &::-webkit-scrollbar {
@@ -227,7 +258,7 @@
         &--item {
           display: block;
           @include media-breakpoint-down(md) {
-            border-radius: 6px;
+            height: 100%;
           }
           &--wrapper {
             display: block !important;
@@ -238,11 +269,20 @@
           top: 50%;
           transform: translateY(-50%);
           z-index: 20;
+          @include media-breakpoint-down(md) {
+            display: none !important;
+          }
           &--left {
             left: 288px;
+            @include media-breakpoint-only(md) {
+              left: 240px;
+            }
           }
           &--right {
             right: 92px;
+            @include media-breakpoint-only(md) {
+              right: 44px;
+            }
           }
         }
 
@@ -253,6 +293,10 @@
           top: 48px;
           right: 92px;
           color: $color-black;
+          @include media-breakpoint-down(md) {
+            top: 16px;
+            right: 12px;
+          }
         }
 
         &--zoom {
@@ -264,12 +308,26 @@
           right: 92px;
           padding: 4px;
           color: $color-silver-brown;
-
+          @include media-breakpoint-down(md) {
+            display: none !important;
+          }
+          @include media-breakpoint-only(md) {
+            right: 44px;
+            width: 66px;
+            height: 66px;
+            padding: 20px;
+          }
           &--in {
             bottom: 93px;
+            @include media-breakpoint-only(md) {
+              bottom: 134px;
+            }
           }
           &--out {
             bottom: 48px;
+            @include media-breakpoint-only(md) {
+              bottom: 44px;
+            }
           }
         }
       }
