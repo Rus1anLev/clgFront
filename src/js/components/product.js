@@ -202,7 +202,6 @@ function initProductSlider() {
     initGalleryZoom()
     $productGalleryPreviewZoom.click(openWindowGallery)
     $productGalleryWindowBigClose.click(closeWindowGallery)
-    $.fancybox.open($('#popup-cart'))
 }
 
 export {initProductSlider}
