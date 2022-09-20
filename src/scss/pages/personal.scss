@@ -769,3 +769,114 @@
 		margin-top: 12px;
 	}
 }
+.loyalty {
+	.loyalty-list {
+		.empty {
+			font-size: 18px;
+			margin-top: 60px;
+			font-weight: 300;
+			p + p {
+				margin-top: 18px;
+			}
+		}	
+		.item {
+			display: flex;
+			align-items: flex-start;
+			font-size: 18px;
+			margin-bottom: 28px;
+			.info {
+				margin-left: 24px;
+				font-weight: 300;
+				p {
+					margin-top: 24px;
+					& + p {
+						margin-top: 5px;
+					}
+				}
+				.card-info {
+					p {
+						color: $color-silver-brown;
+						span {
+							color: $color-black;
+						}
+					}
+				}
+				.the-next-level-play {
+					max-width: 286px;
+					font-size: 14px;
+					font-weight: 300;
+					border-top: 1px solid #E0E0E0;
+					padding-top: 12px;
+					margin-top: 27px;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+	.loyalty-about {
+		margin-top: 18px;
+		font-weight: 300;
+		font-size: 14px;
+		a {
+			color: $color-dark-golden;
+			text-decoration: underline;
+		}
+	}
+}
+@include media-breakpoint-only(md) {
+	img {
+		max-width: 200px;
+	}
+}
+@include media-breakpoint-only(xs) {
+	.personal .loyalty { 
+		h2 {
+			margin-top: 12px;
+		}
+		.loyalty-list .item {
+			display: flex;
+			align-items: flex-start;
+			font-size: 18px;
+			margin-bottom: -5px;
+			flex-direction: column;
+
+			.info {
+				flex-wrap: wrap;
+				margin-left: 0;
+				display: flex;
+				width: 100%;
+				align-items: flex-start;
+				justify-content: space-between;
+				font-size: 16px;
+				h3 {
+					margin-top: 12px;
+					font-size: 30px;
+				}
+				p {
+					margin-top: 0;
+
+					&.the-next-level-play {
+						margin-top: 14px;
+						border-top: 1px solid #E0E0E0;
+						padding-top: 14px;
+						font-size: 12px;
+						line-height: 15px;
+						font-weight: 300;
+					}
+				}
+				.card-info {
+					margin-top: 14px;
+					margin-left: 20px;
+					flex: 1 1 180px;
+					p + p {
+						margin-top: 4px;
+					}
+				}
+			}
+			
+		}
+		.loyalty-about {
+			font-size: 12px;
+		}
+	}
+}
