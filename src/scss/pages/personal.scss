@@ -826,11 +826,11 @@
 	}
 }
 @include media-breakpoint-only(md) {
-	img {
+	.loyalty-list img {
 		max-width: 200px;
 	}
 }
-@include media-breakpoint-only(xs) {
+@include media-breakpoint-down(md) {
 	.personal .loyalty { 
 		h2 {
 			margin-top: 12px;
@@ -879,6 +879,136 @@
 		}
 		.loyalty-about {
 			font-size: 12px;
+		}
+	}
+}
+
+.personal .favourites {
+	.favourites-headline {
+		display: flex;
+		.share-fav-link {
+			margin-top: 20px;
+    		margin-left: 25px;
+    		font-weight: 300;
+			@include media-breakpoint-only(md) {
+				margin-top: 10px;
+			}
+		}
+		a {
+			display: flex;
+			svg {
+				width: 16px;
+				height: 16px;
+				fill: #fff;
+				margin-right: 4px;
+			}
+		}
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
+			.share-fav-link {
+				margin-left: 0;
+			}
+		}
+	}
+	.favourites-list {
+		.item {
+			img {
+				border-radius: 6px;
+				max-width: auto;
+				@include media-breakpoint-only(xs) {
+					width: 100%;
+				}
+			}
+			position: relative;
+			.fav {
+				position: absolute;
+				top: 16px;
+    			right: 28px;
+				svg {
+					width: 22px;
+					height: 22px;
+					stroke: $color-dark-golden;
+					fill: transparent;
+					&.is-active {
+						fill: $color-dark-golden;
+					}
+				}
+			}
+			margin-bottom: 48px;
+			.flexible {
+				margin-top: 12px;
+				display: flex;
+				justify-content: space-between;
+			}
+			.item-left {
+				font-size: 18px;
+				font-weight: 300;
+				a {
+					color: $color-cold-brown;
+				}
+				p {
+					font-size: 13px;
+					font-weight: 300;
+					text-transform: uppercase;
+					margin-top: 6px;
+					color: $color-silver-brown;
+				}
+			}
+			.item-right {
+				text-align: right;
+				width: 140px;
+				.price {
+					font-size: 18px;
+					font-weight: 300;
+					@include media-breakpoint-only(md) { 
+						font-size: 16px;
+					}
+				}
+				.old-price {
+					font-weight: 300;
+					text-decoration: line-through;
+					margin-top: 8px;
+					color: $color-silver-brown;
+					@include media-breakpoint-only(md) { 
+						font-size: 14px;
+					}
+				}
+			}
+			.item-bottom {
+				.color {
+					margin-top: 15px;
+					font-weight: 300;
+					margin-bottom: 6px;
+					color: $color-cold-brown;
+					span {
+						color: $color-silver-brown;
+					}
+				}
+				a.btn {
+					margin-top: 2px;
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+.personal .subscriptions {
+	.subscriptions-list {
+		@include media-breakpoint-only(xs) {
+			margin-top: 48px;
+		}
+		.tumblr ~ .tumblr {
+			margin-top: 8px;
+		}
+		.btn {
+			margin-top: 43px;
+			width: 100%;
+			max-width: 294px;
+			@include media-breakpoint-only(xs) {
+				margin-top: 19px;
+			}
 		}
 	}
 }
