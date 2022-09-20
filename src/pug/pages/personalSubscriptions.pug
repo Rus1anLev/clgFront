@@ -1,0 +1,19 @@
+main.personal.personal-orders.mt-60.mb-120
+	.container.subscriptions
+		.row
+			.d-none.d-sm-block.col-sm-7.col-md-5.col-lg-5.col-xl-4
+				include ../components/personalAside
+			.col-16.col-sm-9.col-md-11.col-lg-11.col-xl-8
+				h2 Управление подписками
+				.subscriptions-list.mt-60
+					label.tumblr
+						input(type="checkbox").tumblr-input
+						.tumblr-box
+						.tumblr-caption Согласен на получение Email рассылок 
+					br
+					label.tumblr
+						input(type="checkbox" checked).tumblr-input
+						.tumblr-box
+						.tumblr-caption Согласен на получение SMS рассылок 
+					br
+					button.btn.btn-primary Сохранить
