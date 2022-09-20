@@ -26,6 +26,7 @@ main.product.pt-60.mb-120
                                 img.product__gallery-thumb--item(src='/images/pages/product/photo-thumb-4.jpg')
                             .product__gallery-thumb--item--wrapper
                                 img.product__gallery-thumb--item(src='/images/pages/product/photo-thumb-5.jpg')
+
                         button.arrow.arrow-down.product__gallery-thumb--arrow.product__gallery-thumb--arrow--down
                             +svg('arrow-down')
 
@@ -43,8 +44,11 @@ main.product.pt-60.mb-120
                                 img.product__gallery-preview--item(src='/images/pages/product/photo-preview-4.jpg')
                             .product__gallery-preview--item--wrapper
                                 img.product__gallery-preview--item(src='/images/pages/product/photo-preview-5.jpg')
+
                         button.arrow.arrow-right.product__gallery-preview--arrow.product__gallery-preview--arrow--right
                             +svg('arrow-right')
+                        button.product__gallery-preview--zoom
+                            +svg('zoom')
 
             .col-lg-6.col-md-8
                 .product-article_number.link-or-text.mb-24 <span>Артикул: </span> 221ML983MF106
@@ -74,7 +78,7 @@ main.product.pt-60.mb-120
                             .product__color-list--item--value(style="background-color: #DBB29B;")
                             .product__color-list--item--value(style="background-color: #55547C;")
                 .product__size.mb-24
-                    a(href="#").product__size-label.link-or-text.link-or-text--underline.mb-12 Гид по размерам
+                    a(href="#popup-size" data-fancybox).product__size-label.link-or-text.link-or-text--underline.mb-12 Гид по размерам
                     .product__size-select
                         select(placeholder="Выберите размер").select
                             option
@@ -86,7 +90,7 @@ main.product.pt-60.mb-120
                             option XXXL
                 .product__actions.mb-48
                     .product__actions-cart
-                        button.btn.btn-primary В корзину
+                        a(href="#popup-cart" data-fancybox).btn.btn-primary В корзину
                     .product__actions-like
                         button.btn.btn-secondary
                             +svg('favorite').favorite-icon
@@ -146,3 +150,109 @@ main.product.pt-60.mb-120
         btnText: 'Записаться <span class="d-none d-md-inline">на консультацию</span>',
         btnHref: '#'
     })
+
+.product__gallery__window--wrapper
+    .product__gallery__window
+        .product__gallery__window-thumb--wrapper
+            button.arrow.arrow-up.product__gallery__window-thumb--arrow.product__gallery__window-thumb--arrow--up
+                +svg('arrow-up')
+            .product__gallery__window-thumb
+                .product__gallery__window-thumb--item--wrapper
+                    img.product__gallery__window-thumb--item(src='/images/pages/product/photo-thumb-1.jpg')
+                .product__gallery__window-thumb--item--wrapper
+                    img.product__gallery__window-thumb--item(src='/images/pages/product/photo-thumb-2.jpg')
+                .product__gallery__window-thumb--item--wrapper
+                    img.product__gallery__window-thumb--item(src='/images/pages/product/photo-thumb-3.jpg')
+                .product__gallery__window-thumb--item--wrapper
+                    img.product__gallery__window-thumb--item(src='/images/pages/product/photo-thumb-4.jpg')
+                .product__gallery__window-thumb--item--wrapper
+                    img.product__gallery__window-thumb--item(src='/images/pages/product/photo-thumb-5.jpg')
+            button.arrow.arrow-down.product__gallery__window-thumb--arrow.product__gallery__window-thumb--arrow--down
+                +svg('arrow-down')
+        .product__gallery__window-big--wrapper
+            .product__gallery__window-big
+                .product__gallery__window-big--item--wrapper
+                    img.product__gallery__window-big--item(src='/images/pages/product/photo-1.jpg')
+                .product__gallery__window-big--item--wrapper
+                    img.product__gallery__window-big--item(src='/images/pages/product/photo-2.jpg')
+                .product__gallery__window-big--item--wrapper
+                    img.product__gallery__window-big--item(src='/images/pages/product/photo-3.jpg')
+                .product__gallery__window-big--item--wrapper
+                    img.product__gallery__window-big--item(src='/images/pages/product/photo-4.jpg')
+                .product__gallery__window-big--item--wrapper
+                    img.product__gallery__window-big--item(src='/images/pages/product/photo-5.jpg')
+            button.arrow.arrow-left.product__gallery__window-big--arrow.product__gallery__window-big--arrow--left
+                +svg('arrow-left')
+            button.arrow.arrow-right.product__gallery__window-big--arrow.product__gallery__window-big--arrow--right
+                +svg('arrow-right')
+            button.product__gallery__window-big--close
+                +svg('close')
+            button.product__gallery__window-big--zoom.product__gallery__window-big--zoom--in
+                +svg('plus')
+            button.product__gallery__window-big--zoom.product__gallery__window-big--zoom--out
+                +svg('minus')
+
+.popup.popup__size#popup-size
+    .popup-title.text-center.mb-60
+        .h2 Таблица размеров
+    table.popup__size-table
+        thead
+            tr
+                th rus
+                th eu
+                th fr
+                th i
+                th gb
+        tbody
+            tr
+                td 38
+                td 36
+                td 36
+                td 36
+                td 36
+            tr
+                td 40
+                td 38
+                td 38
+                td 38
+                td 38
+            tr
+                td 42
+                td 40
+                td 40
+                td 40
+                td 40
+            tr
+                td 44
+                td 42
+                td 42
+                td 42
+                td 42
+            tr
+                td 48
+                td 44
+                td 44
+                td 44
+                td 44
+            tr
+                td 50
+                td 48
+                td 48
+                td 48
+                td 48
+
+.popup.popup__cart#popup-cart
+    .popup-title.text-center.mb-60
+        .h3 Товар успешно добавлен в корзину
+    .popup__cart-content.mb-48
+        img(src="/images/card/cart.jpg").popup__cart-content--img
+        .popup__cart-content--info
+            .popup__cart-content--name.menu-item Брюки узкого кроя с застежками-молниями на штанинах
+            .popup__cart-content__price
+                .popup__cart-content__price-current 36 768 руб.
+                .popup__cart-content__price-old 56 947 руб.
+    .popup__cart-actions
+        div
+            a(href="javascript: $.fancybox.close()").btn.btn-primary Продолжить покупки
+        div
+            a(href="#").link.link-primary.link--big В корзину
