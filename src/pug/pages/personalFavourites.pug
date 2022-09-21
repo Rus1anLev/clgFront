@@ -7,7 +7,7 @@ main.personal.mt-60.mb-120
 				.favourites-headline
 					h2 Избранное
 					.share-fav-link
-						a(href="#")
+						a(href="#").js-open-modal(type="button", aria-controls="sheet" data-target="modal-share-favorite")
 							+svg('share')
 							| Поделиться избранным
 				.favourites-list.mt-60.col-16
