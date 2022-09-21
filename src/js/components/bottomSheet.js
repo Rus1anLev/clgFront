@@ -175,13 +175,13 @@ const bottomSheet = function () {
 		dragPosition = y
 	}
 
-	const onDragEnd = () => {
+	const onDragEnd = (e) => {
 		dragPosition = undefined
 		$(window.lastModalShown).find('.contents').removeClass("not-selectable")
 		document.body.style.cursor = ""
 		$(window.lastModalShown).find(".draggable-area").css('cursor', document.body.style.cursor)
 
-		if (sheetHeight < 30) {
+		if (sheetHeight < 22) {
 			setIsSheetShown(false, window.lastModalShown)
 		} else if (sheetHeight > 75) {
 			setSheetHeight(99, window.lastModalShown)
