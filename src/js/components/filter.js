@@ -7,10 +7,20 @@ function closeAll() {
 }
 
 function openList($list, $button) {
+
+
     closeAll()
     $list.addClass('is-open')
     $list.slideDown(400)
     $button.addClass('is-open')
+    let offset = $list.offset(),
+        width = $list.width(),
+        windowWidth = $(window).width()
+
+    if ( (offset.left + width) > windowWidth ) {
+        $list.css('right', 0)
+    }
+
     setTimeout(function () {
         $('body').on('mouseup', handlerClickOut)
     }, 100)

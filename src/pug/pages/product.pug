@@ -94,6 +94,12 @@ main.product.pt-60.mb-120
                     .product__actions-like
                         button.btn.btn-secondary
                             +svg('favorite').favorite-icon
+                .product__actions.mb-48
+                    .product__actions-cart
+                        a(href="#popup-subscribe" data-fancybox).btn.btn-secondary Узнать о поступлении
+                    .product__actions-like
+                        button.btn.btn-secondary
+                            +svg('favorite').favorite-icon
                 .product__accordion.mb-24
                     .accordion
                         .accordion-item
@@ -256,3 +262,42 @@ main.product.pt-60.mb-120
             a(href="javascript: $.fancybox.close()").btn.btn-primary Продолжить покупки
         div
             a(href="#").link.link-primary.link--big В корзину
+
+.popup.popup__subscribe#popup-subscribe
+    .popup-title.text-center.mb-24
+        .h3 Узнать о поступлении
+    .popup__subscribe-name Рубашка из шёлковой ткани эпонж Bamboo Print с блестящей петелькой
+    .popup__subscribe-color.mb-12 <span>Цвет:</span> светло-лиловый
+    .popup__subscribe-size.mb-24
+        select(placeholder="Выберите размер").select
+            option
+            option(disabled) XS - disabled
+            option XS
+            option XL
+            option XXL
+            option(disabled) XXL - disabled
+            option XXXL
+    .popup__subscribe-separate.mb-24
+    .popup__subscribe-text.mb-24 В данный момент товара нет в наличии. Оставьте свой e-mail, и мы сообщим, когда товар поступит в наши бутики.
+    .popup__subscribe-input.form-control.mb-12
+        input(type="email" placeholder="Email").form-control--input
+        label.form-control--label Email
+    .popup__subscribe-btn.mb-12
+        button.btn.btn-primary Отправить
+    .popup__subscribe-checkboxes
+        label.checkbox.popup__subscribe-checkboxes--item
+            input(type="checkbox").checkbox-input
+            .checkbox-box
+                +svg('checkbox')
+            .checkbox-text.checkbox-text--small
+                | Согласен на <a href="#">обработку персональных данных</a>
+        label.checkbox.popup__subscribe-checkboxes--item
+            input(type="checkbox").checkbox-input
+            .checkbox-box
+                +svg('checkbox')
+            .checkbox-text.checkbox-text--small
+                | Согласен на <a href="#">получение маркетинговых рассылок</a>
+.popup.popup__subscribe__thank.text-center#popup-subscribe-thank
+    .popup__subscribe__thank-title.mb-24
+        .h3 Ваш запрос отправлен.
+    .popup__subscribe__thank-text Мы сообщим о поступлении товара в наши бутики.
