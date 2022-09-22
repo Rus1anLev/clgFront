@@ -100,11 +100,18 @@
             .select-city {
                 width: 264px;
                 // margin-bottom: 24px;
+                .select2-search--dropdown.select2-search--hide {
+                    display: block;
+                }
             }
+            
         }
         .tabs-wrapper {
+            .delivery-info {
+                max-width: 600px;
+            }
             &.delivery-way {
-                margin-top: 50px;
+                margin-top: 23px;
             }
             .select-tabs.tabs-primary {
                 justify-content: flex-start;
@@ -153,28 +160,31 @@
                     line-height: 26px;
                 }
             }
-            .map-list {
-                margin-top: 9px;
-            }
             .salon-list {
-                padding: 11px 21px;
-                margin-top: 20px;
-                border: 2px solid #F5F5F5;
+
+                padding: 8px 20px 8px 0px;
                 .item {
+                    
+
                     display: flex;
                     justify-content: space-between;
-                    margin-bottom: 34px !important;
                     align-items: center;
+                    font-family: Jost;
                     &:last-of-type {
                         margin-bottom: 0 !important;
                     }
                     p {
-                        margin-left: 10px;
-                        font-size: 16px !important;
-                        margin-bottom: 7px;
+                        color: $color-silver-brown;
                     }
                     .choose {
-                        margin-top: -12px;
+                        margin-top: -18px;
+                        button {
+                            width: 150px;
+                            background: #fff;
+                        }
+                    }
+                    & + .item {
+                        margin-top: 15px;
                     }
                 }
             }
@@ -205,10 +215,11 @@
             .addresses {
         
                 margin-bottom: 0;
-                margin-top: 16px;
         
                 .item {
-                    padding: 6px 0px;
+                    background: #F7F7F7;
+                    padding: 22px 25px;
+                    border-radius: 6px;
                     align-items: center;
                     border: none;
                     display: flex;
@@ -292,24 +303,16 @@
             }
             .salon-list {
                 .item {
-                    border-bottom: 2px solid #E6E6E6;
-                    margin-top: 20px;
-                    padding-bottom: 22px;
-                    margin-bottom: 24px;
-    
-                    &:last-of-type {
-                        margin-bottom: 0;
-                        border: none;
-                    }
                     h3 {
+                        font-family: Jost;
                         font-style: normal;
-                        font-weight: 400;
+                        font-weight: 300;
                         font-size: 15px;
                         line-height: 20px;
                         letter-spacing: 1.5px;
-                        text-transform: uppercase;
-                        color: #000000;
+                        color: $color-black;
                         margin-bottom: 8px;
+                        margin-top: 4px;
                     }
                     p {
                         font-style: normal;
@@ -318,15 +321,23 @@
                         line-height: 15px;
                         display: flex;
                         align-items: center;
-                        letter-spacing: 0.1px;
-                        color: #333333;
+                        font-size: 14px;
+                        color: $color-black;
+                        margin-top: 16px;
+                        color: $color-silver-brown;
+                        & + p {
+                            margin-top: 7px;
+                        }
                     }
                 }
             }
         }
         #mapSalon {
+            max-width: 600px;
             width: 100%;
-            height: 450px;
+            height: 360px;
+            margin-top: 8px;
+            border-radius: 6px;
         }
         .salon-list-selected {
             padding: 18px 24px;
@@ -488,11 +499,7 @@
             margin-bottom: 79px;
             margin-top: 22px;
         }
-        .order-page .tabs-wrapper .addresses {
-            margin-top: 11px;
-        }
         .order-page .addresses .salon-list .item {
-            margin-top: 12px;
             padding-bottom: 24px;
             margin-bottom: 26px !important;
         }
@@ -620,7 +627,6 @@
             padding: 0;
             background: none;
             height: auto;
-            margin-top: 0;
             border-bottom: 4px solid #000;
             color: #000;
             padding-bottom: 8px;
@@ -641,7 +647,6 @@
                 color: #000;
                 border-bottom: 4px solid #000;
                 padding-bottom: 3px;
-                margin-top: 1px;
             }
             #mapSalon {
                 width: 100%;
@@ -650,7 +655,7 @@
             }
         }
         .order-page .tabs-wrapper .salon-list {
-            padding: 13px 6px;
+           padding: 8px 20px 8px 0px;
         }
         .order-page .addresses .salon-list .item {
             margin-top: -5px;
@@ -663,6 +668,9 @@
             line-height: 10px;
         }
         .choose {
+            margin-right: 20px;
+            margin-top: -14px;
+
             .btn-primary {
                 height: auto;
                 border: none;
@@ -680,6 +688,7 @@
                 margin-left: 9px;
                 margin-top: 13px;
                 line-height: 11px;
+                
                 &:hover {
                     background: none;
                     color: #000;
@@ -689,7 +698,6 @@
         .order-page .salon-list-selected {
             padding: 0px 7px;
             margin-top: 18px;
-            border: 2px solid #F5F5F5;
             .item {
                 display: block !important;
             }
@@ -721,9 +729,6 @@
         .order-page .tabs-wrapper .add-address .inline-labels .form__group-label {
             max-width: 23%;
         }
-        .order-page .tabs-wrapper .add-address .inline-labels {
-            margin-bottom: 11px;
-        }
         .order-page .data_deliv {
             margin-top: 16px;
         }
@@ -733,5 +738,63 @@
         .order-page .btn-primary.btn-next {
             margin-top: 16px;
         }
+    }
+}
+.pseudo-radio {
+    position: relative;
+    padding-left: 30px;
+}
+.pseudo-radio:after {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: 16px;
+    width: 16px;
+    background: transparent;
+    content: ' ';
+    display: inline-block;
+    border: 1px solid $color-dark-golden;
+    border-radius: 50%;
+}
+.pseudo-radio:before {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    content: ' ';
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 50%;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    .pseudo-radio:before {
+        background-color: $color-dark-golden;
+    }
+}
+.select-city {
+    display: none;
+}
+.select-city + span.select2 .select2-selection--single:hover {
+    background: #fff;
+}
+.select-city + span.select2 {
+    max-width: 290px;
+    padding: 0;
+    margin-top: 2px;
+    font-family: Jost;
+    .select2-selection--single {
+        border: none;
+    }
+    .select2-selection--single .select2-selection__rendered {
+        padding: 0;
+        height: auto !important;
+    }
+    .select2-selection--single {
+        height: auto !important;
+    }
+    svg {
+        margin-left: 5px;
     }
 }

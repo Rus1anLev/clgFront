@@ -32,10 +32,10 @@ main.order.mt-60
 						//- 		| Изменить
 					.form-group.get-way
 						h3 2. Способ получения
-							select(placeholder="Ваш город").select
-										option Выберите город
-										option Москва
-										option Санкт-Петербург
+						select(placeholder="Ваш город").select.select-city
+									option Выберите город
+									option Москва
+									option Санкт-Петербург
 
 						//- button.btn.btn-primary.btn-next
 						//- 	| Далее
@@ -95,61 +95,61 @@ main.order.mt-60
 								.tab-contents.map#pickup.active
 									.delivery-info
 										.addresses
-											.delivery-period-info
-												p
-													| Дата доставки: дд.мм.гггг
-												p
-													| Срок хранения заказа: 3 дня
+											//- .delivery-period-info
+												//- p
+												//- 	| Дата доставки: дд.мм.гггг
+												//- p
+												//- 	| Срок хранения заказа: 3 дня
 											.tabs-wrapper.map-list
 												.select-tabs
 													.border-wrapper
 														a.tab-label(href="#" data-target="salon-list").active Список
 														a.tab-label(href="#" data-target="salon-map") Карта
 
-												.tab-contents.map#salon-map.active
+												.tab-contents.map#salon-map
 													#mapSalon
-												.tab-contents.list#salon-list
+												.tab-contents.list#salon-list.active
 													.salon-list
 														.item
 															.info
-																h3 Фирменный бутик HANRO
-																p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
-																p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
+																h3 Фирменный бутик Caterina Leman
+																p Проспект мира, 35 к.8
+																p Пн-пт: c 9-21, сб-вс: с 10-18
 															.choose
-																button.btn.btn-primary Выбрать
+																button.btn.btn-secondary Выбрать
 														.item
 															.info
-																h3 Фирменный бутик HANRO
-																p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
-																p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
+																h3 Партнёрский пункт [Наименование пункта]
+																p Проспект мира, 35 к.8
+																p Пн-пт: c 9-21, сб-вс: с 10-18
 															.choose
-																button.btn.btn-primary Выбрать
+																button.btn.btn-secondary Выбрать
 														.item
 															.info
-																h3 Фирменный бутик HANRO
-																p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
-																p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
+																h3 Партнёрский пункт [Наименование пункта]
+																p Проспект мира, 35 к.8
+																p Пн-пт: c 9-21, сб-вс: с 10-18
 															.choose
-																button.btn.btn-primary Выбрать
+																button.btn.btn-secondary Выбрать
 														.item
 															.info
-																h3 Фирменный бутик HANRO
+																h3 Партнёрский пункт [Наименование пункта]
 																p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
 																p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
 																
 															.choose
-																button.btn.btn-primary Выбрать
-												.salon-list-selected
-													.item
-														.info
-															h3 Фирменный бутик HANRO
-															p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
-															p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
-															p Дата доставки: дд.мм.гггг
-															p Срок хранения заказа: 3 дня
-														.choose
-															button.btn.btn-secondary.btn-change
-																span Изменить
+																button.btn.btn-secondary Выбрать
+												//- .salon-list-selected
+												//- 	.item
+												//- 		.info
+												//- 			h3 Фирменный бутик HANRO
+												//- 			p Новинский бул., 8, Москва, ТЦ “Лотте плаза”
+												//- 			p Пн-пт: 10:00 - 18:00, сб-вс: 10:00 - 18:00
+												//- 			p Дата доставки: дд.мм.гггг
+												//- 			p Срок хранения заказа: 3 дня
+												//- 		.choose
+												//- 			button.btn.btn-secondary.btn-change
+												//- 				span Изменить
 								//- .tab-contents.list#delivery
 									.add-address
 										label.form__group.form__group__up
@@ -197,129 +197,129 @@ main.order.mt-60
 												.form__group-label.form__group__up-label
 													| Время доставки
 												input.form__group-input.form__group__up-input(type="time")
-					button.btn.btn-primary.btn-next
-							| Далее
-					.salon-list-selected
-						.item
-							.info
-								h3 Доставка / самовывоз
-								p Адрес: ХХХ
-								p Дата доставки: ХХХ
-								p Время доставки: ХХХ
-								p Срок хранения заказа: 3 дня
-								p Доп. строка
-								p Доп. строка
-							.choose
-								button.btn.btn-secondary.btn-change
-									span Изменить
+					//- button.btn.btn-primary.btn-next
+					//- 		| Далее
+					//- .salon-list-selected
+					//- 	.item
+					//- 		.info
+					//- 			h3 Доставка / самовывоз
+					//- 			p Адрес: ХХХ
+					//- 			p Дата доставки: ХХХ
+					//- 			p Время доставки: ХХХ
+					//- 			p Срок хранения заказа: 3 дня
+					//- 			p Доп. строка
+					//- 			p Доп. строка
+					//- 		.choose
+					//- 			button.btn.btn-secondary.btn-change
+					//- 				span Изменить
 
-					.grey-line.order-personal-data-after
-					.form-group.get-payment
-						h3 3. Оплата
-						.get-payment_wrap
-							.item
-								.radio-but
-									input(type="radio" id="test5" name="payment")
-									label(for="test5")
-								label(for="test5").text
-									| При получении
-							.item
-								.radio-but
-									input(type="radio" id="test6" name="payment")
-									label(for="test6")
-								label(for="test6").text
-									| Картой на сайте
-					.grey-line.order-personal-data-after
-					.promo-block
-						.promo-block_inp
-							label.form__group.form__group__up.courier-comments
-								.form__group-label.form__group__up-label
-									| Коментарии курьеру
-								.fl_box
-									div
-										input.form__group-input.form__group__up-input(type="text")
-										.form__group-error
-											| Описание ошибки
-									button.btn.btn-secondary.btn-change
-										span ok
-						.promo-block_bonus
-							.promo-block_bonus_img
-								img(src="images/Image-base.jpg" alt="")
-							.promo-block_bonus_desc
-								.all_bonus
-									| Бонусы: 45 876 руб.
-								.withdraw
-									input.form__group-input.form__group__up-input(type="text")
-									button.btn.btn-secondary.btn-change
-										span списать
+					//- .grey-line.order-personal-data-after
+					//- .form-group.get-payment
+					//- 	h3 3. Оплата
+					//- 	.get-payment_wrap
+					//- 		.item
+					//- 			.radio-but
+					//- 				input(type="radio" id="test5" name="payment")
+					//- 				label(for="test5")
+					//- 			label(for="test5").text
+					//- 				| При получении
+					//- 		.item
+					//- 			.radio-but
+					//- 				input(type="radio" id="test6" name="payment")
+					//- 				label(for="test6")
+					//- 			label(for="test6").text
+					//- 				| Картой на сайте
+					//- .grey-line.order-personal-data-after
+					//- .promo-block
+					//- 	.promo-block_inp
+					//- 		label.form__group.form__group__up.courier-comments
+					//- 			.form__group-label.form__group__up-label
+					//- 				| Коментарии курьеру
+					//- 			.fl_box
+					//- 				div
+					//- 					input.form__group-input.form__group__up-input(type="text")
+					//- 					.form__group-error
+					//- 						| Описание ошибки
+					//- 				button.btn.btn-secondary.btn-change
+					//- 					span ok
+					//- 	.promo-block_bonus
+					//- 		.promo-block_bonus_img
+					//- 			img(src="images/Image-base.jpg" alt="")
+					//- 		.promo-block_bonus_desc
+					//- 			.all_bonus
+					//- 				| Бонусы: 45 876 руб.
+					//- 			.withdraw
+					//- 				input.form__group-input.form__group__up-input(type="text")
+					//- 				button.btn.btn-secondary.btn-change
+					//- 					span списать
 
-					.grey-line.order-personal-data-after
-					.agreement_block
-						form.form.for-loyal
+					//- .grey-line.order-personal-data-after
+					//- .agreement_block
+					//- 	form.form.for-loyal
 							
-						form.form.for-pers
-							label.checkbox
-								input(type="checkbox" required).checkbox-input
-								.checkbox-box
-									+svg('check')
-								.checkbox-text
-										| Согласен на обработку 
-										a(href="#") персональных данных  
-										| и на обработку моих 
-										a(href="#") персональных данных
-						form.form.for-loyal
-							label.checkbox
-									input(type="checkbox" required).checkbox-input
-									.checkbox-box
-										+svg('check')
-									.checkbox-text
-											| Согласен стать участником 
-											a(href="#") программы лояльности
-						form.form.for-mailing
-							label.checkbox
-									input(type="checkbox" required).checkbox-input
-									.checkbox-box
-										+svg('check')
-									.checkbox-text
-											| Согласен на получение 
-											a(href="#") рассылок
-					button.btn.btn-primary.btn-sub-bod(type="submit")
-							| Оформить заказ
+					//- 	form.form.for-pers
+					//- 		label.checkbox
+					//- 			input(type="checkbox" required).checkbox-input
+					//- 			.checkbox-box
+					//- 				+svg('check')
+					//- 			.checkbox-text
+					//- 					| Согласен на обработку 
+					//- 					a(href="#") персональных данных  
+					//- 					| и на обработку моих 
+					//- 					a(href="#") персональных данных
+					//- 	form.form.for-loyal
+					//- 		label.checkbox
+					//- 				input(type="checkbox" required).checkbox-input
+					//- 				.checkbox-box
+					//- 					+svg('check')
+					//- 				.checkbox-text
+					//- 						| Согласен стать участником 
+					//- 						a(href="#") программы лояльности
+					//- 	form.form.for-mailing
+					//- 		label.checkbox
+					//- 				input(type="checkbox" required).checkbox-input
+					//- 				.checkbox-box
+					//- 					+svg('check')
+					//- 				.checkbox-text
+					//- 						| Согласен на получение 
+					//- 						a(href="#") рассылок
+					//- button.btn.btn-primary.btn-sub-bod(type="submit")
+					//- 		| Оформить заказ
 					
 					
-			.col-12.col-md-12.col-lg-4.rel
-				.order-aside
-					.order-info.headline
-						| Информация о заказе
-					.order-info 
-						span
-							| Товаров на сумму
-						span
-							| 172 580 руб.
-					.order-info
-						span
-							| Скидка
-						span
-							| -580 руб.
-					.order-info
-						span
-							| Доставка
-						span
-							| 580 руб. / не выбрано
-					.order-info
-						span
-							| Бонусы
-						span
-							| -3 470 руб.
-					.order-total
-						span
-							| Итого
-						span
-							| 164 678 руб.
-					button.btn.btn-primary.btn-sub-asid(type="submit")
-							| Оформить заказ
-				.clear
-
+			//- .col-12.col-md-12.col-lg-4.rel
+			//- 	.order-aside
+			//- 		.order-info.headline
+			//- 			| Информация о заказе
+			//- 		.order-info 
+			//- 			span
+			//- 				| Товаров на сумму
+			//- 			span
+			//- 				| 172 580 руб.
+			//- 		.order-info
+			//- 			span
+			//- 				| Скидка
+			//- 			span
+			//- 				| -580 руб.
+			//- 		.order-info
+			//- 			span
+			//- 				| Доставка
+			//- 			span
+			//- 				| 580 руб. / не выбрано
+			//- 		.order-info
+			//- 			span
+			//- 				| Бонусы
+			//- 			span
+			//- 				| -3 470 руб.
+			//- 		.order-total
+			//- 			span
+			//- 				| Итого
+			//- 			span
+			//- 				| 164 678 руб.
+			//- 		button.btn.btn-primary.btn-sub-asid(type="submit")
+			//- 				| Оформить заказ
+			//- 	.clear
+			
 script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=99f91afb-8db0-4a66-b863-0c9c380b92d5')
 script.
 	var myMap;
@@ -368,3 +368,13 @@ script.
 
 
 	}
+
+br
+br
+br
+br
+br
+br
+br
+br
+br
