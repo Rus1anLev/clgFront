@@ -1,9 +1,9 @@
-main.test.mb-120
-    .container.mb-120
+main.test.pt-60.mb-120
+    .container
         .row
             .col-md-4
                 h2 Инпуты
-
+                br
                 form.form
                     .form-row
                         .form-control
@@ -67,8 +67,59 @@ main.test.mb-120
                             label.form-control--label Дескриптор
                         .form-control--notify.is-error
                             | Текст ошибки или уведомления
+                br
+                br
+                .city-box
+                    .city-box-head
+                        .city-box-head--label.menu-item Ваш город
+                        .city-box-head__current
+                            .city-box-head__current-text.menu-item Москва
+                            .city-box-head__current-icon
+                                +svg('arrow-down')
+                    .city-box__list
+                        label.radio.city-box__list-item
+                            input(type="radio" name="city-box").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Архангельск
+                        label.radio.city-box__list-item
+                            input(type="radio" name="city-box").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Санкт-Петербург
+                        label.radio.city-box__list-item
+                            input(type="radio" name="city-box" checked).radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Москва
+                        label.radio.city-box__list-item
+                            input(type="radio" name="city-box").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Владивосток
+                        label.radio.city-box__list-item
+                            input(type="radio" name="city-box").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Владикавказ
+                        label.radio.city-box__list-item
+                            input(type="radio" name="city-box").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Архангельск
+                        label.radio.city-box__list-item
+                            input(type="radio" name="city-box").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Санкт-Петербург
+                        label.radio.city-box__list-item
+                            input(type="radio" name="city-box").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Москва
+                        label.radio.city-box__list-item
+                            input(type="radio" name="city-box").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Владивосток
+                        label.radio.city-box__list-item
+                            input(type="radio" name="city-box").radio-input
+                            .radio-box
+                            .radio-text.radio-text--big Владикавказ
             .col-md-4
                 h2 Кнопки
+                br
                 button.btn.btn-primary НАЗВАНИЕ КНОПКИ
                 br
                 br
@@ -93,6 +144,7 @@ main.test.mb-120
                 br
             .col-md-6
                 h2 Чекбоксы
+                br
                 label.checkbox
                     input(type="checkbox").checkbox-input
                     .checkbox-box
@@ -122,6 +174,7 @@ main.test.mb-120
                 br
                 br
                 h2 Чекбоксы с унифицированным текстом
+                br
                 label.checkbox
                     input(type="checkbox").checkbox-input
                     .checkbox-box
@@ -146,6 +199,7 @@ main.test.mb-120
                 br
                 br
                 h2 Радиокнопки
+                br
                 label.radio
                     input(type="radio" name="radio-big").radio-input
                     .radio-box
@@ -170,6 +224,7 @@ main.test.mb-120
                 br
                 br
                 h2 Селект
+                br
                 select(placeholder="Дескриптор").select
                     option
                     option Описание инпута 1
@@ -179,6 +234,7 @@ main.test.mb-120
                     option Описание инпута 5
             .col-md-2
                 h2 Тумблер
+                br
                 label.tumblr
                     input(type="checkbox").tumblr-input
                     .tumblr-caption Текст
@@ -191,4 +247,6 @@ main.test.mb-120
                     .tumblr-caption Текст
                     .tumblr-box
                     .tumblr-caption Текст
+
+
 

@@ -18,6 +18,7 @@ import {initAccordion} from "./components/accordion";
 import {initProductSlider} from "./components/product";
 
 import {initProductsSlider} from "./components/block/products_slider";
+import {initCityBox} from "./components/city-box";
 
 bottomSheet();
 ieFix();
@@ -35,3 +36,5 @@ initAccordion()
 
 initProductSlider()
 initProductsSlider()
+
+initCityBox()
