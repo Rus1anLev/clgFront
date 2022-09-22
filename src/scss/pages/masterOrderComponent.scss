@@ -1,0 +1,737 @@
+.order {
+    font-weight: 300;
+    .order-page {
+        .mb-70 {
+            margin-bottom: 63px;
+        }
+        .form-control--input:not(:placeholder-shown) {
+            padding: 28px 11px 10px;
+        }
+        .form-row {
+            margin-bottom: 12px;
+        }
+        .btn-primary.btn-next {
+            margin-top: 24px;
+        }
+        
+        .recipient-block {
+            max-width: 295px;
+            h3 {
+                margin-bottom: 22px;
+            }
+        }
+        .back {
+            display: flex;
+            flex-direction: row;
+            width: 100px;
+            align-items: center;
+            margin-bottom: 60px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+            span {
+                font-style: normal;
+                font-size: 14px;
+                line-height: 18px;
+                text-transform: uppercase;
+            }
+        }
+        .order-aside {
+            width: 273px;
+            padding: 24px;
+            padding-bottom: 50px;
+            background: #F7F7F7;
+            position: sticky;
+            top: 20px;
+            float: right;
+            border-radius: 6px;
+            .order-info {
+                &.headline {
+                    font-size: 18px;
+                    margin-top: 2px;
+                    border-bottom: 1px solid #E0E0E0;
+                    padding-bottom: 25px;
+                }
+                margin-top: 26px;
+                font-size: 18px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                span + span {
+                    margin-top: 4px;
+                }
+                & + .order-info + .order-info {
+                    margin-top: 14px;
+                }
+            }
+            .grey-line {
+                margin-top: 22px;
+            }
+            .order-total {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-style: normal;
+                color: #000000;
+                font-size: 18px;
+                margin-top: 16px;
+                span + span {
+                    font-size: 19px;
+                    font-weight: 500;
+                    margin-top: 3px;
+                }
+            }
+        }
+        
+        .order-data-completed {
+            margin-bottom: 50px;
+            margin-top: 9px;
+            .order-data-completed-info {
+                margin-bottom: 18px;
+            }
+        }
+        .get-way {
+            margin-top: 46px;
+            h3 {
+                font-size: 30px;
+                margin-bottom: 22px;
+            }
+            .select-city {
+                width: 264px;
+                // margin-bottom: 24px;
+            }
+        }
+        .tabs-wrapper {
+            &.delivery-way {
+                margin-top: 50px;
+            }
+            .select-tabs.tabs-primary {
+                justify-content: flex-start;
+                .border-wrapper {
+                    position: static;
+                    bottom: 0;
+                    padding: 5px;
+                    border-radius: 6px;
+                    background-color: #F7F7F7;
+                    border: none;
+                    color: $color-silver-brown;
+                    .tab-label {
+                        &:hover {
+                            padding: 0 11px;
+                            background: #fff;
+                            height: 42px;
+                            margin-top: 0;
+                            border-bottom: none;
+                            color: $color-dark-golden;
+                            border-radius: 6px;
+                        }
+                        top: 0;
+                        margin: 0 9px;
+                        padding: 11px;
+                        &:first-of-type {
+                            margin-left: 0;
+                        }
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                        &.active {
+                            padding: 0 11px;
+                            background: #fff;
+                            margin-top: 0;
+                            border-bottom: none;
+                            color: $color-dark-golden;
+                            border-radius: 6px;
+                            box-shadow: 1px 1px 10px #e7e7e7;
+                        }
+                    }
+                }
+            }
+            .delivery-period-info {
+                padding-top: 6px;
+                p {
+                    line-height: 26px;
+                }
+            }
+            .map-list {
+                margin-top: 9px;
+            }
+            .salon-list {
+                padding: 11px 21px;
+                margin-top: 20px;
+                border: 2px solid #F5F5F5;
+                .item {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 34px !important;
+                    align-items: center;
+                    &:last-of-type {
+                        margin-bottom: 0 !important;
+                    }
+                    p {
+                        margin-left: 10px;
+                        font-size: 16px !important;
+                        margin-bottom: 7px;
+                    }
+                    .choose {
+                        margin-top: -12px;
+                    }
+                }
+            }
+            .add-address {
+                max-width: 460px;
+                margin-top: 26px;
+                .form-group-info {
+                    font-size: 12px;
+                    margin-top: 7px;
+                }
+                .magic-checkbox-wrap {
+                    margin-top: 18px;
+                    margin-bottom: 20px;
+                }
+                .inline-labels {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    margin-bottom: 30px;
+                    .form__group-label {
+                        max-width: 20%;
+                    }
+                }
+            }
+            .addresses {
+        
+                margin-bottom: 0;
+                margin-top: 16px;
+        
+                .item {
+                    padding: 6px 0px;
+                    align-items: center;
+                    border: none;
+                    display: flex;
+                    justify-content: space-between;
+                    .text {
+                        max-width: 75%;
+                        width: 75%;
+                        font-size: 17px;
+                        letter-spacing: -0.4px;
+                        line-height: 17px;
+                    }
+                    &.removed {
+                        padding-top: 22px;
+                        padding-bottom: 19px;
+                        color: #696969;
+                        justify-content: space-between;
+                    }
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+                    .edit, .delete {
+                        display: flex;
+                        align-items: center;
+                        span {
+                            margin-left: 4px;
+                        }
+                    }
+                    .delete {
+                        margin-left: 10px;
+                    }
+                }
+                .new-address {
+                    padding: 14px 17px;
+                    margin-top: 12px;
+                }
+                
+
+            }
+            .radio-group {
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 10px;
+                margin-bottom: 0;
+                max-width: 40px;
+                width: 24px;
+                height: 24px;
+                label {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        
+        margin-bottom: -24px;
+        h1 {
+            margin-bottom: 70px;
+            text-align: center;
+            margin-top: 23px;
+        }
+        h2 {
+            margin-top: 46px;
+            margin-bottom: 22px;
+        }
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            line-height: 29.3px;
+        }
+        .addresses {
+            h4 {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 20px;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                margin-top: 15px;
+                margin-bottom: 6px;
+            }
+            .salon-list {
+                .item {
+                    border-bottom: 2px solid #E6E6E6;
+                    margin-top: 20px;
+                    padding-bottom: 22px;
+                    margin-bottom: 24px;
+    
+                    &:last-of-type {
+                        margin-bottom: 0;
+                        border: none;
+                    }
+                    h3 {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 20px;
+                        letter-spacing: 1.5px;
+                        text-transform: uppercase;
+                        color: #000000;
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 15px;
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.1px;
+                        color: #333333;
+                    }
+                }
+            }
+        }
+        #mapSalon {
+            width: 100%;
+            height: 450px;
+        }
+        .salon-list-selected {
+            padding: 18px 24px;
+            margin-top: 24px;
+            border: 2px solid #F5F5F5;
+            margin-bottom: 50px;
+            h3{
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 20px;
+                color: #000;
+                margin-bottom: 8px;
+                margin-left: 0;
+            }
+            p{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 16px;
+                letter-spacing: 0.1px;
+                color: #696969;
+                margin-bottom: 4px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .item {
+                padding: 6px 0px;
+                align-items: center;
+                border: none;
+                display: flex;
+                justify-content: space-between;
+            }
+            .btn-change{
+                padding: 14px 17px;
+            }
+        }
+        .get-payment {
+            margin-top: 50px;
+            margin-bottom: 41px;
+            h3{
+                margin-left: 0;
+            }
+            .get-payment_wrap {
+                margin-top: 5px;
+                .item {
+                    padding: 10px 0px;
+                    align-items: center;
+                    border: none;
+                    display: flex;
+                    [type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
+                        padding-left: 12px;
+                        top: -16px;
+                    }
+                    .text {
+                        color: #000;
+                    }
+                }
+            }
+        }
+        .promo-block_inp {
+            padding: 16px;
+            width: 418px;
+            height: 98px;
+            background: #F5F5F5;
+            border-radius: 14px;
+            margin-top: 50px;
+            margin-bottom: 24px;
+            .fl_box {
+                display: flex;
+                & > div {
+                    width: 84%;
+                    margin-right: 16px;
+                }
+            }
+        }
+        .promo-block_bonus {
+            padding: 16px;
+            gap: 24px;
+            width: 418px;
+            height: 152px;
+            background: #F5F5F5;
+            border-radius: 14px;
+            margin-bottom: 50px;
+            display: flex;
+                align-items: center;
+            .promo-block_bonus_img {
+                width: 46%;
+                img{
+                    border-radius: 12px;
+                }
+            }
+            .withdraw {
+                display: flex;
+                .form__group-input {
+                    width: 78px;
+                    height: 44px;
+                    margin-right: 12px;
+                }
+            }
+            .all_bonus {
+                margin-bottom: 24px;
+                color: #696969;
+            }
+        }
+        .agreement_block {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            form {
+                margin-bottom: 16px;
+            }
+        }
+        .data_deliv {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+            label {
+                width: 216px;
+                .form__group-input{
+                    height: 44px;
+                }
+                
+            }
+        }
+    }
+}
+.btn-sub-bod {
+    display: block;
+}
+.btn-sub-asid{
+    display: none;
+}
+.clear {
+    clear: both;
+}
+.rel {
+    position: relative;
+}
+
+
+@media (max-width: 1200px){
+    .btn-sub-bod {
+        display: none;
+    }
+    .btn-sub-asid{
+        display: block;
+        width: 100%;
+            margin-top: 24px;
+            background: #f5f5f5;
+    }
+    .order .order-page .order-aside {
+        width: 100%;
+    }
+    .order .order-page .order-aside .order-info {
+        margin-bottom: 18px;
+    }
+    .order {
+        margin-top: 77px;
+        .order-page h1 {
+            margin-bottom: 79px;
+            margin-top: 22px;
+        }
+        .order-page .tabs-wrapper .addresses {
+            margin-top: 11px;
+        }
+        .order-page .addresses .salon-list .item {
+            margin-top: 12px;
+            padding-bottom: 24px;
+            margin-bottom: 26px !important;
+        }
+        .add-address {
+            .form__group-input {
+                padding: 13px 13px 11px;
+            }
+            .form__group-label {
+                input {
+                    margin-top: 5px;
+                }
+            }
+        }
+        .order-page .tabs-wrapper .add-address .inline-labels {
+            margin-bottom: 18px;
+        }
+        .order-page .get-payment {
+            margin-bottom: 37px;
+        }
+        .order-page .promo-block_bonus{
+            margin-bottom: 47px;
+        }
+        .order-page .agreement_block {
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+        .order-page .agreement_block form {
+            margin-bottom: 8px;
+        }
+        .order-page .order-aside {
+            padding: 36px 100px 39px 100px;
+        }
+
+    }
+
+}
+@media (max-width: 480px) {
+    .order {
+        margin-top: 59px;
+        .order-page .promo-block_inp {
+            width: 100%;
+        }
+        .order-page .promo-block_bonus {
+            width: 100%;
+            display: block;
+            padding: 7px;
+            height: 140px;
+        }
+        .order-page .promo-block_bonus .promo-block_bonus_img {
+            width: 98.51px;
+            float: left;
+        }
+        .order-page .promo-block_bonus .withdraw .form__group-input {
+            width: 161px;
+            height: 44px;
+            margin-right: 25px;
+        }
+        .order-page .promo-block_bonus .all_bonus {
+            margin-bottom: 38px;
+            margin-top: 21px;
+            margin-left: 116px;
+        }
+        .order-page .order-aside{
+            padding: 15px;
+        }
+
+        .order-page .back {
+            width: auto;
+            justify-content: center;
+        }
+        .order-page h1 {
+            margin-bottom: 58px;
+            margin-top: 12px;
+        }
+        .order-page .form-group.order-personal-data {
+            margin-top: 16px;
+        }
+        .order-page .form-group.order-personal-data label {
+            margin-bottom: 16px;
+        }
+        .order-page .order-data-completed {
+            margin-bottom: 50px;
+            margin-top: 1px;
+        }
+        .order-page p {
+            line-height: 26.3px;
+        }
+        .order-page .order-data-completed .order-data-completed-info {
+            margin-bottom: 9px;
+        }
+        .order-page .get-way {
+            margin-top: 44px;
+        }
+        .order-page .get-way h3 {
+            margin-bottom: 16px;
+        }
+        .order-page .get-way .select-city {
+            width: 100%;
+        }
+        .order-page .tabs-wrapper .select-tabs.tabs-primary .border-wrapper {
+            bottom: 0;
+            padding: 0;
+            border: none;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+            &:before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: #E6E6E6;
+            }
+        }
+        .order-page .tabs-wrapper .select-tabs.tabs-primary .border-wrapper .tab-label {
+            top: 0;
+            margin: 0;
+            padding: 0;
+            border-bottom: 4px solid #E6E6E6;
+                padding-bottom: 8px;
+        }
+        .order-page .tabs-wrapper .select-tabs.tabs-primary .border-wrapper .tab-label.active {
+            padding: 0;
+            background: none;
+            height: auto;
+            margin-top: 0;
+            border-bottom: 4px solid #000;
+            color: #000;
+            padding-bottom: 8px;
+        }
+        .order-page .tabs-wrapper .delivery-period-info {
+            padding-top: 0px;
+        }
+        .order-page .tabs-wrapper .delivery-period-info p {
+            line-height: 23px;
+        }
+        .map-list  {
+            .select-tabs .tab-label {
+                font-size: 14px;
+                letter-spacing: 0.5px;
+            }
+            
+            .select-tabs .tab-label.active {
+                color: #000;
+                border-bottom: 4px solid #000;
+                padding-bottom: 3px;
+                margin-top: 1px;
+            }
+            #mapSalon {
+                width: 100%;
+                margin-top: -8px;
+
+            }
+        }
+        .order-page .tabs-wrapper .salon-list {
+            padding: 13px 6px;
+        }
+        .order-page .addresses .salon-list .item {
+            margin-top: -5px;
+            display: block;
+            padding-bottom: 14px;
+            margin-bottom: 15px !important;
+        }
+        .order-page .tabs-wrapper .salon-list .item p {
+            font-size: 12px !important;
+            line-height: 10px;
+        }
+        .choose {
+            .btn-primary {
+                height: auto;
+                border: none;
+                background: none;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                text-transform: uppercase;
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 5px;
+                letter-spacing: 0.4px;
+                border-bottom: 1px solid #000;
+                margin-left: 9px;
+                margin-top: 13px;
+                line-height: 11px;
+                &:hover {
+                    background: none;
+                    color: #000;
+                }
+            }
+        }
+        .order-page .salon-list-selected {
+            padding: 0px 7px;
+            margin-top: 18px;
+            border: 2px solid #F5F5F5;
+            .item {
+                display: block !important;
+            }
+            .btn-change {
+                padding: 0;
+                margin-top: 14px;
+            }
+        }
+        .order-page .tabs-wrapper .addresses .item {
+            align-items: flex-start;
+        }
+        .order-page .tabs-wrapper .addresses .item .edit span, .order-page .tabs-wrapper .addresses .item .delete span{
+            display: none;
+        }
+        .tabs-wrapper .select-tabs .tab-label:last-of-type {
+            margin-left: 14px;
+        }
+        .order-page .get-payment {
+            margin-bottom: 38px;
+            margin-top: 45px;
+        }
+        .order-page .promo-block_inp .fl_box > div {
+            width: 77%;
+        }
+        .order-page .tabs-wrapper .add-address .magic-checkbox-wrap {
+            margin-top: 8px;
+            margin-bottom: 13px;
+        }
+        .order-page .tabs-wrapper .add-address .inline-labels .form__group-label {
+            max-width: 23%;
+        }
+        .order-page .tabs-wrapper .add-address .inline-labels {
+            margin-bottom: 11px;
+        }
+        .order-page .data_deliv {
+            margin-top: 16px;
+        }
+        .order-page .data_deliv label {
+            width: 144px;
+        }
+        .order-page .btn-primary.btn-next {
+            margin-top: 16px;
+        }
+    }
+}
