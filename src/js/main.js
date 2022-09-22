@@ -16,7 +16,7 @@ import {bottomSheet} from "./components/bottomSheet";
 import {initFilter} from "./components/filter";
 import {initAccordion} from "./components/accordion";
 import {initProductSlider} from "./components/product";
-
+import {tabs} from "./components/tabs";
 import {initProductsSlider} from "./components/block/products_slider";
 import {initCityBox} from "./components/city-box";
 
@@ -30,7 +30,7 @@ headerInit();
 initSearchbar()
 lazyLoading.init();
 oneTimePasswd.init();
-
+tabs();
 initFilter()
 initAccordion()
 
