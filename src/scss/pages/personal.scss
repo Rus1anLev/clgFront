@@ -1034,36 +1034,41 @@
 	}
 }
 .share-wrap {
-	margin-top: 50px;
 	display: flex;
 	svg {
-		fill: transparent;
 		width: 24px;
 		height: 24px;
-	}
-	fill: transparent;
-	.vk-link {
-		svg {
-			fill: $color-dark-golden;
-		}
 	}
 	.social-links {
 		display: flex;
 		a {
 			margin-right: 24px;
+			color: $color-dark-golden;
+			&:last-child {
+				margin-right: 0;
+			}
+			@include media-breakpoint-down(md) {
+				margin-right: 20px;
+			}
 		}
 	}
 	.js-copy-to-clipboard {
 		display: flex;
-		margin-left: 24px;
+		margin-left: 48px;
 		font-size: 14px;
 		font-weight: 300;
-		color: $color-black;
+		color: $color-dark-golden;
 		svg {
 			margin-right: 10px;
 		}
+		span {
+			color: $color-black;
+		}
+		@include media-breakpoint-down(md) {
+			margin-left: 29px;
+		}
 	}
-	@include media-breakpoint-only(xs) {
+	@include media-breakpoint-down(md) {
 		justify-content: center;
 	}
 }

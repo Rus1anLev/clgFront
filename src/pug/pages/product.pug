@@ -10,7 +10,7 @@ main.product.pt-60.mb-120
                 .product__price.mb-48
                     .product__price-current 36 768 руб.
                     .product__price-old 56 947 руб.
-            .col-lg-10.col-md-8
+            .col-xl-10.col-lg-9.col-md-8
                 .product__gallery
                     .product__gallery-thumb--wrapper
                         button.arrow.arrow-up.product__gallery-thumb--arrow.product__gallery-thumb--arrow--up
@@ -50,7 +50,7 @@ main.product.pt-60.mb-120
                         button.product__gallery-preview--zoom
                             +svg('zoom')
 
-            .col-lg-6.col-md-8
+            .col-xl-6.col-lg-7.col-md-8
                 .product-article_number.link-or-text.mb-24 <span>Артикул: </span> 221ML983MF106
                 .d-none.d-md-block
                     .product-tag.tag.mb-12 Sale
@@ -139,10 +139,17 @@ main.product.pt-60.mb-120
                                     +svg('arrow-right')
                                 .accordion-heading--text.h3 Поделиться
                             .accordion-content
-                                | Платье рубашечного кроя из жаккарда на основе вискозы с принтом в виде осеннего
-                                | цветочного мотива, навеянного персонажем из фильма Франсуа Трюфо. Передняя часть
-                                | платья с пуговицами украшена элегантными складками вдоль кокетки, а пояс из той же
-                                | ткани аккуратно утягивает талию, формируя женственный силуэт.
+                                .share-wrap
+                                    .social-links
+                                        a(href="https://vk.com/share.php?url=http://dev.caterinaleman.ru/" target="_blank")
+                                            +svg('vk')
+                                        a(href="https://api.whatsapp.com/send?text=http://dev.caterinaleman.ru/" target="_blank")
+                                            +svg('whatsup')
+                                        a(href="https://telegram.me/share/url?url=http://dev.caterinaleman.ru/" target="_blank")
+                                            +svg('telegram')
+                                    a(href="#").js-copy-to-clipboard(value="http://dev.caterinaleman.ru/" data-tippy-content="Ссылка скопирована")
+                                        +svg('copy-link')
+                                        span Скопировать ссылку
 
                 .product__look
                     a(href="#").btn.btn-secondary Подобрать образ
