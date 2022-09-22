@@ -9,6 +9,7 @@
 
   @include media-breakpoint-down(md) {
     padding: 72px 12px;
+    border-radius: 0;
   }
 
   .fancybox-close-small.fancybox-button {
@@ -135,5 +136,70 @@
         }
       }
     }
+  }
+  &__subscribe {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.33;
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+    &-name {
+      margin-bottom: 4px;
+    }
+    &-color {
+      span {
+        color: $color-silver-brown;
+      }
+    }
+    &-size {
+      max-width: 296px;
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
+      }
+    }
+    &-separate {
+      height: 1px;
+      background: $color-space-gray;
+      border-radius: 1px;
+    }
+    &-text {
+      color: $color-silver-brown;
+    }
+    &-input {
+
+    }
+    &-btn {
+      .btn {
+        width: 100%;
+      }
+    }
+    &-checkboxes {
+      &--item {
+        display: flex;
+        &:first-child {
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    &__thank {
+      color: $color-black;
+      &-text {
+        font-size: 18px;
+        line-height: 1.33;
+        font-weight: 300;
+        @include media-breakpoint-down(md) {
+          font-size: 16px;
+          line-height: 1.25;
+        }
+      }
+    }
+  }
+}
+.fancybox-slide--html{
+  @include media-breakpoint-down(md) {
+    padding: 0;
   }
 }
