@@ -345,6 +345,11 @@ h3, .h3 {
 	&-input:checked + &-box + &-text {
 		color: $color-cold-brown;
 	}
+
+	&-input:disabled + &-box,
+	&-input:disabled + &-box + &-text {
+		opacity: 0.3;
+	}
 }
 
 .radio {
