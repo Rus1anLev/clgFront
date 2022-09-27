@@ -7,8 +7,6 @@ function closeAll() {
 }
 
 function openList($list, $button) {
-
-
     closeAll()
     $list.addClass('is-open')
     $list.slideDown(400)
@@ -22,7 +20,7 @@ function openList($list, $button) {
     }
 
     setTimeout(function () {
-        $('body').on('mouseup', handlerClickOut)
+        $('body').on('mousedown', handlerClickOut)
     }, 100)
 }
 
@@ -49,7 +47,7 @@ function handlerClickOut(e) {
         !$container.is(e.target) && $container.has(e.target).length === 0
     ) {
         closeAll()
-        $('body').off('mouseup', handlerClickOut)
+        $('body').off('mousedown', handlerClickOut)
     }
 
 }
