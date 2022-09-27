@@ -1,5 +1,5 @@
 let $filterParamsHead = $('.filter__params-head'),
-    $filterParamsList = $('.filter__params-list')
+    $filterParamsList = $('.filter__params-list--wrapper')
 
 function closeAll() {
     $filterParamsHead.removeClass('is-open')
@@ -34,7 +34,7 @@ function closeList($list, $button) {
 
 function handlerList() {
     let $button = $(this),
-        $list = $button.siblings('.filter__params-list')
+        $list = $button.siblings('.filter__params-list--wrapper')
 
     if ($button.hasClass('is-open')) {
         closeList($list, $button)
@@ -44,7 +44,7 @@ function handlerList() {
 }
 
 function handlerClickOut(e) {
-    let $container = $('.filter__params-list.is-open').parent()
+    let $container = $('.filter__params-list--wrapper.is-open').parent()
     if (
         !$container.is(e.target) && $container.has(e.target).length === 0
     ) {
