@@ -20,6 +20,12 @@ import {tabs} from "./components/tabs";
 import {initProductsSlider} from "./components/block/products_slider";
 import {initCityBox} from "./components/city-box";
 
+// import $ from 'jquery';
+// import datepickerFactory from 'jquery-datepicker';
+// import datepickerJAFactory from 'jquery-datepicker/i18n/jquery.ui.datepicker-ja';
+// // Just pass your jquery instance and you're done
+// datepickerFactory($);
+
 bottomSheet();
 ieFix();
 vhFix();
