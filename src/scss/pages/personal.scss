@@ -391,6 +391,7 @@
 	padding: 7px 12px;
 	font-size: 14px;
 	display: block;
+	font-weight: 300;
 	width: auto;
 	border-radius: 6px;
 	display: inline-block;
@@ -404,6 +405,9 @@
 	&.cancelled {
 		background-color: $color-gray-2;
 		color: $color-black;
+	}
+	&.delivery {
+		background-color: #B78041;
 	}
 }
 

@@ -52,8 +52,7 @@ $(function () {
                     }
 
                     return $(
-                        `
-                        <div class="city-box">
+                        `<div class="city-box">
 								<div class="city-box-head">
 									<div class="city-box-head--label menu-item">${placeholder}</div>
 									<div class="city-box-head__current">
@@ -65,15 +64,11 @@ $(function () {
 										</div>
 									</div>
 								</div>
-							</div>
-                        `
+							</div>`
                     );
                 }
             });
         });
-        // $('.select2-selection__arrow').find('b').append(
-        //     `<svg><use xlink:href="/images/sprites.svg#arrow-down"></use></svg>`
-        // )
     }
 
 })

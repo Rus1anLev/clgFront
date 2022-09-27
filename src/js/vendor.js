@@ -1,5 +1,6 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import '../../node_modules/jquery-ui-dist/jquery-ui.min.js';
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
 import objectFitImages from 'object-fit-images';
