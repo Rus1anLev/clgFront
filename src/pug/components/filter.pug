@@ -1,8 +1,8 @@
 .filter.d-none.d-lg-flex
     .filter__params
         .filter__params-item.filter__params-item--link
-            button.filter__params-head.menu-item
-                .filter__params-name
+            button.filter__params-head
+                .filter__params-name.menu-item
                     | Категория
                     .filter__params-name--icon
                         +svg('arrow-down')
@@ -26,113 +26,122 @@
                     a(href="#").filter__params-list--item Категория 4
 
         .filter__params-item.filter__params-item--link
-            button.filter__params-head.menu-item
-                .filter__params-name
+            .filter__params-head
+                button.filter__params-name.menu-item
                     | Коллекция
                     .filter__params-name--icon
                         +svg('arrow-down')
+                button.filter__params-current.filter__params-current--checkbox.is-active
+                    .filter__params-current--label 1
+                    .filter__params-current--icon
+                        +svg('close')
             .filter__params-list--wrapper
                 .filter__params-list.filter__params-list--checkbox
                     label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 1").checkbox-input
+                        input(type="checkbox" value="Параметр 1" checked).checkbox-input.js-filter-checkbox
                         .checkbox-box
                             +svg('checkbox')
                         .checkbox-text.checkbox-text--big Параметр 1
                     label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 2").checkbox-input
+                        input(type="checkbox" value="Параметр 2").checkbox-input.js-filter-checkbox
                         .checkbox-box
                             +svg('checkbox')
                         .checkbox-text.checkbox-text--big Параметр 2
-                    label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 3").checkbox-input
-                        .checkbox-box
-                            +svg('checkbox')
-                        .checkbox-text.checkbox-text--big Параметр 3
         .filter__params-item.filter__params-item--link
-            button.filter__params-head.menu-item
-                .filter__params-name
+            .filter__params-head
+                button.filter__params-name.menu-item
                     | Цена
                     .filter__params-name--icon
                         +svg('arrow-down')
-            .filter__params-list--wrapper
+                button.filter__params-current.filter__params-current--price
+                    .filter__params-current--label от 5 000 до 20 000
+                    .filter__params-current--icon
+                        +svg('close')
+            .filter__params-list--wrapper.filter__params-list--wrapper--price
                 .filter__params-list.filter__params-list--price
-                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, beatae commodi, cupiditate eum
-                    | eveniet fuga fugiat in iste minima nemo neque numquam pariatur reiciendis rem repellat repudiandae
+                    .filter__params-list--price--heading.mb-12 Цена в ₽
+                    .filter__params-list--price--inputs
+                        label.filter__params-list--price--item
+                            span.filter__params-list--price--label От
+                            input(type="number" placeholder="От" value="1000").filter__params-list--price--input.js-filter-price-input.js-filter-price-input--min
+                            span.filter__params-list--price--currency руб.
+                        label.filter__params-list--price--item
+                            span.filter__params-list--price--label До
+                            input(type="number" placeholder="До" value="30000").filter__params-list--price--input.js-filter-price-input.js-filter-price-input--max
+                            span.filter__params-list--price--currency руб.
+                    .filter__params-list--price--track(data-min="1000" data-max="30000")
         .filter__params-item.filter__params-item--link
-            button.filter__params-head.menu-item
-                .filter__params-name
+            .filter__params-head
+                button.filter__params-name.menu-item
                     | Цвет
                     .filter__params-name--icon
                         +svg('arrow-down')
+                button.filter__params-current.filter__params-current--checkbox.is-active
+                    .filter__params-current--label 1
+                    .filter__params-current--icon
+                        +svg('close')
             .filter__params-list--wrapper
                 .filter__params-list.filter__params-list--checkbox
                     label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 1").checkbox-input
+                        input(type="checkbox" value="Параметр 1" checked).checkbox-input.js-filter-checkbox
                         .checkbox-box
                             +svg('checkbox')
                         .checkbox-text.checkbox-text--big Параметр 1
                     label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 2").checkbox-input
+                        input(type="checkbox" value="Параметр 2").checkbox-input.js-filter-checkbox
                         .checkbox-box
                             +svg('checkbox')
-                        .checkbox-text.checkbox-text--big Параметр 2
-                    label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 3").checkbox-input
-                        .checkbox-box
-                            +svg('checkbox')
-                        .checkbox-text.checkbox-text--big Параметр 3
+                        .checkbox-text.checkbox-text--big Параметр 1
         .filter__params-item.filter__params-item--link
-            button.filter__params-head.menu-item
-                .filter__params-name
+            .filter__params-head
+                button.filter__params-name.menu-item
                     | Размер
                     .filter__params-name--icon
                         +svg('arrow-down')
+                button.filter__params-current.filter__params-current--checkbox.is-active
+                    .filter__params-current--label 1
+                    .filter__params-current--icon
+                        +svg('close')
             .filter__params-list--wrapper
                 .filter__params-list.filter__params-list--checkbox
                     label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 1").checkbox-input
+                        input(type="checkbox" value="Параметр 1" checked).checkbox-input.js-filter-checkbox
                         .checkbox-box
                             +svg('checkbox')
                         .checkbox-text.checkbox-text--big Параметр 1
                     label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 2").checkbox-input
+                        input(type="checkbox" value="Параметр 2").checkbox-input.js-filter-checkbox
                         .checkbox-box
                             +svg('checkbox')
-                        .checkbox-text.checkbox-text--big Параметр 2
-                    label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 3").checkbox-input
-                        .checkbox-box
-                            +svg('checkbox')
-                        .checkbox-text.checkbox-text--big Параметр 3
+                        .checkbox-text.checkbox-text--big Параметр 1
         .filter__params-item.filter__params-item--link
-            button.filter__params-head.menu-item
-                .filter__params-name
+            .filter__params-head
+                button.filter__params-name.menu-item
                     | Стиль
                     .filter__params-name--icon
                         +svg('arrow-down')
+                button.filter__params-current.filter__params-current--checkbox.is-active
+                    .filter__params-current--label 1
+                    .filter__params-current--icon
+                        +svg('close')
             .filter__params-list--wrapper
                 .filter__params-list.filter__params-list--checkbox
                     label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 1").checkbox-input
+                        input(type="checkbox" value="Параметр 1" checked).checkbox-input.js-filter-checkbox
                         .checkbox-box
                             +svg('checkbox')
                         .checkbox-text.checkbox-text--big Параметр 1
                     label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 2").checkbox-input
+                        input(type="checkbox" value="Параметр 2").checkbox-input.js-filter-checkbox
                         .checkbox-box
                             +svg('checkbox')
-                        .checkbox-text.checkbox-text--big Параметр 2
-                    label.checkbox.filter__params-list--item
-                        input(type="checkbox" value="Параметр 3").checkbox-input
-                        .checkbox-box
-                            +svg('checkbox')
-                        .checkbox-text.checkbox-text--big Параметр 3
+                        .checkbox-text.checkbox-text--big Параметр 1
     button.menu-item.filter-reset.d-none.d-lg-block
         | Сбросить фильтры
     .filter-sort.d-none.d-lg-block
         .filter__params-item.filter__params-item--link
-            button.filter__params-head.menu-item
-                .filter__params-name
+            button.filter__params-head
+                .filter__params-name.menu-item
                     | Упорядочить
                     .filter__params-name--icon
                         +svg('sort')
@@ -181,8 +190,8 @@
                 .filter
                     .filter__params
                         .filter__params-item.filter__params-item--link
-                            button.filter__params-head.menu-item
-                                .filter__params-name
+                            button.filter__params-head
+                                .filter__params-name.menu-item
                                     | Категория
                                     .filter__params-name--icon
                                         +svg('arrow-down')
@@ -206,107 +215,116 @@
                                     a(href="#").filter__params-list--item Категория 4
 
                         .filter__params-item.filter__params-item--link
-                            button.filter__params-head.menu-item
-                                .filter__params-name
+                            .filter__params-head
+                                button.filter__params-name.menu-item
                                     | Коллекция
                                     .filter__params-name--icon
                                         +svg('arrow-down')
+                                button.filter__params-current.filter__params-current--checkbox.is-active
+                                    .filter__params-current--label 1
+                                    .filter__params-current--icon
+                                        +svg('close')
                             .filter__params-list--wrapper
                                 .filter__params-list.filter__params-list--checkbox
                                     label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 1").checkbox-input
+                                        input(type="checkbox" value="Параметр 1" checked).checkbox-input.js-filter-checkbox
                                         .checkbox-box
                                             +svg('checkbox')
                                         .checkbox-text.checkbox-text--big Параметр 1
                                     label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 2").checkbox-input
+                                        input(type="checkbox" value="Параметр 2").checkbox-input.js-filter-checkbox
                                         .checkbox-box
                                             +svg('checkbox')
                                         .checkbox-text.checkbox-text--big Параметр 2
-                                    label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 3").checkbox-input
-                                        .checkbox-box
-                                            +svg('checkbox')
-                                        .checkbox-text.checkbox-text--big Параметр 3
                         .filter__params-item.filter__params-item--link
-                            button.filter__params-head.menu-item
-                                .filter__params-name
+                            .filter__params-head
+                                button.filter__params-name.menu-item
                                     | Цена
                                     .filter__params-name--icon
                                         +svg('arrow-down')
-                            .filter__params-list--wrapper
+                                button.filter__params-current.filter__params-current--price
+                                    .filter__params-current--label от 5 000 до 20 000
+                                    .filter__params-current--icon
+                                        +svg('close')
+                            .filter__params-list--wrapper.filter__params-list--wrapper--price
                                 .filter__params-list.filter__params-list--price
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, beatae commodi, cupiditate eum
-                                    | eveniet fuga fugiat in iste minima nemo neque numquam pariatur reiciendis rem repellat repudiandae
+                                    .filter__params-list--price--heading.mb-12 Цена в ₽
+                                    .filter__params-list--price--inputs
+                                        label.filter__params-list--price--item
+                                            span.filter__params-list--price--label От
+                                            input(type="number" placeholder="От" value="1000").filter__params-list--price--input.js-filter-price-input.js-filter-price-input--min
+                                            span.filter__params-list--price--currency руб.
+                                        label.filter__params-list--price--item
+                                            span.filter__params-list--price--label До
+                                            input(type="number" placeholder="До" value="30000").filter__params-list--price--input.js-filter-price-input.js-filter-price-input--max
+                                            span.filter__params-list--price--currency руб.
+                                    .filter__params-list--price--track(data-min="1000" data-max="30000")
                         .filter__params-item.filter__params-item--link
-                            button.filter__params-head.menu-item
-                                .filter__params-name
+                            .filter__params-head
+                                button.filter__params-name.menu-item
                                     | Цвет
                                     .filter__params-name--icon
                                         +svg('arrow-down')
+                                button.filter__params-current.filter__params-current--checkbox.is-active
+                                    .filter__params-current--label 1
+                                    .filter__params-current--icon
+                                        +svg('close')
                             .filter__params-list--wrapper
                                 .filter__params-list.filter__params-list--checkbox
                                     label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 1").checkbox-input
+                                        input(type="checkbox" value="Параметр 1" checked).checkbox-input.js-filter-checkbox
                                         .checkbox-box
                                             +svg('checkbox')
                                         .checkbox-text.checkbox-text--big Параметр 1
                                     label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 2").checkbox-input
+                                        input(type="checkbox" value="Параметр 2").checkbox-input.js-filter-checkbox
                                         .checkbox-box
                                             +svg('checkbox')
-                                        .checkbox-text.checkbox-text--big Параметр 2
-                                    label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 3").checkbox-input
-                                        .checkbox-box
-                                            +svg('checkbox')
-                                        .checkbox-text.checkbox-text--big Параметр 3
+                                        .checkbox-text.checkbox-text--big Параметр 1
                         .filter__params-item.filter__params-item--link
-                            button.filter__params-head.menu-item
-                                .filter__params-name
+                            .filter__params-head
+                                button.filter__params-name.menu-item
                                     | Размер
                                     .filter__params-name--icon
                                         +svg('arrow-down')
+                                button.filter__params-current.filter__params-current--checkbox.is-active
+                                    .filter__params-current--label 1
+                                    .filter__params-current--icon
+                                        +svg('close')
                             .filter__params-list--wrapper
                                 .filter__params-list.filter__params-list--checkbox
                                     label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 1").checkbox-input
+                                        input(type="checkbox" value="Параметр 1" checked).checkbox-input.js-filter-checkbox
                                         .checkbox-box
                                             +svg('checkbox')
                                         .checkbox-text.checkbox-text--big Параметр 1
                                     label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 2").checkbox-input
+                                        input(type="checkbox" value="Параметр 2").checkbox-input.js-filter-checkbox
                                         .checkbox-box
                                             +svg('checkbox')
-                                        .checkbox-text.checkbox-text--big Параметр 2
-                                    label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 3").checkbox-input
-                                        .checkbox-box
-                                            +svg('checkbox')
-                                        .checkbox-text.checkbox-text--big Параметр 3
+                                        .checkbox-text.checkbox-text--big Параметр 1
                         .filter__params-item.filter__params-item--link
-                            button.filter__params-head.menu-item
-                                .filter__params-name
+                            .filter__params-head
+                                button.filter__params-name.menu-item
                                     | Стиль
                                     .filter__params-name--icon
                                         +svg('arrow-down')
+                                button.filter__params-current.filter__params-current--checkbox.is-active
+                                    .filter__params-current--label 1
+                                    .filter__params-current--icon
+                                        +svg('close')
                             .filter__params-list--wrapper
                                 .filter__params-list.filter__params-list--checkbox
                                     label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 1").checkbox-input
+                                        input(type="checkbox" value="Параметр 1" checked).checkbox-input.js-filter-checkbox
                                         .checkbox-box
                                             +svg('checkbox')
                                         .checkbox-text.checkbox-text--big Параметр 1
                                     label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 2").checkbox-input
+                                        input(type="checkbox" value="Параметр 2").checkbox-input.js-filter-checkbox
                                         .checkbox-box
                                             +svg('checkbox')
-                                        .checkbox-text.checkbox-text--big Параметр 2
-                                    label.checkbox.filter__params-list--item
-                                        input(type="checkbox" value="Параметр 3").checkbox-input
-                                        .checkbox-box
-                                            +svg('checkbox')
-                                        .checkbox-text.checkbox-text--big Параметр 3
+                                        .checkbox-text.checkbox-text--big Параметр 1
 .bottom-sheet.column.items-center.justify-end.auto-height(aria-hidden="true")#modal-filter-sort
     // Dark background for the sheet
     .overlay
@@ -335,3 +353,8 @@
                             input(type="radio" name="sort").radio-input
                             .radio-box
                             .radio-text.radio-text--big Цена по убыванию
+                                label.checkbox.filter__params-list--item
+                                    input(type="checkbox" value="Параметр 3").checkbox-input.js-filter-checkbox
+                                    .checkbox-box
+                                        +svg('checkbox')
+                                    .checkbox-text.checkbox-text--big Параметр 3
