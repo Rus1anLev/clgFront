@@ -20,6 +20,9 @@ import {tabs} from "./components/tabs";
 import {initProductsSlider} from "./components/block/products_slider";
 import {initCityBox} from "./components/city-box";
 
+import '../../node_modules/jquery-ui-dist/jquery-ui.min';
+import './vendor/jquery.ui.touch-punch';
+
 // import $ from 'jquery';
 // import datepickerFactory from 'jquery-datepicker';
 // import datepickerJAFactory from 'jquery-datepicker/i18n/jquery.ui.datepicker-ja';
