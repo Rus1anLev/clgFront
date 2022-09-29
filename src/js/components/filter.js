@@ -70,10 +70,10 @@ function initPriceSlider() {
             range: true,
             min: $track.data('min'),
             max: $track.data('max'),
-            values: [$track.data('min'), $track.data('max')],
+            values: [$filterPriceInputMin.val(), $filterPriceInputMax.val()],
             slide: function (event, ui) {
-                $filterPriceInputMin.val(ui.values[0]);
-                $filterPriceInputMax.val(ui.values[1]);
+                $filterPriceInputMin.val(ui.values[0])
+                $filterPriceInputMax.val(ui.values[1])
                 checkPriceCurrent()
             }
         })
