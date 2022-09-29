@@ -20,16 +20,43 @@ const bottomSheet = function () {
 			setIsSheetShown(false, '#' + $(this).parent().attr('id'))
 		})
 
-
 		const openModal = function (modalID) {
+			console.log('1')
 			if ($(modalID).length > 0) {
-				if ($(window).width() >= 576 || $(modalID).hasClass('bottom-full')) {
+				console.log('2')
+				if ($(modalID).hasClass('bottom-full')) {
+					console.log('3')
 					$.fancybox.open({
 						src: modalID,
 						scrolling: 'hidden',
 					})
 				} else {
-					window.openBottomModal(modalID)
+					console.log('4')
+					if ($(modalID).hasClass('tablet-sheet')) {
+						console.log('5')
+						if ($(window).width() >= 1008) {
+							console.log('6')
+							$.fancybox.open({
+								src: modalID,
+								scrolling: 'hidden',
+							})
+						} else {
+							console.log('7')
+							window.openBottomModal(modalID)
+						}
+					} else {
+						console.log('8')
+						if ($(window).width() >= 576) {
+							console.log('9')
+							$.fancybox.open({
+								src: modalID,
+								scrolling: 'hidden',
+							})
+						} else {
+							console.log('10')
+							window.openBottomModal(modalID)
+						}
+					}
 				}
 			}
 		}
