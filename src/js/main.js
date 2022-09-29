@@ -8,6 +8,7 @@ import {headerInit} from './components/header';
 import {initSearchbar} from './components/searchbar';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
+import Inputmask from "inputmask";
 import './components/select';
 import './components/popup';
 import "./components/copyToClipboard";
@@ -27,6 +28,8 @@ import './vendor/jquery.ui.touch-punch';
 // import datepickerJAFactory from 'jquery-datepicker/i18n/jquery.ui.datepicker-ja';
 // // Just pass your jquery instance and you're done
 // datepickerFactory($);
+
+window.inputMask = Inputmask
 
 bottomSheet();
 ieFix();
