@@ -35,7 +35,7 @@ function init() {
     var im = new Inputmask("+7 999 999-99-99");
     var firstPhoneInput = document.querySelector(".block_callback__form-input input[name=PHONE]");
     if (firstPhoneInput !== null) {
-        firstPhoneInput.focus()
+        // firstPhoneInput.focus()
     }
     selectors.forEach(x => {
         im.mask(x);
