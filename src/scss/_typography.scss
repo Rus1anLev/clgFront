@@ -182,9 +182,9 @@ h3, .h3 {
 			}
 
 			&--phone {
-				padding: 22px 11px 10px;
+				padding: 22px 11px 10px !important;
 				& + .form-control--label {
-					padding: 10px 11px 22px;
+					padding: 8px 11px 22px !important;
 					font-size: 12px;
 				}
 				&::placeholder {

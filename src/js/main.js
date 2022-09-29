@@ -9,7 +9,6 @@ import {initSearchbar} from './components/searchbar';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import './components/select';
-import oneTimePasswd from "./components/oneTimePasswd";
 import './components/popup';
 import "./components/copyToClipboard";
 import {bottomSheet} from "./components/bottomSheet";
@@ -38,7 +37,6 @@ scrollToAnchor.init();
 headerInit();
 initSearchbar()
 lazyLoading.init();
-oneTimePasswd.init();
 tabs();
 initFilter()
 initAccordion()
