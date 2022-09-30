@@ -98,6 +98,7 @@
 			flex: 0 0 24px;
 			margin-right: 24px;
 			position: relative;
+			color: $color-dark-golden;
 			@include media-breakpoint-down(sm) {
 				margin-right: 12px;
 			}

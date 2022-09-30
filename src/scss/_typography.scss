@@ -108,21 +108,21 @@ h3, .h3 {
 	color: $color-silver-brown;
 }
 
-.favorite-icon {
-	stroke: currentColor;
-	fill: transparent;
+.favorite {
+	&-icon {
+		stroke: currentColor;
+		fill: transparent;
 
-	transition: fill $duration-normal $easing-out;
-
-	&:hover {
+		transition: fill $duration-normal $easing-out;
+	}
+	&-icon--btn:hover &-icon {
 		fill: currentColor;
 	}
-
-	&.is-active {
+	&-icon--btn.is-active &-icon {
 		fill: currentColor;
-		&:hover {
-			fill: none;
-		}
+	}
+	&-icon--btn.is-active:hover &-icon {
+		fill: none;
 	}
 }
 
