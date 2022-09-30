@@ -1,5 +1,5 @@
 .card {
-
+  position: relative;
   &-img {
     display: block;
     border-radius: 6px;
@@ -12,6 +12,15 @@
     img {
       display: block;
     }
+  }
+
+  &-favorite {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    color: $color-dark-golden;
   }
 
   &__content {
