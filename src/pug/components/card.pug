@@ -2,11 +2,13 @@ mixin card(data)
     .card
         a(href="#").card-img.mb-12
             img(src=data.img)
+        button.card-favorite.favorite-icon--btn
+            +svg('favorite').favorite-icon
         .card__content
             div
                 a(href="#").card__content-name !{data.name}
                 if data.price
-                    div.card__content-price.d-sm-none.mt-12
+                    a(href="#").card__content-price.d-sm-none.mt-12
                         .card__content-price--current !{data.price}
                         if data.price_old
                             .card__content-price--old !{data.price_old}
@@ -16,7 +18,7 @@ mixin card(data)
                 if data.coming_soon
                     a(href="#").link.link-primary.link--big Узнать о поступлении
             if data.price
-                div.card__content-price.d-none.d-sm-block
+                a(href="#").card__content-price.d-none.d-sm-block
                     .card__content-price--current !{data.price}
                     if data.price_old
                         .card__content-price--old !{data.price_old}
