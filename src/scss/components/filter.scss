@@ -101,7 +101,7 @@
         background: #FFF;
         box-shadow: 1px 1px 20px rgba(44, 44, 44, 0.05);
         border-radius: 6px;
-
+        z-index: 5;
         @include media-breakpoint-down(lg) {
           position: relative;
           top: 0;

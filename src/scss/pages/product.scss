@@ -232,7 +232,6 @@
           overflow: hidden;
           @include media-breakpoint-down(md) {
             order: 1;
-            flex: 1 1;
             height: auto;
             border-radius: 6px;
           }
