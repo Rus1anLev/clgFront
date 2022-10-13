@@ -8,8 +8,8 @@ import {headerInit} from './components/header';
 import {initSearchbar} from './components/searchbar';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
+import Inputmask from "inputmask";
 import './components/select';
-import oneTimePasswd from "./components/oneTimePasswd";
 import './components/popup';
 import "./components/copyToClipboard";
 import {bottomSheet} from "./components/bottomSheet";
@@ -29,6 +29,8 @@ import './vendor/jquery.ui.touch-punch';
 // // Just pass your jquery instance and you're done
 // datepickerFactory($);
 
+window.inputMask = Inputmask
+
 bottomSheet();
 ieFix();
 vhFix();
@@ -38,7 +40,6 @@ scrollToAnchor.init();
 headerInit();
 initSearchbar()
 lazyLoading.init();
-oneTimePasswd.init();
 tabs();
 initFilter()
 initAccordion()
