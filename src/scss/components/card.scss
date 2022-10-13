@@ -78,9 +78,20 @@
         }
       }
     }
+
   }
 
-
+  &-color {
+    color: $color-cold-brown;
+    span {
+      color: $color-silver-brown;
+    }
+  }
+  &-add2cart {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
   @include media-breakpoint-down(md) {
     .mb-12 {
       margin-bottom: 6px;

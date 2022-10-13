@@ -22,4 +22,16 @@ mixin card(data)
                     .card__content-price--current !{data.price}
                     if data.price_old
                         .card__content-price--old !{data.price_old}
+        if data.sku
+            .card-color.mt-12.menu-item
+                <span>Цвет:</span> Оливковый
+            select(placeholder="Выберите размер").select.mt-12.mb-6
+                option
+                option Описание инпута 1
+                option Описание инпута 2
+                option Описание инпута 3
+                option Описание инпута 4
+                option Описание инпута 5
+            a(href="#").btn.btn-primary.card-add2cart В корзину
+
 
