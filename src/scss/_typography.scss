@@ -565,3 +565,16 @@ h3, .h3 {
 		}
 	}
 }
+
+.typography-main {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 1.33;
+	color: #2C2C2C;
+	p {
+		margin-bottom: 12px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

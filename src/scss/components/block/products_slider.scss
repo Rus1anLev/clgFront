@@ -6,7 +6,10 @@
     &--arrow {
       position: absolute;
       top: 222px;
-      @include media-breakpoint-down(xl) {
+      @include media-breakpoint-only(md) {
+        top: 142px;
+      }
+      @include media-breakpoint-only(lg) {
         top: 176px;
       }
       @include media-breakpoint-down(md) {
