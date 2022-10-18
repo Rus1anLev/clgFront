@@ -1,8 +1,9 @@
 mixin block_products_slider(object)
     .block_products_slider&attributes(attributes)
         .container
-            .block_products_slider-title.text-center.mb-60
-                h2 Заголовок “карусели” товаров
+            if object.title
+                .block_products_slider-title.text-center.mb-60
+                    h2 Заголовок “карусели” товаров
             .block_products_slider__slider-wrapper
                 .block_products_slider__slider
                     .block_products_slider__slider-item
@@ -10,7 +11,9 @@ mixin block_products_slider(object)
                             img: `${baseDir}images/card/card1.jpg`,
                             name: 'Кофта из тонкого трикотажа с коротким рукавом и капюшоном',
                             tag: 'sale',
-                            price: '34 658 руб.'
+                            price: '34 658 руб.',
+                            sku: object.sku
+
                         })
                     .block_products_slider__slider-item
                         +card({
@@ -18,19 +21,27 @@ mixin block_products_slider(object)
                             name: 'Футболка с узором ручной рабооты',
                             tag: 'sale',
                             price: '34 658 руб.',
-                            price_old: '34 658 руб.'
+                            price_old: '34 658 руб.',
+                            sku: object.sku
+
                         })
                     .block_products_slider__slider-item
                         +card({
                             img: `${baseDir}images/card/card3.jpg`,
                             name: 'Футболка с морским узором',
-                            price: '34 658 руб.'
+                            price: '34 658 руб.',
+                            sku: object.sku
+
                         })
                     .block_products_slider__slider-item
                         +card({
                             img: `${baseDir}images/card/card4.jpg`,
                             name: 'Блуза свободного кроя с черно-белым принтом',
-                            tag: 'Новые поступления'
+                            tag: 'Новые поступления',
+                            price: '34 658 руб.',
+                            price_old: '34 658 руб.',
+                            sku: object.sku
+
                         })
                     .block_products_slider__slider-item
                         +card({

@@ -1,0 +1,88 @@
+main.lookbook.pt-60
+    .mb-36
+        include ../components/breadcrumbs
+    .mb-60.text-center
+        h1.h2 Look 6
+    .container.mb-120
+        .row
+            .col-lg-8.col-xl-10
+                .lookbook__image-wrapper
+                    +lazyPicture({
+                        src: '/images/pages/lookbook/lookbook-main.jpg',
+                        alt: '',
+                    }).lookbook__image
+            .col-lg-8.col-xl-6.d-none.d-lg-block
+                .lookbook__list-wrapper
+                    .lookbook__list
+                        .lookbook__list-item
+                            +card-lookbook({
+                                img: `${baseDir}images/card/card1.jpg`,
+                                name: 'Кофта из тонкого трикотажа с коротким рукавом и капюшоном',
+                                tag: 'sale',
+                                price: '34 658 руб.',
+                                sku: true
+                            })
+                        .lookbook__list-item
+                            +card-lookbook({
+                                img: `${baseDir}images/card/card1.jpg`,
+                                name: 'Кофта из тонкого трикотажа с коротким рукавом и капюшоном',
+                                tag: 'sale',
+                                price: '34 658 руб.',
+                                price_old: '34 658 руб.',
+                                coming_soon: true
+                            })
+                        .lookbook__list-item
+                            +card-lookbook({
+                                img: `${baseDir}images/card/card1.jpg`,
+                                name: 'Кофта из тонкого трикотажа с коротким рукавом и капюшоном',
+                                tag: 'sale',
+                                price: '34 658 руб.',
+                                sku: true
+                            })
+                        .lookbook__list-item
+                            +card-lookbook({
+                                img: `${baseDir}images/card/card1.jpg`,
+                                name: 'Кофта из тонкого трикотажа с коротким рукавом и капюшоном',
+                                tag: 'sale',
+                                price: '34 658 руб.',
+                                price_old: '34 658 руб.',
+                                coming_soon: true
+                            })
+                        .lookbook__list-item
+                            +card-lookbook({
+                                img: `${baseDir}images/card/card1.jpg`,
+                                name: 'Кофта из тонкого трикотажа с коротким рукавом и капюшоном',
+                                tag: 'sale',
+                                price: '34 658 руб.',
+                                sku: true
+                            })
+                        .lookbook__list-item
+                            +card-lookbook({
+                                img: `${baseDir}images/card/card1.jpg`,
+                                name: 'Кофта из тонкого трикотажа с коротким рукавом и капюшоном',
+                                tag: 'sale',
+                                price: '34 658 руб.',
+                                price_old: '34 658 руб.',
+                                coming_soon: true
+                            })
+                        .lookbook__list-item
+                            +card-lookbook({
+                                img: `${baseDir}images/card/card1.jpg`,
+                                name: 'Кофта из тонкого трикотажа с коротким рукавом и капюшоном',
+                                tag: 'sale',
+                                price: '34 658 руб.',
+                                sku: true
+                            })
+                        .lookbook__list-item
+                            +card-lookbook({
+                                img: `${baseDir}images/card/card1.jpg`,
+                                name: 'Кофта из тонкого трикотажа с коротким рукавом и капюшоном',
+                                tag: 'sale',
+                                price: '34 658 руб.',
+                                price_old: '34 658 руб.',
+                                coming_soon: true
+                            })
+    +block_products_slider({
+        title: false,
+        sku: true
+    }).d-lg-none.mb-120.mt-mobile-48

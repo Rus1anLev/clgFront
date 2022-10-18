@@ -60,6 +60,19 @@
 	}
 }
 
+.mb-36 {
+	margin-bottom: 36px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 24px;
+	}
+}
+.mt-36 {
+	margin-top: 36px;
+	@include media-breakpoint-down(md) {
+		margin-top: 24px;
+	}
+}
+
 .mb-24 {
 	margin-bottom: 24px;
 	@include media-breakpoint-down(md) {
@@ -105,6 +118,12 @@
 	.mt-desktop-48 {
 		margin-top: 48px;
 	}
+	.mb-desktop-36 {
+		margin-bottom: 36px;
+	}
+	.mt-desktop-36 {
+		margin-top: 36px;
+	}
 	.mb-desktop-24 {
 		margin-bottom: 24px;
 	}
@@ -142,6 +161,12 @@
 	}
 	.mt-mobile-48 {
 		margin-top: 48px;
+	}
+	.mb-mobile-36 {
+		margin-bottom: 36px;
+	}
+	.mt-mobile-36 {
+		margin-top: 36px;
 	}
 	.mb-mobile-24 {
 		margin-bottom: 24px;
