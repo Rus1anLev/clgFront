@@ -19,6 +19,7 @@ import {initProductSlider} from "./components/product";
 import {tabs} from "./components/tabs";
 import {initProductsSlider} from "./components/block/products_slider";
 import {initCityBox} from "./components/city-box";
+import {initCookie} from "./components/cookie";
 
 import '../../node_modules/jquery-ui-dist/jquery-ui.min';
 import './vendor/jquery.ui.touch-punch';
@@ -46,5 +47,5 @@ initAccordion()
 
 initProductSlider()
 initProductsSlider()
-
 initCityBox()
+initCookie()

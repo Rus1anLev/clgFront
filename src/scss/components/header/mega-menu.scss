@@ -31,12 +31,9 @@
     }
     &-col {
       flex: 0 0 auto;
-      margin-right: 134px;
+      margin-right: auto;
       &:last-child {
         margin-right: 0;
-      }
-      @include media-breakpoint-only(lg) {
-        margin-right: 12px;
       }
     }
     &-heading {
@@ -68,6 +65,7 @@
     &-img {
       display: block;
       max-width: 402px;
+      picture,
       img {
         width: 100%;
         border-radius: 6px;
