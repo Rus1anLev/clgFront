@@ -20,6 +20,7 @@ import {tabs} from "./components/tabs";
 import {initProductsSlider} from "./components/block/products_slider";
 import {initCityBox} from "./components/city-box";
 import {initCookie} from "./components/cookie";
+import {initInputFile} from "./components/inputFile";
 
 import '../../node_modules/jquery-ui-dist/jquery-ui.min';
 import './vendor/jquery.ui.touch-punch';
@@ -49,3 +50,5 @@ initProductSlider()
 initProductsSlider()
 initCityBox()
 initCookie()
+
+initInputFile()

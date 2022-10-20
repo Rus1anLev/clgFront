@@ -115,15 +115,18 @@ h3, .h3 {
 
 		transition: fill $duration-normal $easing-out;
 	}
-	&-icon--btn:hover &-icon {
-		fill: currentColor;
-	}
+
+	//&-icon--btn:hover &-icon {
+	//	fill: currentColor;
+	//}
+
 	&-icon--btn.is-active &-icon {
 		fill: currentColor;
 	}
-	&-icon--btn.is-active:hover &-icon {
-		fill: none;
-	}
+
+	//&-icon--btn.is-active:hover &-icon {
+	//	fill: none;
+	//}
 }
 
 .counter {
@@ -285,6 +288,15 @@ h3, .h3 {
 		&.is-error ~ &--notify.is-error {
 			display: block;
 			color: $color-system-red;
+		}
+
+		&--file {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 0;
 		}
 	}
 	.info-top {

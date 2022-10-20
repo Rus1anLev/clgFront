@@ -1,0 +1,73 @@
+main.contacts.pt-60
+    .container
+        .contacts-title.text-center.mb-60
+            h1.h2  Контакты
+        .contacts__card--wrapper
+            .row
+                .col-lg-8.contacts__card-item
+                    .contacts__card
+                        .contacts__card-title.mb-24
+                            h2.h3 Клиентская служба
+                        .contacts__card-text.mb-24
+                            a(href="mailto: customer-service@caterinaleman.ru").contacts__card-text--link
+                                | customer-service@caterinaleman.ru
+                            a(href="tel: +78006896565").contacts__card-text--link
+                                | 8 800 689 65 65
+                        .contacts__card-hint
+                            | Клиентская служба принимает звонки с понедельника <br />
+                            | по пятницу, с 10:00 до 19:00 по московскому времени.
+                .col-lg-8.contacts__card-item
+                    .contacts__card
+                        .contacts__card-title.mb-24
+                            h2.h3 Консультация стилиста
+                        .contacts__card-text.mb-24
+                            | Получите профессиональные рекомендации по стилю и соберите новые модные образы
+                        .contacts__card-btn
+                            a(href="#").btn.btn-secondary Забронировать визит
+    .contacts__form--wrapper
+        .container
+            .row.justify-content-center
+                .col-xl-8.col-lg-10.col-md-12
+                    form.form.contacts__form
+                        .contacts__form-title.h2.text-center.mb-24 Связаться с нами
+                        .contacts__form-subtitle.text-center.mb-48 Будем рады ответить на все ваши вопросы
+                        .form-row
+                            .form-control
+                                input(type="text" placeholder="Ваше имя*").form-control--input
+                                label.form-control--label Ваше имя*
+                        .form-row
+                            .form-control
+                                input(type="text" placeholder="Email*").form-control--input
+                                label.form-control--label Email*
+                        .form-row
+                            .form-control
+                                input(type="tel" placeholder="Телефон*").form-control--input
+                                label.form-control--label Телефон*
+                        .form-row
+                            select.select(placeholder="Город*")
+                                option
+                                option Москва
+                                option Чебоксары
+                                option Казань
+                        .form-row
+                            .form-control
+                                textarea(placeholder="Сообщение").form-control--input.contacts__form-textarea
+                                label.form-control--label Сообщение
+                        .form-row.mb-48
+                            .form-control.form-control--icon-right
+                                .form-control--icon
+                                    +svg('attach')
+                                input(type="file" class="form-control--file")
+                                input(type="text" placeholder="Прикрепите файл" readonly).form-control--input
+                                label.form-control--label Прикрепите файл
+
+                        .row.justify-content-center
+                            .col-xl-8.col-md-10
+                                .contacts__form-btn--wrapper.mb-12
+                                    button.btn.btn-primary.contacts__form-btn Отправить
+                                .contacts__form-agree
+                                    label.checkbox
+                                        input(type="checkbox").checkbox-input
+                                        .checkbox-box
+                                            +svg('checkbox')
+                                        .checkbox-text.checkbox-text--small Согласен на <a href="#"> обработку персональных данных </a>
