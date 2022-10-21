@@ -230,14 +230,20 @@
         }
       }
       &-big {
-        cursor: grab;
+        @include media-breakpoint-down(lg) {
+          cursor: grab;
+        }
+
         &--wrapper {
           height: 100vh;
-          overflow: hidden;
-          @include media-breakpoint-down(md) {
+          @include media-breakpoint-down(lg) {
             order: 1;
             height: auto;
             border-radius: 6px;
+            overflow: hidden;
+          }
+          @include media-breakpoint-up(lg) {
+            overflow-y: scroll;
           }
 
         //  overflow-x: hidden;
@@ -312,6 +318,9 @@
           right: 92px;
           padding: 4px;
           color: $color-silver-brown;
+          @include media-breakpoint-up(lg) {
+            display: none;
+          }
           @include media-breakpoint-down(md) {
             display: none !important;
           }
