@@ -154,7 +154,9 @@ main.product.pt-60.mb-120
                 .product__look
                     a(href="#").btn.btn-secondary Подобрать образ
 
-    +block_products_slider().mb-120
+    +block_products_slider({
+        title: true
+    }).mb-120
     +block_consulting({
         image: '/images/pages/main/consultingImg.jpg',
         image_mob: '/images/pages/main/consultingImg_mob.jpg',

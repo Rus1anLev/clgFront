@@ -1,0 +1,49 @@
+.cookie {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #FFF;
+  z-index: 10000;
+  padding: 48px 0;
+  display: none;
+  @include media-breakpoint-down(md) {
+    padding: 24px 0;
+    border-radius: 12px 12px 0 0;
+  }
+  &-text {
+    font-size: 18px;
+    color: #2C2C2C;
+    font-weight: 300;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 24px;
+    }
+    a {
+      color: #98938C;
+      text-decoration-line: underline;
+      text-decoration-thickness: from-font;
+    }
+
+    &--more {
+      display: inline;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+      &.is-open {
+        display: inline;
+      }
+      &-btn {
+        display: inline;
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+        &.is-open {
+          display: none;
+        }
+      }
+    }
+  }
+  &-btn {
+    width: 100%;
+  }
+}

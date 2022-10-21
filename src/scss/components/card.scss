@@ -4,13 +4,16 @@
     display: block;
     border-radius: 6px;
     overflow: hidden;
-    margin-bottom: 12px;
     picture {
       display: block;
     }
 
     img {
       display: block;
+    }
+
+    &--wrapper {
+      position: relative;
     }
   }
 
@@ -78,8 +81,21 @@
         }
       }
     }
+
   }
 
+  &-color {
+    color: $color-cold-brown;
+    span {
+      color: $color-silver-brown;
+    }
+  }
+
+  &-add2cart {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
 
   @include media-breakpoint-down(md) {
     .mb-12 {
@@ -87,6 +103,38 @@
     }
     .mt-12 {
       margin-top: 6px;
+    }
+  }
+
+
+  &-lookbook {
+    display: flex;
+    &--img {
+      margin-right: 6px;
+      width: 196px;
+      flex: 0 0 196px;
+    }
+    &__content {
+      margin-bottom: auto;
+      &--wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+      &-name {
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      &-price {
+        display: flex;
+        &--current {
+
+        }
+        &--old {
+          margin-left: 6px;
+          margin-top: 0;
+        }
+      }
     }
   }
 }

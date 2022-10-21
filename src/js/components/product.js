@@ -13,32 +13,6 @@ let $productGalleryThumb = $('.product__gallery-thumb'),
     $productGalleryWindowBigZoomOut = $('.product__gallery__window-big--zoom--out'),
     zoomInstance
 
-if ($productGalleryWindowBig.length) {
-    zoomInstance = panzoom($productGalleryWindowBig.get(0), {
-        bounds: true,
-        boundsPadding: 1,
-        maxZoom: 3,
-        minZoom: 1,
-        zoomDoubleClickSpeed: 1,
-        // beforeWheel: function(e) {
-        //     // allow wheel-zoom only if altKey is down. Otherwise - ignore
-        //     var shouldIgnore = !e.altKey;
-        //     return shouldIgnore;
-        // }
-        beforeWheel: function(e) {
-            setTimeout(function () {
-                hideZoomButton(zoomInstance.getTransform().scale)
-            }, 300)
-        },
-        onTouch: function(e) {
-
-        }
-    })
-    zoomInstance.on('zoomend', function(e) {
-        hideZoomButton(e.getTransform().scale)
-    });
-}
-
 function initSliderThumb() {
     $productGalleryThumb.slick({
         slidesToShow: 5,
@@ -122,11 +96,14 @@ function initWindowSliderBig() {
         arrows: true,
         asNavFor: '.product__gallery__window-thumb',
         prevArrow: $('.product__gallery__window-big--arrow--left'),
-        nextArrow: $('.product__gallery__window-big--arrow--right'),
-        draggable: false,
-        swipe: false,
-        swipeToSlide: false
+        nextArrow: $('.product__gallery__window-big--arrow--right')
     });
+
+    if(helpers.isMobile()) {
+        // $productGalleryWindowBig.slick('slickSetOption', 'swipe', false)
+        // $productGalleryWindowBig.slick('slickSetOption', 'draggable', false)
+        // $productGalleryWindowBig.slick('slickSetOption', 'swipeToSlide', false)
+    }
 }
 
 function openWindowGallery() {
@@ -151,11 +128,15 @@ function closeWindowGallery() {
         $productGalleryWindowThumb.slick('unslick')
         $productGalleryWindowBig.slick('unslick')
         $(document).off('keyup', closeFromEscape)
-        zoomInsance.zoomTo(0, 0, 0.0001)
-        zoomInsance.moveTo(0, 0)
-        hideZoomButton(1)
+
+        if(helpers.isMobile()) {
+            zoomInsance.zoomTo(0, 0, 0.0001)
+            zoomInsance.moveTo(0, 0)
+            hideZoomButton(1)
+        }
     })
 }
+
 
 function closeFromEscape(e) {
     if (e.key === "Escape") {
@@ -169,10 +150,76 @@ function handlerZoomIn() {
 
 function handlerZoomOut() {
     zoomInsance.smoothZoom(0, 0, 0.5);
+}
 
+function hideZoomButton(scale) {
+    if (scale === 3) {
+        $productGalleryWindowBigZoomIn.addClass('is-hidden')
+
+        if($productGalleryWindowBig.get(0).slick) {
+            $productGalleryWindowBig.slick('slickSetOption', 'swipe', false)
+            $productGalleryWindowBig.slick('slickSetOption', 'draggable', false)
+            $productGalleryWindowBig.slick('slickSetOption', 'swipeToSlide', false)
+        }
+    }
+    if (scale < 3) {
+        $productGalleryWindowBigZoomIn.removeClass('is-hidden')
+
+        if($productGalleryWindowBig.get(0).slick) {
+            $productGalleryWindowBig.slick('slickSetOption', 'swipe', false)
+            $productGalleryWindowBig.slick('slickSetOption', 'draggable', false)
+            $productGalleryWindowBig.slick('slickSetOption', 'swipeToSlide', false)
+        }
+    }
+    if (scale > 1) {
+        $productGalleryWindowBigZoomOut.removeClass('is-hidden')
+
+        if($productGalleryWindowBig.get(0).slick) {
+            $productGalleryWindowBig.slick('slickSetOption', 'swipe', false)
+            $productGalleryWindowBig.slick('slickSetOption', 'draggable', false)
+            $productGalleryWindowBig.slick('slickSetOption', 'swipeToSlide', false)
+            $productGalleryWindowBig.slick('slickSetOption', 'touchMove', false)
+        }
+    }
+    if (scale === 1) {
+        $productGalleryWindowBigZoomOut.addClass('is-hidden')
+
+        if($productGalleryWindowBig.get(0).slick) {
+            $productGalleryWindowBig.slick('slickSetOption', 'swipe', true)
+            $productGalleryWindowBig.slick('slickSetOption', 'draggable', true)
+            $productGalleryWindowBig.slick('slickSetOption', 'swipeToSlide', true)
+            $productGalleryWindowBig.slick('slickSetOption', 'touchMove', true)
+        }
+    }
 }
 
 function initGalleryZoom() {
+    if ($productGalleryWindowBig.length) {
+        zoomInstance = panzoom($productGalleryWindowBig.get(0), {
+            bounds: true,
+            boundsPadding: 1,
+            maxZoom: 3,
+            minZoom: 1,
+            zoomDoubleClickSpeed: 1,
+            // beforeWheel: function(e) {
+            //     // allow wheel-zoom only if altKey is down. Otherwise - ignore
+            //     var shouldIgnore = !e.altKey;
+            //     return shouldIgnore;
+            // }
+            beforeWheel: function(e) {
+                setTimeout(function () {
+                    hideZoomButton(zoomInstance.getTransform().scale)
+                }, 300)
+            },
+            onTouch: function(e) {
+
+            }
+        })
+        zoomInstance.on('transform', function(e) {
+            hideZoomButton(e.getTransform().scale)
+        });
+    }
+
     window.zoomInsance = zoomInstance
 
     $productGalleryWindowBigZoomIn.click(handlerZoomIn)
@@ -180,26 +227,13 @@ function initGalleryZoom() {
     hideZoomButton(1)
 }
 
-function hideZoomButton(scale) {
-    if (scale === 3) {
-        $productGalleryWindowBigZoomIn.addClass('is-hidden')
-    }
-    if (scale > 1) {
-        $productGalleryWindowBigZoomOut.removeClass('is-hidden')
-    }
-    if (scale === 1) {
-        $productGalleryWindowBigZoomOut.addClass('is-hidden')
-    }
-    if (scale < 3) {
-        $productGalleryWindowBigZoomIn.removeClass('is-hidden')
-    }
-}
-
-
 function initProductSlider() {
     initSliderThumb()
     initSliderPreview()
-    initGalleryZoom()
+    if(helpers.isMobile() && $productGalleryWindowBig.length) {
+        initGalleryZoom()
+    }
+
     $productGalleryPreviewZoom.click(openWindowGallery)
     $productGalleryWindowBigClose.click(closeWindowGallery)
 }

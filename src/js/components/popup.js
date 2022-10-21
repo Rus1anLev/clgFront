@@ -388,11 +388,6 @@ $.fancybox.defaults = {
 // 	}
 // }
 $(document).ready(function(){
-	if (window.getCookie("cookie_accepted") !== 'YES') {
-		$('.cookie').css('display', 'flex');
-	}
-
-
 	$('#privateHouse').change(function(){
 		if(this.checked) {
 			$('#modal-add-address .inline-labels').hide()
@@ -402,14 +397,3 @@ $(document).ready(function(){
 		window.modalAutoHeight()
 	})
 })
-
-$('.cookie-accept').click(function () {
-
-	$('.cookie').fadeOut(400)
-	window.setCookie("cookie_accepted","YES",3600); //set "user_email" cookie, expires in 30 days
-})
-$('.cookie-more').click(function () {
-	$(this).addClass('d-none')
-	$('.cookie-more--show').addClass('d-inline')
-})
-

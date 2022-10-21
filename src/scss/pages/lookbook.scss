@@ -1,0 +1,31 @@
+.lookbook {
+  &__image {
+    display: block;
+    border-radius: 4px;
+
+    &-wrapper {
+      @include media-breakpoint-only(xs) {
+        margin: 0 -($grid-gutter-width / 2);
+      }
+    }
+  }
+  &__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-right: 12px;
+    &-wrapper {
+      height: 100%;
+      overflow-y: scroll;
+      position: relative;
+    }
+    &-item {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

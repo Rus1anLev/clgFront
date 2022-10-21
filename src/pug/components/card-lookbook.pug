@@ -1,0 +1,31 @@
+mixin card-lookbook(data)
+    .card.card-lookbook
+        .card-img--wrapper.card-lookbook--img
+            a(href="#").card-img
+                img(src=data.img)
+            button.card-favorite.favorite-icon--btn
+                +svg('favorite').favorite-icon
+        .card__content--wrapper.card-lookbook__content--wrapper
+            .card__content.card-lookbook__content
+                div
+                    if data.tag
+                        .card__content-tag.tag.mb-12 !{data.tag}
+                    a(href="#").card__content-name.card-lookbook__content-name !{data.name}
+                    if data.price
+                        a(href="#").card__content-price.card-lookbook__content-price.mx-0
+                            .card__content-price--current.card-lookbook__content-price--current !{data.price}
+                            if data.price_old
+                                .card__content-price--old.card-lookbook__content-price--old !{data.price_old}
+                    if data.coming_soon
+                        a(href="#").link.link-primary.link--big Узнать о поступлении
+            if data.sku
+                select(placeholder="Выберите размер").select.mt-12.mb-6
+                    option
+                    option Описание инпута 1
+                    option Описание инпута 2
+                    option Описание инпута 3
+                    option Описание инпута 4
+                    option Описание инпута 5
+                a(href="#").btn.btn-primary.card-add2cart В корзину
+
+

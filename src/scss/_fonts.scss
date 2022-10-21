@@ -1,4 +1,5 @@
 // stylelint-disable no-empty-source
+@include font-face("../fonts/jost/Jost-Medium", "Jost", 500, normal);
 @include font-face("../fonts/jost/Jost-Regular", "Jost", 400, normal);
 @include font-face("../fonts/jost/Jost-Light", "Jost", 300, normal);
 @include font-face("../fonts/forum/Forum", "Forum", 400, normal);
