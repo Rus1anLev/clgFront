@@ -1,4 +1,4 @@
-.block_products_slider {
+.block_look_slider {
   &__slider{
     &-wrapper {
       position: relative;
@@ -41,13 +41,6 @@
       @include media-breakpoint-down(lg) {
         margin: 0 -6px;
       }
-    }
-    .slick-track {
-      display: flex;
-    }
-    .slick-track .slick-slide {
-      display: flex;
-      height: auto;
     }
 
     &-progress {

@@ -18,6 +18,7 @@ import {initAccordion} from "./components/accordion";
 import {initProductSlider} from "./components/product";
 import {tabs} from "./components/tabs";
 import {initProductsSlider} from "./components/block/products_slider";
+import {initLookSlider} from "./components/block/look_slider";
 import {initCityBox} from "./components/city-box";
 import {initCookie} from "./components/cookie";
 import {initInputFile} from "./components/inputFile";
@@ -48,6 +49,7 @@ initAccordion()
 
 initProductSlider()
 initProductsSlider()
+initLookSlider()
 initCityBox()
 initCookie()
 

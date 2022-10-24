@@ -33,16 +33,14 @@ h3, .h3 {
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 1.12;
-	&:hover {
-		color: $color-dark-golden;
-	}
+
 	@include media-breakpoint-only(lg) {
 		font-size: 14px;
 	}
-	//@include media-breakpoint-down(md) {
-	//	font-size: 14px;
-	//	line-height: 1.29;
-	//}
+}
+
+a.menu-item:hover {
+	color: $color-dark-golden;
 }
 
 .link {
