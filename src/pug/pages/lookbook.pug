@@ -1,6 +1,18 @@
 main.lookbook.pt-60
     .mb-36
-        include ../components/breadcrumbs
+        .container
+            .breadcrumbs.d-none.d-md-flex
+                a(href="#").breadcrumbs-item
+                    | Главная
+                a(href="#").breadcrumbs-item
+                    .breadcrumbs-item--icon
+                        +svg('line-for-breadcrumbs')
+                    | Lookbook
+            a(href="#").breadcrumbs-prev.d-md-none
+                .breadcrumbs-prev--icon
+                    +svg('arrow-left')
+                .breadcrumbs-prev--text
+                    | Предыдущий раздел
     .mb-60.text-center
         h1.h2 Look 6
     .container.mb-120

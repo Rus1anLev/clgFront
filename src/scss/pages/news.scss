@@ -4,6 +4,9 @@
       display: flex;
       margin: 0 -24px;
       flex-wrap: wrap;
+      @include media-breakpoint-down(lg) {
+        margin: 0;
+      }
     }
     &--col {
       flex: 0 0 50%;
@@ -12,6 +15,7 @@
       @include media-breakpoint-down(lg) {
         flex: 0 0 100%;
         margin-bottom: 36px;
+        padding: 0;
       }
     }
 
