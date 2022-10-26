@@ -1,0 +1,43 @@
+main.pt-60.news
+    .container
+        .mb-60
+            a(href="#").return-link
+                .return-link--icon
+                    +svg('arrow-left')
+                .return-link--text
+                    | Все новости
+        .mb-60.text-center
+            h1.h2 22-летие сети салонов Caterina Leman в России
+        .news__detail.mb-120
+            .row.justify-content-center
+                .col-xl-8.col-md-10.col-md-12
+                    +lazyPicture({
+                        src: '/images/pages/news/newsDetail.jpg',
+                        alt: '',
+                    }).mb-12.news__detail-img
+                    .news__detail-info.mb-24
+                        .news__detail-info--share
+                            .news__detail-info--share--label
+                                | Поделиться
+                            .share-wrap
+                                .social-links
+                                    a(href="https://vk.com/share.php?url=http://dev.caterinaleman.ru/" target="_blank")
+                                        +svg('vk')
+                                    a(href="https://api.whatsapp.com/send?text=http://dev.caterinaleman.ru/" target="_blank")
+                                        +svg('whatsup')
+                                    a(href="https://telegram.me/share/url?url=http://dev.caterinaleman.ru/" target="_blank")
+                                        +svg('telegram')
+                        .news__detail-info--date
+                            | 21 ОКТЯБРЯ 2021
+                    .news__detail-content.typography-main
+                        p Яркая осень с Caterina Leman продолжается! Мы с огромным удовольствием приглашаем вас в салон Caterina Leman в ТЦ Европейский  в честь нашего Дня Рождения!
+                        p С 22 по 24 октября вас ждёт специальная праздничная программа:
+                        ul
+                            li приятные скидки: мы дарим 10% всем-всем и 20% по VIP карте лояльности
+                            li фуршет и авторские коктейли от нашего бармена все 3 дня
+                            li интересные и полезные прямые эфиры с экспертами beauty и fashion индустрии
+                            li беспроигрышная лотерея (при любой покупке вас ждёт подарок от нас и наших любимых партнёров: Estelle Adony, Falke, Molecule Project и Sephora Russia
+                            li моментальные фото
+                            li розыгрыш 3-х роскошных подарочных VIP-боксов  и многое другое специально для Вас!
+                        p До встречи в Европейском
+        +block_video().mb-120

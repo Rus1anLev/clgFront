@@ -1,9 +1,9 @@
-let $productsSlider = $('.block_products_slider__slider')
+let $lookSlider = $('.block_look_slider__slider')
 
-function initProductsSlider () {
-    $productsSlider.each(function () {
+function initLookSlider () {
+    $lookSlider.each(function () {
         let $slider = $(this),
-            $progressBar = $slider.siblings('.block_products_slider__slider-progress').find('.progress')
+            $progressBar = $slider.siblings('.block_look_slider__slider-progress').find('.progress')
 
 
         $slider.on('init', function(event, slick) {
@@ -14,11 +14,9 @@ function initProductsSlider () {
         $slider.slick({
             slidesToShow: 3,
             slidesToScroll: 1,
-            dots: true,
-            prevArrow: $slider.siblings('.block_products_slider__slider--arrow--left'),
-            nextArrow: $slider.siblings('.block_products_slider__slider--arrow--right'),
-            slide: 'div',
-            rows: 0,
+            dots: false,
+            prevArrow: $slider.siblings('.block_look_slider__slider--arrow--left'),
+            nextArrow: $slider.siblings('.block_look_slider__slider--arrow--right'),
             responsive: [
                 {
                     breakpoint: 1008,
@@ -42,4 +40,4 @@ function initProductsSlider () {
 
 }
 
-export {initProductsSlider}
+export {initLookSlider}

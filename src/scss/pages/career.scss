@@ -1,0 +1,50 @@
+.career {
+  &__section {
+    &-heading {
+
+    }
+    &-list {
+      max-height: 660px;
+      overflow-y: auto;
+      padding-right: 8px;
+      @include media-breakpoint-down(md) {
+        max-height: 512px;
+      }
+      &--item {
+        padding: 24px;
+        background: $color-silver-gray;
+        border: 1px solid #F7F7F7;
+        border-radius: 6px;
+
+        margin-bottom: 12px;
+
+        @include media-breakpoint-down(md) {
+          padding: 16px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &--heading {
+
+      }
+      &--text {
+        color: $color-silver-brown;
+      }
+      &--link {
+
+      }
+    }
+  }
+
+  &-card {
+    padding: 24px;
+    background: $color-silver-gray;
+    border: 1px solid #F7F7F7;
+    border-radius: 6px;
+    @include media-breakpoint-down(md) {
+      padding: 24px 16px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+mixin block_look_slider(object)
+    .block_look_slider&attributes(attributes)
+        .container
+            if object.title
+                .block_look_slider-title.text-center.mb-60
+                    h2 Больше образов
+            .block_look_slider__slider-wrapper
+                .block_look_slider__slider
+                    .block_look_slider__slider-item
+                        a(href="#").block_banners-item
+                            img(src="/images/pages/lookbook/lookbookSlide1.jpg").block_banners-img
+                            .block_banners-content--wrapper
+                                .block_banners-content
+                                    .link.link-photo.link--big Look 3
+                    .block_look_slider__slider-item
+                        a(href="#").block_banners-item
+                            img(src="/images/pages/lookbook/lookbookSlide2.jpg").block_banners-img
+                            .block_banners-content--wrapper
+                                .block_banners-content
+                                    .link.link-photo.link--big Look 4
+                    .block_look_slider__slider-item
+                        a(href="#").block_banners-item
+                            img(src="/images/pages/lookbook/lookbookSlide3.jpg").block_banners-img
+                            .block_banners-content--wrapper
+                                .block_banners-content
+                                    .link.link-photo.link--big Look 5
+                    .block_look_slider__slider-item
+                        a(href="#").block_banners-item
+                            img(src="/images/pages/lookbook/lookbookSlide1.jpg").block_banners-img
+                            .block_banners-content--wrapper
+                                .block_banners-content
+                                    .link.link-photo.link--big Look 3
+                    .block_look_slider__slider-item
+                        a(href="#").block_banners-item
+                            img(src="/images/pages/lookbook/lookbookSlide2.jpg").block_banners-img
+                            .block_banners-content--wrapper
+                                .block_banners-content
+                                    .link.link-photo.link--big Look 4
+                    .block_look_slider__slider-item
+                        a(href="#").block_banners-item
+                            img(src="/images/pages/lookbook/lookbookSlide3.jpg").block_banners-img
+                            .block_banners-content--wrapper
+                                .block_banners-content
+                                    .link.link-photo.link--big Look 5
+
+                button.arrow.arrow-left.block_look_slider__slider--arrow.block_look_slider__slider--arrow--left
+                    +svg('arrow-left')
+                button.arrow.arrow-right.block_look_slider__slider--arrow.block_look_slider__slider--arrow--right
+                    +svg('arrow-right')
+                .progress-wrapper.block_look_slider__slider-progress
+                    .progress(role="progressbar" aria-valuemin="0" aria-valuemax="100")
+
+
