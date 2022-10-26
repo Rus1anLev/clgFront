@@ -588,3 +588,21 @@ a.menu-item:hover {
 		}
 	}
 }
+
+.return-link {
+	display: flex;
+	align-items: center;
+	&--icon {
+		height: 24px;
+		width: 24px;
+		flex: 0 0 24px;
+	}
+	&--text {
+		color: $color-black;
+		letter-spacing: 0.5px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 1.29;
+		text-transform: uppercase;
+	}
+}

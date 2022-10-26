@@ -22,6 +22,7 @@ import {initLookSlider} from "./components/block/look_slider";
 import {initCityBox} from "./components/city-box";
 import {initCookie} from "./components/cookie";
 import {initInputFile} from "./components/inputFile";
+import {initBlockVideo} from "./components/block/video";
 
 import '../../node_modules/jquery-ui-dist/jquery-ui.min';
 import './vendor/jquery.ui.touch-punch';
@@ -54,3 +55,4 @@ initCityBox()
 initCookie()
 
 initInputFile()
+initBlockVideo()
