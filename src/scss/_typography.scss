@@ -103,6 +103,9 @@ a.menu-item:hover {
 		text-decoration: underline;
 		text-decoration-skip-ink: none;
 	}
+	&--primary {
+		color: $color-dark-golden;
+	}
 }
 
 .tag {

@@ -20,6 +20,18 @@
 		margin-top: 80px;
 	}
 }
+.pb-120 {
+	padding-bottom: 120px;
+	@include media-breakpoint-down(md) {
+		padding-bottom: 80px;
+	}
+}
+.pt-120 {
+	padding-top: 120px;
+	@include media-breakpoint-down(md) {
+		padding-top: 80px;
+	}
+}
 
 .mb-60 {
 	margin-bottom: 60px;
@@ -100,6 +112,12 @@
 	.mt-desktop-120 {
 		margin-top: 120px;
 	}
+	.pb-desktop-120 {
+		padding-bottom: 120px;
+	}
+	.pt-desktop-120 {
+		padding-top: 120px;
+	}
 	.mb-desktop-60 {
 		margin-bottom: 60px;
 	}
@@ -143,6 +161,12 @@
 	}
 	.mt-mobile-120 {
 		margin-top: 120px;
+	}
+	.pb-mobile-120 {
+		padding-bottom: 120px;
+	}
+	.pt-mobile-120 {
+		padding-top: 120px;
 	}
 	.mb-mobile-60 {
 		margin-bottom: 60px;
