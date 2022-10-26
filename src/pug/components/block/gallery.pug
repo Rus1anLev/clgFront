@@ -1,0 +1,91 @@
+mixin block_gallery(object)
+    .block_gallery&attributes(attributes)
+        .container
+            .block_gallery-list.js-block-gallery-list
+                .block_gallery-col.block_gallery-full
+                    a(href="/images/pages/news/gallery1-original.jpg" data-fancybox="block_gallery").block_gallery-item
+                        picture
+                            source(
+                                media="(max-width: 576.98px)"
+                                srcset="/images/pages/news/gallery1-mobile.jpg"
+                            )
+                            source(
+                                media="(max-width: 1007.98px)"
+                                srcset="/images/pages/news/gallery1-tablet.jpg"
+                            )
+                            img(
+                                src="/images/pages/news/gallery1.jpg"
+                            )
+                .block_gallery-col.block_gallery-half
+                    a(href="/images/pages/news/gallery2-original.jpg" data-fancybox="block_gallery").block_gallery-item
+                        picture
+                            source(
+                                media="(max-width: 576.98px)"
+                                srcset="/images/pages/news/gallery2-mobile.jpg"
+                            )
+                            source(
+                                media="(max-width: 1007.98px)"
+                                srcset="/images/pages/news/gallery2-tablet.jpg"
+                            )
+                            img(
+                                src="/images/pages/news/gallery2.jpg"
+                            )
+                .block_gallery-col.block_gallery-half
+                    a(href="/images/pages/news/gallery3-original.jpg" data-fancybox="block_gallery").block_gallery-item
+                        picture
+                            source(
+                                media="(max-width: 576.98px)"
+                                srcset="/images/pages/news/gallery3-mobile.jpg"
+                            )
+                            source(
+                                media="(max-width: 1007.98px)"
+                                srcset="/images/pages/news/gallery3-tablet.jpg"
+                            )
+                            img(
+                                src="/images/pages/news/gallery3.jpg"
+                            )
+
+                .block_gallery-col.block_gallery-one-third
+                    a(href="/images/pages/news/gallery4-original.jpg" data-fancybox="block_gallery").block_gallery-item
+                        picture
+                            source(
+                                media="(max-width: 576.98px)"
+                                srcset="/images/pages/news/gallery4-mobile.jpg"
+                            )
+                            source(
+                                media="(max-width: 1007.98px)"
+                                srcset="/images/pages/news/gallery4-tablet.jpg"
+                            )
+                            img(
+                                src="/images/pages/news/gallery4.jpg"
+                            )
+                .block_gallery-col.block_gallery-one-third
+                    a(href="/images/pages/news/gallery5-original.jpg" data-fancybox="block_gallery").block_gallery-item
+                        picture
+                            source(
+                                media="(max-width: 576.98px)"
+                                srcset="/images/pages/news/gallery5-mobile.jpg"
+                            )
+                            source(
+                                media="(max-width: 1007.98px)"
+                                srcset="/images/pages/news/gallery5-tablet.jpg"
+                            )
+                            img(
+                                src="/images/pages/news/gallery5.jpg"
+                            )
+                .block_gallery-col.block_gallery-one-third
+                    a(href="/images/pages/news/gallery6-original.jpg" data-fancybox="block_gallery").block_gallery-item
+                        picture
+                            source(
+                                media="(max-width: 576.98px)"
+                                srcset="/images/pages/news/gallery6-mobile.jpg"
+                            )
+                            source(
+                                media="(max-width: 1007.98px)"
+                                srcset="/images/pages/news/gallery6-tablet.jpg"
+                            )
+                            img(
+                                src="/images/pages/news/gallery6.jpg"
+                            )
+            .progress-wrapper.block_gallery-progress
+                .progress(role="progressbar" aria-valuemin="0" aria-valuemax="100")

@@ -1,14 +1,15 @@
 mixin block_video(object)
-    .block_video.js-block-video-container&attributes(attributes)
-        iframe(
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-        ).block_video-frame.js-block-video-frame
-        .block_video-thumb.js-block-video-thumb
-            +lazyPicture({
-                src: '/images/pages/news/video.jpg',
-                alt: '',
-            }).block_video-thumb--image
-            button(data-frame="https://www.youtube.com/embed/WNCl-69POro").block_video-thumb--icon.js-block-video-button
-                +svg('play')
+    .container&attributes(attributes)
+        .block_video.js-block-video-container
+            iframe(
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ).block_video-frame.js-block-video-frame
+            .block_video-thumb.js-block-video-thumb
+                +lazyPicture({
+                    src: '/images/pages/news/video.jpg',
+                    alt: '',
+                }).block_video-thumb--image
+                button(data-frame="https://www.youtube.com/embed/WNCl-69POro").block_video-thumb--icon.js-block-video-button
+                    +svg('play')
