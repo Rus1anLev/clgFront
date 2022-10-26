@@ -1,0 +1,42 @@
+.block_gallery {
+  &-list {
+    margin: 0 -12px;
+  }
+  &-col {
+    padding: 0 12px;
+  }
+  @include media-breakpoint-up(lg) {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -24px;
+    }
+    &-col {
+      margin-bottom: 24px;
+    }
+    &-full {
+      flex: 0 0 100%;
+    }
+    &-half {
+      flex: 0 0 50%;
+    }
+    &-one-third {
+      flex: 0 0 33%;
+    }
+  }
+
+  &-item {
+    border-radius: 6px;
+    overflow: hidden;
+    display: block;
+    @include media-breakpoint-down(md) {
+      width: 276px;
+    }
+    @include media-breakpoint-only(md) {
+      width: 560px;
+    }
+    picture, img {
+      display: block;
+    }
+  }
+}
