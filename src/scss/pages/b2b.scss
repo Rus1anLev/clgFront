@@ -1,0 +1,40 @@
+.b2b__location {
+  &-map {
+    height: 604px;
+    @include media-breakpoint-down(md) {
+      height: 296px;
+    }
+  }
+  &-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: $color-silver-gray;
+    border-radius: 6px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+      height: auto;
+    }
+  }
+  &-title {
+
+  }
+  &-text {
+
+  }
+  &-contacts {
+    margin-top: auto;
+    @include media-breakpoint-down(lg) {
+      margin-top: 48px;
+    }
+    &--item {
+      display: block;
+      margin-bottom: 6px;
+      color: $color-silver-brown;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

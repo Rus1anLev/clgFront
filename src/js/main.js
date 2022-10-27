@@ -24,6 +24,7 @@ import {initCookie} from "./components/cookie";
 import {initInputFile} from "./components/inputFile";
 import {initBlockVideo} from "./components/block/video";
 import {initBlockGallery} from "./components/block/gallery";
+import {initB2b} from "./components/b2b";
 
 import '../../node_modules/jquery-ui-dist/jquery-ui.min';
 import './vendor/jquery.ui.touch-punch';
@@ -58,3 +59,4 @@ initCookie()
 initInputFile()
 initBlockVideo()
 initBlockGallery()
+initB2b()
