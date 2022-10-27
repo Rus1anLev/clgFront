@@ -1,0 +1,83 @@
+main.pt-60.pb-120
+    .container
+        .text-center.mb-60
+            h1.h2 Адреса бутиков
+        .row
+            .col-16.d-lg-none
+                .boutiques-content--city.mb-48
+                    select(placeholder="Ваш город").select.js-boutiques-city
+                        option(value="0" selected) Москва
+                        option(value="1") Санкт-петербург
+                        option(value="2") Чебоксары
+            .col-lg-8
+                .boutiques-map.js-boutiques-map
+            .col-lg-8
+                .boutiques-content--wrapper
+                    .boutiques-content
+                        .boutiques-content--city.d-none.d-lg-block.mb-48
+                            select(placeholder="Ваш город").select.js-boutiques-city
+                                option(value="0" selected) Москва
+                                option(value="1") Санкт-петербург
+                                option(value="2") Чебоксары
+                        .boutiques-content__list--wrapper
+                            .boutiques-content__list.js-boutiques-list.js-boutiques-list-current(data-city="0")
+                                .boutiques-content__list-item.js-boutiques-map-item(data-coords="55.757339, 37.659173")
+                                    .boutiques-content__list-title.typography-main.mb-12 Атриум
+                                    .boutiques-content__list__contact
+                                        .boutiques-content__list__contact-item.link-or-text Москва, ул.Земляной вал, д.33
+                                        .boutiques-content__list__contact-item.link-or-text 1 этаж
+                                        a(href="tel: +74959810986").boutiques-content__list__contact-item.link-or-text 8(495) 981 09 86
+                                        .boutiques-content__list__contact-item.link-or-text Часы работы: пн-вс 10:00 - 22:00
+                                .boutiques-content__list-item.js-boutiques-map-item(data-coords="55.805837, 37.515164")
+                                    .boutiques-content__list-title.typography-main.mb-12 Метромаркет ТЦ
+                                    .boutiques-content__list__contact
+                                        .boutiques-content__list__contact-item.link-or-text Москва, Ленинградский проспект, д. 76а
+                                        .boutiques-content__list__contact-item.link-or-text 1 этаж
+                                        a(href="tel: +74959819709").boutiques-content__list__contact-item.link-or-text 8(495) 981 97 09
+                                        .boutiques-content__list__contact-item.link-or-text Часы работы: пн-вс 10:00 - 22:00
+                                .boutiques-content__list-item.js-boutiques-map-item(data-coords="55.823216, 37.497468")
+                                    .boutiques-content__list-title.typography-main.mb-12 Метрополис ТЦ
+                                    .boutiques-content__list__contact
+                                        .boutiques-content__list__contact-item.link-or-text Москва, Ленинградское шоссе, д.16A. стр.4
+                                        .boutiques-content__list__contact-item.link-or-text 1 этаж
+                                        a(href="tel: +74952879980").boutiques-content__list__contact-item.link-or-text 8(495) 287 99 80
+                                        .boutiques-content__list__contact-item.link-or-text Часы работы: пн-вс 10:00 - 22:00
+                                .boutiques-content__list-item.js-boutiques-map-item(data-coords="55.755804, 37.614608")
+                                    .boutiques-content__list-title.typography-main.mb-12 Охотный ряд ТК
+                                    .boutiques-content__list__contact
+                                        .boutiques-content__list__contact-item.link-or-text Москва, Манежная пл., д.1, стр.2
+                                        .boutiques-content__list__contact-item.link-or-text верхний уровень
+                                        a(href="tel: +74957378567").boutiques-content__list__contact-item.link-or-text 8(495) 737 85 67
+                                        .boutiques-content__list__contact-item.link-or-text Часы работы: пн-вс 10:00 - 22:00
+                            .boutiques-content__list.js-boutiques-list(data-city="1")
+                                .boutiques-content__list-item.js-boutiques-map-item(data-coords="59.938447, 30.284552")
+                                    .boutiques-content__list-title.typography-main.mb-12 Андреевский двор
+                                    .boutiques-content__list__contact
+                                        .boutiques-content__list__contact-item.link-or-text test
+                                        .boutiques-content__list__contact-item.link-or-text test
+                                        a(href="tel: +74959810986").boutiques-content__list__contact-item.link-or-text 8(495) 981 09 86
+                                        .boutiques-content__list__contact-item.link-or-text Часы работы: пн-вс 10:00 - 22:00
+                                .boutiques-content__list-item.js-boutiques-map-item(data-coords="59.919212, 30.338880")
+                                    .boutiques-content__list-title.typography-main.mb-12 Планета Нептун
+                                    .boutiques-content__list__contact
+                                        .boutiques-content__list__contact-item.link-or-text test
+                                        .boutiques-content__list__contact-item.link-or-text test
+                                        a(href="tel: +74959810986").boutiques-content__list__contact-item.link-or-text 8(495) 981 09 86
+                                        .boutiques-content__list__contact-item.link-or-text Часы работы: пн-вс 10:00 - 22:00
+                                .boutiques-content__list-item.js-boutiques-map-item(data-coords="59.911696, 30.446784")
+                                    .boutiques-content__list-title.typography-main.mb-12 Лондон Молл
+                                    .boutiques-content__list__contact
+                                        .boutiques-content__list__contact-item.link-or-text test
+                                        .boutiques-content__list__contact-item.link-or-text test
+                                        a(href="tel: +74959810986").boutiques-content__list__contact-item.link-or-text 8(495) 981 09 86
+                                        .boutiques-content__list__contact-item.link-or-text Часы работы: пн-вс 10:00 - 22:00
+
+                            .boutiques-content__list.js-boutiques-list(data-city="2")
+                                .boutiques-content__list-item.js-boutiques-map-item(data-coords="56.135476, 47.241016")
+                                    .boutiques-content__list-title.typography-main.mb-12 Каскад
+                                    .boutiques-content__list__contact
+                                        .boutiques-content__list__contact-item.link-or-text Тест
+                                        .boutiques-content__list__contact-item.link-or-text Тест
+                                        a(href="tel: +74959810986").boutiques-content__list__contact-item.link-or-text 8(495) 981 09 86
+                                        .boutiques-content__list__contact-item.link-or-text Тест
+

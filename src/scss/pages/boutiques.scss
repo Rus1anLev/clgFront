@@ -1,0 +1,84 @@
+.boutiques {
+  &-map {
+    height: 724px;
+    @include media-breakpoint-down(md) {
+      height: 296px;
+    }
+    @include media-breakpoint-only(md) {
+      height: 604px;
+    }
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 48px;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @include media-breakpoint-down(lg) {
+      height: auto;
+      position: static;
+    }
+
+    &--wrapper {
+      height: 100%;
+      position: relative;
+      @include media-breakpoint-down(lg) {
+        height: auto;
+      }
+    }
+
+    &--city {
+      max-width: 296px;
+      @include media-breakpoint-down(lg) {
+        margin: 0 auto 48px;
+      }
+    }
+
+    &__list {
+      display: none;
+      &.js-boutiques-list-current {
+        display: block;
+      }
+      &--wrapper {
+        flex: 1 1;
+        overflow-y: auto;
+      }
+      &-item {
+        margin-bottom: 12px;
+        padding: 24px;
+        background: $color-silver-gray;
+        cursor: pointer;
+        @include media-breakpoint-down(md) {
+          padding: 16px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &-title {
+        font-family: $font-primary;
+      }
+
+      &__contact {
+        font-family: $font-primary;
+        &-item {
+          display: block;
+          margin-bottom: 4px;
+          color: $color-silver-brown;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

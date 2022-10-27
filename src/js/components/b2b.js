@@ -1,26 +1,17 @@
-import initYmap from './ymap'
-import helpers from "../helpers";
+import {addPlacemark, createMap, initYmap} from './ymap'
+
+let $b2bLocationMap = $('.js-b2b-location-map')
 
 function initB2bMap() {
-    let b2bMapData = new ymaps.Map("b2bMap", {
-        center: [55.704809, 37.597933],
-        zoom: 13,
-        controls: []
-    })
-    let b2bMapPlacemark = new ymaps.Placemark(
-        [55.704809, 37.597933],
-        {},
-        helpers.ymapMapPin
-    )
+    let b2bMapData = createMap($b2bLocationMap.get(0), [55.704809, 37.597933])
+    let b2bMapPlacemark = addPlacemark([55.704809, 37.597933])
     b2bMapData.geoObjects.add(b2bMapPlacemark)
-
-    b2bMapData.controls.add('zoomControl', {
-        size: 'large',
-    });
 }
 
 function initB2b() {
-    initYmap(initB2bMap)
+    if ($b2bLocationMap.length) {
+        initYmap(initB2bMap)
+    }
 }
 
-export {initB2b}
+export default initB2b

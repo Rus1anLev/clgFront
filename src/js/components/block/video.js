@@ -14,4 +14,4 @@ function initBlockVideo() {
     })
 }
 
-export {initBlockVideo}
+export default initBlockVideo
