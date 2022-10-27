@@ -1,0 +1,292 @@
+#mapBoutique {
+    max-width: 100%;
+    width: 600px;
+    border-radius: 5px;
+    // max-height: 360px;
+    height: 360px;
+}
+.salon-list {
+    max-height: 600px;
+    overflow-y: auto;
+}
+.time-boxes-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 420px;
+    width: 100%;
+    margin-top: 14px;
+    
+}
+.time-square {
+    display: block;
+    border: 1px solid $color-dark-golden;
+    color: $color-black;
+    border-radius: 5px;
+    padding: 20px 0;
+    width: 59px;
+    text-align: center;
+    margin-right: 11px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 300;
+}
+.time-box input:disabled + .time-square {
+    border-color: #e0e0e0;
+    color: #e0e0e0;
+    cursor: default;
+}
+.time-box input:checked + .time-square {
+    border-color: #e0e0e0;
+    background: #736647;
+    color: #e0e0e0;
+    cursor: default;
+}
+.time-box input {
+    display: none;
+}
+main.book {
+    h2 {
+        margin-top: 1px;
+        margin-bottom: 0;
+    }
+    .block_content_aside {
+        margin-top: 59px;
+    }
+    .block_content_aside-content {
+        padding-left: 106px;
+    }
+    .block_content_aside-content--right {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    .flex-vertical-center {
+        display: flex;
+        align-items: center;
+    }
+    form {
+        margin-top: 176px;
+        margin-bottom: 61px;
+        max-width: 620px;
+    width: 100%;
+    }
+    .form-row.city {
+        width: 100%;
+        max-width: 296px;
+    }
+    .tabs-wrapper.map-list {
+        position: relative;
+        .headline {
+            position: absolute;
+            font-weight: 300;
+            font-size: 18px;
+            top: 11px;
+            color: $color-black;
+        }
+        .select-tabs {
+            margin-top: 38px;
+            padding-right: 15px;
+        }
+    }
+    .data_deliv {
+        margin-top: 46px;
+        width: 100%;
+        max-width: 294px;
+    }
+    .times {
+        margin-top: 50px;
+
+        p {
+            font-weight: 300;
+            font-size: 18px;
+            color: $color-black;
+        }
+    }
+    .checkbox-wrap.fav {
+        margin-top: 36px;
+        .checkbox-text {
+            font-size: 18px;
+        }
+        p.desc {
+            font-size: 14px;
+            color: $color-black;
+            font-weight: 300;
+            margin-top: 6px;
+            max-width: 560px;
+            line-height: 17px;
+        }
+    }
+    .name-input {
+        margin-top: 31px;
+        margin-bottom: 0;
+        max-width: 412px;
+        width: 100%;
+    }
+    .phone-input {
+        margin-top: 12px;
+        margin-bottom: 0;
+        max-width: 412px;
+        width: 100%;
+    }
+    .form-control.text-area textarea.form-control--input {
+        margin-top: 12px;
+        max-width: 412px;
+        width: 100%;
+    }
+    .bottom-inputset .checkbox-wrap {
+        margin-top: 43px;
+    }
+    .bottom-inputset .btn-sub-asid {
+        margin-top: 8px;
+        max-width: 100%;
+        width: 296px;
+    }
+    .tabs-wrapper .salon-list {
+        padding: 8px 10px 8px 0px;
+    }
+    .mapTooltip {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 20px;
+        .flex-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h3 {
+                font-family: Forum;
+                font-size: 18px !important;
+                font-weight: 300;
+            }
+        }
+        p {
+            line-height: 18px;
+            margin-top: 8px;
+            font-family: 'Jost';
+            font-weight: 300;
+            color: #98938C;
+            font-size: 14px;
+        }
+        .choose {
+            position: relative;
+            left: 10px;
+        }
+    }
+    
+    .salon-list {
+        max-height: 600px;
+        overflow-y: auto;
+         .item {
+            & + .item {
+                margin-top: 15px;
+            }
+            background: #F7F7F7;
+            padding: 22px 25px;
+            border-radius: 6px;
+            align-items: center;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            h3 {
+                font-family: Jost;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 20px;
+                letter-spacing: 1.5px;
+                color: #2C2C2C;
+                margin-bottom: 8px;
+                margin-top: 4px; 
+            }
+            p {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 15px;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: #2C2C2C;
+                margin-top: 16px;
+                color: #98938C;
+            }
+        }
+    }
+    .salon-list-selected {
+        margin-top: 12px;
+        .item {
+            background: #fff !important;
+            box-shadow: 1px 1px 10px #7360351a;
+            padding: 22px 25px;
+            border-radius: 6px;
+            align-items: center;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            h3 {
+                margin-top: 5px;
+                font-weight: 300;
+                font-size: 18px;
+                color: #2C2C2C;
+                font-family: Jost;
+                color: #2C2C2C;
+            }
+            p {
+                font-weight: 300;
+                font-size: 14px;
+                color: #98938C;
+                line-height: 4px;
+                margin-top: 18px;
+            }
+            .btn-change {
+                padding: 14px 17px;
+                margin-right: 30px;
+                margin-top: 13px;
+                color: #736035;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1007px) {
+    main.book .block_content_aside-content {
+        padding-left:20px;
+        
+    }
+    main.book form {
+        margin-top: 60px;
+    }
+}
+
+@media screen and(max-width: 575px) {
+    .salon-list-selected .item {
+        flex-direction: column;
+    }
+    main.book .salon-list-selected .item p {
+        font-weight: 300;
+        font-size: 14px;
+        color: #98938C;
+        line-height: 20px;
+        margin-top: 14px;
+    }
+    main.book .salon-list .item {
+        flex-direction: column;
+        align-items: flex-start;
+        .btn-secondary {
+            border: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+    }
+    main.book form {
+        margin-top: 10px;
+    }
+    main.book .mapTooltip {
+        flex-direction: column;
+        padding: 0;
+        .btn-primary {
+            padding: 15px 20px;
+            margin-top: 16px;
+        }
+    }
+}
