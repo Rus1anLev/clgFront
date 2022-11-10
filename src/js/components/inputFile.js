@@ -16,4 +16,4 @@ function initInputFile() {
     $inputFile.on('change', handlerInputFile)
 }
 
-export {initInputFile}
+export default initInputFile

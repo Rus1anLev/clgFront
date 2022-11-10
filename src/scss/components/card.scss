@@ -128,6 +128,7 @@
       &--wrapper {
         display: flex;
         flex-direction: column;
+        flex: 1 1;
       }
       &-name {
         font-size: 16px;

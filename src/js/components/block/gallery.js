@@ -47,4 +47,4 @@ function initBlockGallery() {
     }
 }
 
-export {initBlockGallery}
+export default initBlockGallery

@@ -32,4 +32,4 @@ function initCookie() {
     }
 }
 
-export {initCookie}
+export default initCookie

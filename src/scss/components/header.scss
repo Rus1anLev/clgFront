@@ -16,11 +16,15 @@
 		top: 0;
 	}
 	&.is-open,
-	&.is-dark {
+	&.is-dark,
+	&:hover{
 		background: #FFF;
 		color: $color-black;
 		.header__actions-personal--label {
 			color: $color-silver-brown;
+		}
+		.header__actions-favorite {
+			color: $color-black;
 		}
 	}
 
