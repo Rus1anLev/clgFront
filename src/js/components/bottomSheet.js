@@ -126,8 +126,8 @@ const bottomSheet = function () {
 	
 	function setSheetHeight(value, modalID) {
 
-		if (value > 90) {
-			value = 90
+		if (value > 80) {
+			value = 80
 		}		
 
 		sheetHeight = Math.max(0, Math.min(100, value))
