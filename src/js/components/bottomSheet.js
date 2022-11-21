@@ -38,7 +38,7 @@ const bottomSheet = function () {
 							window.openBottomModal(modalID)
 						}
 					} else {
-						if ($(window).width() >= 576) {
+						if ($(window).width() >= 768) {
 							$.fancybox.open({
 								src: modalID,
 								scrolling: 'hidden',
@@ -94,12 +94,13 @@ const bottomSheet = function () {
 		window.lastModalShown = target
 
 		if ($(target).hasClass('auto-height')) {
-
-			var height = $(target).find('.body > *').outerHeight() + 80
-			openBottomSheet(target, getVH(height))
-		} else {
-			openBottomSheet(target, 50)
-		}
+			var height = $(target).find('.body').outerHeight() + 80;
+			openBottomSheet(target, getVH(height));
+		  } else if ($(target).hasClass('full-height')) {
+			openBottomSheet(target, 80);
+		  } else {
+			openBottomSheet(target, 50);
+		  }
 
 		let selector = `${target} input:enabled`
 		let firstInput = document.querySelector(selector)
